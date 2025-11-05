@@ -208,8 +208,8 @@ const Courses = () => {
   };
 
   return (
-    <section id="courses" className="section-padding bg-gradient-mesh overflow-hidden relative z-10">
-      <div className="container mx-auto container-padding overflow-hidden px-8">
+    <section id="courses" className="section-padding bg-gradient-mesh overflow-hidden relative z-10 max-w-full">
+      <div className="container mx-auto container-padding overflow-hidden px-4 sm:px-6 md:px-8 max-w-full">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -234,30 +234,30 @@ const Courses = () => {
         </motion.div>
 
         {/* Courses Slider with Professional Cards */}
-        <div className="relative overflow-visible py-4">
+        <div className="relative overflow-hidden py-4 max-w-full">
           {/* Mobile: Single Card with Navigation */}
-          <div className="block md:hidden relative py-4">
+          <div className="block md:hidden relative py-4 max-w-full">
             {/* Navigation Arrows for Mobile */}
             <motion.button
               onClick={handleCoursePrevious}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="absolute -left-2 top-1/2 -translate-y-1/2 z-50 w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white flex items-center justify-center shadow-2xl transition-all"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-50 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white flex items-center justify-center shadow-2xl transition-all"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </motion.button>
 
             <motion.button
               onClick={handleCourseNext}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="absolute -right-2 top-1/2 -translate-y-1/2 z-50 w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white flex items-center justify-center shadow-2xl transition-all"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-50 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white flex items-center justify-center shadow-2xl transition-all"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </motion.button>
 
             {/* Display Single Course Card */}
-            <div className="flex justify-center px-14">
+            <div className="flex justify-center px-10 sm:px-14 max-w-full">
               {(() => {
                 const course = courses[currentCourseIndex];
                 return (
@@ -465,28 +465,28 @@ const Courses = () => {
           </div>
 
           {/* Desktop: Manual Navigation with Arrows */}
-          <div className="hidden md:block relative py-4">
+          <div className="hidden md:block relative py-4 max-w-full">
             {/* Navigation Arrows - Positioned Outside Cards with Higher Z-Index */}
             <motion.button
               onClick={handleCoursePrevious}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="absolute -left-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white flex items-center justify-center shadow-2xl transition-all"
+              className="absolute left-0 lg:-left-6 top-1/2 -translate-y-1/2 z-50 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white flex items-center justify-center shadow-2xl transition-all"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
             </motion.button>
 
             <motion.button
               onClick={handleCourseNext}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="absolute -right-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white flex items-center justify-center shadow-2xl transition-all"
+              className="absolute right-0 lg:-right-6 top-1/2 -translate-y-1/2 z-50 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white flex items-center justify-center shadow-2xl transition-all"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
             </motion.button>
 
             {/* Course Cards Display - Show 3 at a time */}
-            <div className="flex gap-4 lg:gap-6 xl:gap-8 justify-center px-20">
+            <div className="flex gap-3 md:gap-4 lg:gap-6 xl:gap-8 justify-center px-12 lg:px-20 max-w-full overflow-hidden">
               {[0, 1, 2].map((offset) => {
                 const courseIndex = (currentCourseIndex + offset) % courses.length;
                 const course = courses[courseIndex];

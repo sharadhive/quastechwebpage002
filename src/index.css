@@ -5,6 +5,9 @@
 /* Import Responsive Utilities */
 @import './styles/responsive.css';
 
+/* Import Comprehensive Mobile Fix */
+@import './styles/mobile-responsive-fix.css';
+
 /* Dark Mode Styles */
 .dark-mode {
   /* Dark Background Colors */

@@ -471,18 +471,6 @@ Please provide me with more information about this course.`;
                             className="h-full w-auto object-contain"
                           />
                         </motion.div>
-                        
-                        {/* IBM Logo */}
-                        <motion.div
-                          className="flex items-center justify-center bg-white rounded-lg px-4 py-3 shadow-md hover:shadow-lg transition-shadow h-20 sm:h-22 md:h-24 min-w-[140px] border border-gray-200"
-                          whileHover={{ scale: 1.05, y: -3 }}
-                        >
-                          <img
-                            src="/uploads/ibm.png"
-                            alt="IBM Logo"
-                            className="h-full w-auto object-contain"
-                          />
-                        </motion.div>
                       </div>
                     </div>
                   </motion.div>

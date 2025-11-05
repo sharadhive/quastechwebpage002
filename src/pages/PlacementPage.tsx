@@ -959,17 +959,17 @@ const PlacementPage = () => {
                     <motion.img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover border-2 border-blue-200"
+                      className="w-16 h-16 rounded-full object-cover border-2 border-blue-200 flex-shrink-0"
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
                     />
-                    <div>
-                      <h3 className="font-bold text-gray-800">{testimonial.name}</h3>
-                      <p className="text-sm text-blue-600">{testimonial.role}</p>
-                      <p className="text-xs text-gray-500">{testimonial.company}</p>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-gray-800 truncate">{testimonial.name}</h3>
+                      <p className="text-sm text-blue-600 truncate">{testimonial.role}</p>
+                      <p className="text-xs text-gray-500 truncate">{testimonial.company}</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 leading-relaxed">{testimonial.review}</p>
+                  <p className="text-gray-700 text-sm leading-relaxed line-clamp-6">{testimonial.review}</p>
                 </motion.div>
               ))}
             </div>

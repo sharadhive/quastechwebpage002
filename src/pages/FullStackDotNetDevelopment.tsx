@@ -1840,11 +1840,10 @@ const FullStackDotNetDevelopment = () => {
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold text-gray-800 mb-4">in Collaboration with</h3>
                   <div className="h-px bg-gray-300 mb-6"></div>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
                     {[
-                      { name: "NSDC", logo: "/uploads/nsdeimg01.png" },
-                      { name: "Skill India", logo: "/uploads/skillindia--.jpg" },
-                      { name: "IBM", logo: "/uploads/ibm.png" }
+                      { name: "NSDC", logo: "/uploads/nsdeimg01.jpg" },
+                      { name: "Skill India", logo: "/uploads/skillindia--.jpg" }
                     ].map((partner, index) => (
                       <motion.div
                         key={index}

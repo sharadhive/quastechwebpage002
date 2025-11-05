@@ -304,20 +304,6 @@ Please provide course details and guidance.
                         className="h-12 sm:h-14 md:h-16 w-auto object-contain"
                       />
                     </motion.div>
-                    {/* IBM Logo */}
-                    <motion.div
-                      className="flex items-center justify-center bg-white rounded-lg px-4 py-2 sm:px-5 sm:py-3 shadow-lg hover:shadow-xl transition-shadow"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.7, duration: 0.4 }}
-                      whileHover={{ scale: 1.1, y: -2 }}
-                    >
-                      <img
-                        src="/uploads/ibm.png"
-                        alt="IBM Logo"
-                        className="h-12 sm:h-14 md:h-16 w-auto object-contain"
-                      />
-                    </motion.div>
                   </div>
                 </div>
               </motion.div>

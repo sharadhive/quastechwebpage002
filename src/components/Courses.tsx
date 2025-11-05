@@ -38,34 +38,46 @@ const Courses = () => {
   const [currentCourseIndex, setCurrentCourseIndex] = useState(0);
   const [courseAutoPlay, setCourseAutoPlay] = useState(true);
 
-  // Define courses array first
+  // Define courses array first - AI-Enhanced Placement Courses
   const courses = [
     {
-      icon: Database,
-      title: "Data Science & Analytics with AI",
-      duration: "8-10 Months",
-      trainingType: "Classroom & Online Training",
-      batchTypes: "Weekday and Weekend Batches",
-      // seatsLeft: 2,
-      // countdown: "47 hrs : 59 mins : 44 sec",
-      features: [
-        "/coursesicons/bootstrap.jpg",
-        "/coursesicons/css.jpg",
-        "/coursesicons/django.jpg",
-        "/coursesicons/html.jpg",
-        "/coursesicons/jquery.jpg",
-        "/coursesicons/mysql.jpg"
-      ],
-      color: "from-blue-500 to-purple-600"
-    },
-    {
-      icon: Code,
-      title: "Python Full Stack Development",
+      icon: Shield,
+      title: "Software Testing with AI",
       duration: "6-8 Months",
       trainingType: "Classroom & Online Training",
       batchTypes: "Weekday and Weekend Batches",
-      // seatsLeft: 3,
-      // countdown: "23 hrs : 15 mins : 32 sec",
+      features: [
+        "/coursesicons/bootstrap.jpg",
+        "/coursesicons/css.jpg",
+        "/coursesicons/html.jpg",
+        "/coursesicons/jquery.jpg",
+        "/coursesicons/mysql.jpg",
+        "/coursesicons/python.jpg"
+      ],
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      icon: Code,
+      title: "Full Stack Java Development with AI",
+      duration: "7-9 Months",
+      trainingType: "Classroom & Online Training",
+      batchTypes: "Weekday and Weekend Batches",
+      features: [
+        "/coursesicons/bootstrap.jpg",
+        "/coursesicons/css.jpg",
+        "/coursesicons/jquery.jpg",
+        "/coursesicons/html.jpg",
+        "/coursesicons/mysql.jpg",
+        "/coursesicons/django.jpg"
+      ],
+      color: "from-orange-500 to-red-600"
+    },
+    {
+      icon: Code,
+      title: "Full Stack Python Development with AI",
+      duration: "6-8 Months",
+      trainingType: "Classroom & Online Training",
+      batchTypes: "Weekday and Weekend Batches",
       features: [
         "/coursesicons/python.jpg",
         "/coursesicons/django.jpg",
@@ -78,12 +90,10 @@ const Courses = () => {
     },
     {
       icon: Globe,
-      title: "Java Full Stack Development",
+      title: "Full Stack .NET Development with AI",
       duration: "7-9 Months",
       trainingType: "Classroom & Online Training",
       batchTypes: "Weekday and Weekend Batches",
-      // seatsLeft: 1,
-      // countdown: "12 hrs : 30 mins : 15 sec",
       features: [
         "/coursesicons/bootstrap.jpg",
         "/coursesicons/css.jpg",
@@ -92,16 +102,14 @@ const Courses = () => {
         "/coursesicons/mysql.jpg",
         "/coursesicons/django.jpg"
       ],
-      color: "from-orange-500 to-red-600"
+      color: "from-blue-500 to-purple-600"
     },
     {
-      icon: Smartphone,
-      title: "Mobile App Development",
+      icon: TrendingUp,
+      title: "Digital Marketing with AI",
       duration: "5-7 Months",
       trainingType: "Classroom & Online Training",
       batchTypes: "Weekday and Weekend Batches",
-      // seatsLeft: 4,
-      // countdown: "18 hrs : 45 mins : 22 sec",
       features: [
         "/coursesicons/html.jpg",
         "/coursesicons/css.jpg",
@@ -110,16 +118,14 @@ const Courses = () => {
         "/coursesicons/python.jpg",
         "/coursesicons/mysql.jpg"
       ],
-      color: "from-purple-500 to-pink-600"
+      color: "from-pink-500 to-rose-600"
     },
     {
       icon: Brain,
-      title: "Artificial Intelligence",
-      duration: "10-12 Months",
+      title: "Data Science with AI",
+      duration: "8-10 Months",
       trainingType: "Classroom & Online Training",
       batchTypes: "Weekday and Weekend Batches",
-      // seatsLeft: 2,
-      // countdown: "35 hrs : 20 mins : 18 sec",
       features: [
         "/coursesicons/python.jpg",
         "/coursesicons/django.jpg",
@@ -131,22 +137,20 @@ const Courses = () => {
       color: "from-cyan-500 to-blue-600"
     },
     {
-      icon: Shield,
-      title: "Cybersecurity",
+      icon: Database,
+      title: "Data Analytics with AI",
       duration: "6-8 Months",
       trainingType: "Classroom & Online Training",
       batchTypes: "Weekday and Weekend Batches",
-      // seatsLeft: 3,
-      // countdown: "28 hrs : 12 mins : 45 sec",
       features: [
-        "/coursesicons/html.jpg",
-        "/coursesicons/css.jpg",
-        "/coursesicons/jquery.jpg",
         "/coursesicons/bootstrap.jpg",
-        "/coursesicons/python.jpg",
+        "/coursesicons/css.jpg",
+        "/coursesicons/django.jpg",
+        "/coursesicons/html.jpg",
+        "/coursesicons/jquery.jpg",
         "/coursesicons/mysql.jpg"
       ],
-      color: "from-red-500 to-orange-600"
+      color: "from-indigo-500 to-purple-600"
     }
   ];
 
@@ -219,13 +223,13 @@ const Courses = () => {
           </div>
           <h2 className="text-4xl lg:text-6xl font-extrabold mb-3">
             <span className="bg-gradient-to-r from-[#6B5B95] via-[#9B6B8F] to-[#8B5A5A] bg-clip-text text-transparent">
-              Transform Your Career
+              AI-Enhanced Placement Courses
             </span>
           </h2>
           <div className="h-1 w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 mb-6" />
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Choose from our comprehensive range of courses designed by industry experts 
-            with hands-on projects and guaranteed placement assistance.
+            Industry-focused training with AI integration and guaranteed placement support. 
+            Transform your career with cutting-edge AI technology and hands-on projects.
           </p>
         </motion.div>
 
@@ -262,10 +266,10 @@ const Courses = () => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                whileHover={{ y: -4, scale: 1.02 }}
+                whileHover={{ y: -8, scale: 1.03 }}
               className="group w-full max-w-md"
             >
-                <Card className="w-full min-h-[500px] sm:min-h-[520px] overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 bg-white transform-gpu">
+                <Card className="w-full min-h-[500px] sm:min-h-[520px] overflow-hidden border-2 border-blue-100 shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.25)] hover:border-blue-300 transition-all duration-700 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 transform-gpu">
                   {/* Compact Header - Countdown and Seats Side by Side */}
                   {/* <div className="flex items-center justify-between p-2 sm:p-3 bg-gradient-to-r from-blue-50 to-orange-50">
                     <div className="flex items-center gap-2">
@@ -285,16 +289,17 @@ const Courses = () => {
                     <div className="flex gap-4 mb-4 min-h-[85px] sm:min-h-[90px]">
                       {/* Course Icon - Left Side */}
                       <motion.div 
-                        className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-600 to-orange-500 rounded-lg flex items-center justify-center shadow-lg flex-shrink-0"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/50 flex-shrink-0 relative overflow-hidden"
+                        whileHover={{ scale: 1.15, rotate: 8 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <course.icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent"></div>
+                        <course.icon className="w-7 h-7 sm:w-8 sm:h-8 text-white relative z-10" />
                       </motion.div>
                       
                       {/* Course Details - Right Side */}
                       <div className="flex-1 flex flex-col justify-center">
-                        <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 leading-snug min-h-[50px] flex items-center">
+                        <h3 className="text-lg sm:text-xl font-extrabold bg-gradient-to-r from-gray-800 via-blue-700 to-purple-700 bg-clip-text text-transparent mb-2 leading-snug min-h-[50px] flex items-center">
                           {course.title}
                         </h3>
                         <div className="flex items-center gap-1.5 mb-1.5">
@@ -308,23 +313,57 @@ const Courses = () => {
                       </div>
                     </div>
 
-                    {/* Technology Logos - All 6 in 1 Line */}
-                    <div className="mb-4">
-                      <div className="flex justify-center gap-2 flex-wrap">
-                        {course.features.slice(0, 6).map((imgSrc, idx) => (
-                          <motion.div 
-                            key={idx} 
-                            className="w-12 h-12 sm:w-13 sm:h-13 bg-white rounded-lg shadow-md border border-gray-200 flex-shrink-0 overflow-hidden p-0"
-                            whileHover={{ scale: 1.1, y: -2, rotate: 3 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <img
-                              src={imgSrc}
-                              alt="Tech"
-                              className="w-full h-full object-cover"
-                            />
-                          </motion.div>
-                        ))}
+                    {/* Technology Logos - Continuous Sliding Animation */}
+                    <div className="mb-4 relative overflow-hidden">
+                      {/* AI Badge */}
+                      <div className="absolute -top-2 -right-2 z-10 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-lg flex items-center gap-1">
+                        <Brain className="w-3 h-3" />
+                        AI
+                      </div>
+                      
+                      <div className="relative h-14 flex items-center">
+                        <motion.div 
+                          className="flex gap-2 absolute"
+                          animate={{ x: [0, -300] }}
+                          transition={{
+                            x: {
+                              repeat: Infinity,
+                              duration: 8,
+                              ease: "linear",
+                            },
+                          }}
+                        >
+                          {/* Original set */}
+                          {course.features.slice(0, 6).map((imgSrc, idx) => (
+                            <motion.div 
+                              key={`orig-${idx}`}
+                              className="w-12 h-12 bg-white rounded-lg shadow-md border-2 border-blue-100 flex-shrink-0 overflow-hidden p-1"
+                              whileHover={{ scale: 1.15, y: -3, rotate: 5, borderColor: "#3b82f6" }}
+                              transition={{ duration: 0.3 }}
+                            >
+                              <img
+                                src={imgSrc}
+                                alt="Tech"
+                                className="w-full h-full object-contain"
+                              />
+                            </motion.div>
+                          ))}
+                          {/* Duplicate set for seamless loop */}
+                          {course.features.slice(0, 6).map((imgSrc, idx) => (
+                            <motion.div 
+                              key={`dup-${idx}`}
+                              className="w-12 h-12 bg-white rounded-lg shadow-md border-2 border-blue-100 flex-shrink-0 overflow-hidden p-1"
+                              whileHover={{ scale: 1.15, y: -3, rotate: 5, borderColor: "#3b82f6" }}
+                              transition={{ duration: 0.3 }}
+                            >
+                              <img
+                                src={imgSrc}
+                                alt="Tech"
+                                className="w-full h-full object-contain"
+                              />
+                            </motion.div>
+                          ))}
+                        </motion.div>
                       </div>
                     </div>
 
@@ -375,21 +414,21 @@ const Courses = () => {
 
                     {/* Bottom Buttons - Compact */}
                     <div className="mt-auto space-y-2.5 pb-4">
-                      <div className="flex gap-2.5">
+                      <div className="flex gap-2">
                         <Button
                           variant="outline"
                           size="sm"
-                          className="flex-1 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 text-sm transition-all duration-300 font-semibold min-w-0 py-2.5"
+                          className="flex-1 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 text-[11px] sm:text-xs transition-all duration-300 font-semibold min-w-0 max-w-[50%] py-2 px-1.5 sm:px-2 overflow-hidden"
                         >
-                          <Download className="w-4 h-4 mr-1.5 flex-shrink-0" />
-                          <span className="relative z-10">Download</span>
+                          <Download className="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-0.5 sm:mr-1 flex-shrink-0" />
+                          <span className="relative z-10 truncate whitespace-nowrap overflow-hidden text-ellipsis">Download</span>
                         </Button>
                         <Button
                           size="sm"
-                          className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-sm min-w-0 py-2.5"
+                          className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-[11px] sm:text-xs min-w-0 max-w-[50%] py-2 px-1.5 sm:px-2 overflow-hidden"
                         >
-                          <MoreHorizontal className="w-4 h-4 mr-1.5 flex-shrink-0" />
-                          <span>Know More</span>
+                          <MoreHorizontal className="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-0.5 sm:mr-1 flex-shrink-0" />
+                          <span className="truncate whitespace-nowrap overflow-hidden text-ellipsis">Details</span>
                         </Button>
                       </div>
                       
@@ -458,24 +497,25 @@ const Courses = () => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: offset * 0.1 }}
-                whileHover={{ y: -8, scale: 1.02 }}
+                whileHover={{ y: -12, scale: 1.04 }}
               >
-                <Card className="min-h-[470px] md:min-h-[490px] w-full overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 bg-white transform-gpu">
+                <Card className="min-h-[470px] md:min-h-[490px] w-full overflow-hidden border-2 border-blue-100 shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.25)] hover:border-blue-300 transition-all duration-700 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 transform-gpu">
                   <CardContent className="p-5 flex flex-col h-full min-h-[470px] md:min-h-[490px]">
                     {/* Main Content - Course Icon Left, Details Right */}
                     <div className="flex gap-4 mb-4 min-h-[100px]">
                       {/* Course Icon - Left Side */}
                       <motion.div 
-                        className="w-16 h-16 bg-gradient-to-r from-blue-600 to-orange-500 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        className="w-16 h-16 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/50 flex-shrink-0 relative overflow-hidden"
+                        whileHover={{ scale: 1.15, rotate: 8 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <course.icon className="w-8 h-8 text-white" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent"></div>
+                        <course.icon className="w-8 h-8 text-white relative z-10" />
                       </motion.div>
                       
                       {/* Course Details - Right Side */}
                       <div className="flex-1 flex flex-col justify-center">
-                        <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2 leading-snug min-h-[52px] flex items-center">
+                        <h3 className="text-lg md:text-xl font-extrabold bg-gradient-to-r from-gray-800 via-blue-700 to-purple-700 bg-clip-text text-transparent mb-2 leading-snug min-h-[52px] flex items-center">
                           {course.title}
                         </h3>
                         <div className="flex items-center gap-1.5 mb-1.5">
@@ -489,23 +529,57 @@ const Courses = () => {
                       </div>
                     </div>
 
-                    {/* Technology Logos - All 6 in 1 Line */}
-                    <div className="mb-5">
-                      <div className="flex justify-center gap-2 flex-wrap">
-                        {course.features.slice(0, 6).map((imgSrc, idx) => (
-                          <motion.div 
-                            key={idx} 
-                            className="w-11 h-11 bg-white rounded-lg shadow-md border border-gray-200 flex-shrink-0 overflow-hidden p-0"
-                            whileHover={{ scale: 1.1, y: -2, rotate: 3 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <img
-                              src={imgSrc}
-                              alt="Tech"
-                              className="w-full h-full object-cover"
-                            />
-                          </motion.div>
-                        ))}
+                    {/* Technology Logos - Continuous Sliding Animation */}
+                    <div className="mb-5 relative overflow-hidden">
+                      {/* AI Badge */}
+                      <div className="absolute -top-2 -right-2 z-10 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-lg flex items-center gap-1">
+                        <Brain className="w-3.5 h-3.5" />
+                        AI
+                      </div>
+                      
+                      <div className="relative h-14 flex items-center">
+                        <motion.div 
+                          className="flex gap-2 absolute"
+                          animate={{ x: [0, -320] }}
+                          transition={{
+                            x: {
+                              repeat: Infinity,
+                              duration: 8,
+                              ease: "linear",
+                            },
+                          }}
+                        >
+                          {/* Original set */}
+                          {course.features.slice(0, 6).map((imgSrc, idx) => (
+                            <motion.div 
+                              key={`orig-${idx}`}
+                              className="w-12 h-12 bg-white rounded-lg shadow-md border-2 border-blue-100 flex-shrink-0 overflow-hidden p-1"
+                              whileHover={{ scale: 1.15, y: -3, rotate: 5, borderColor: "#3b82f6" }}
+                              transition={{ duration: 0.3 }}
+                            >
+                              <img
+                                src={imgSrc}
+                                alt="Tech"
+                                className="w-full h-full object-contain"
+                              />
+                            </motion.div>
+                          ))}
+                          {/* Duplicate set for seamless loop */}
+                          {course.features.slice(0, 6).map((imgSrc, idx) => (
+                            <motion.div 
+                              key={`dup-${idx}`}
+                              className="w-12 h-12 bg-white rounded-lg shadow-md border-2 border-blue-100 flex-shrink-0 overflow-hidden p-1"
+                              whileHover={{ scale: 1.15, y: -3, rotate: 5, borderColor: "#3b82f6" }}
+                              transition={{ duration: 0.3 }}
+                            >
+                              <img
+                                src={imgSrc}
+                                alt="Tech"
+                                className="w-full h-full object-contain"
+                              />
+                            </motion.div>
+                          ))}
+                        </motion.div>
                       </div>
                     </div>
 
@@ -560,17 +634,17 @@ const Courses = () => {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="flex-1 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 text-xs transition-all duration-300 font-semibold min-w-0"
+                          className="flex-1 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 text-[10px] md:text-xs transition-all duration-300 font-semibold min-w-0 max-w-[50%] px-1.5 py-1.5 overflow-hidden"
                         >
-                          <Download className="w-3 h-3 mr-1 flex-shrink-0" />
-                          <span className="relative z-10 truncate">Download</span>
+                          <Download className="w-2.5 h-2.5 md:w-3 md:h-3 mr-0.5 flex-shrink-0" />
+                          <span className="relative z-10 truncate whitespace-nowrap overflow-hidden text-ellipsis">Download</span>
                         </Button>
                         <Button
                           size="sm"
-                          className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-xs min-w-0"
+                          className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-[10px] md:text-xs min-w-0 max-w-[50%] px-1.5 py-1.5 overflow-hidden"
                         >
-                          <MoreHorizontal className="w-3 h-3 mr-1 flex-shrink-0" />
-                          <span className="truncate">Know More</span>
+                          <MoreHorizontal className="w-2.5 h-2.5 md:w-3 md:h-3 mr-0.5 flex-shrink-0" />
+                          <span className="truncate whitespace-nowrap overflow-hidden text-ellipsis">Details</span>
                         </Button>
                       </div>
                       
@@ -616,14 +690,14 @@ const Courses = () => {
         >
           <div className="bg-gradient-hero rounded-3xl p-12 lg:p-16 text-white shadow-xl">
             <h3 className="heading-md mb-6">
-              🚀 Transform Your Career with Expert Guidance
+               Transform Your Career with Expert Guidance
             </h3>
             <p className="text-xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed">
               Connect with our <span className="font-semibold text-white">industry-expert career counselors</span> for personalized course recommendations tailored to your goals and unlock your potential with the perfect course match designed for success!
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button variant="glass" size="xl" className="text-lg font-bold hover:scale-105 transition-transform">
-                🎯 Get Free Career Counseling →
+                Get Free Career Counseling →
               </Button>
             </div>
           </div>

@@ -80,14 +80,14 @@ const Marquee = ({
 const About = () => {
   // --- Data Arrays (unchanged) ---
   const whyUsFeatures = [
-    { icon: GraduationCap, title: "Industry Requirement", description: "Industry-focused syllabus with practical approach and latest technologies", color: "from-blue-500 to-indigo-600" },
-    { icon: DollarSign, title: "Cost Effective", description: "Affordable fees with high-quality training and industry-relevant content", color: "from-green-500 to-teal-600" },
-    { icon: Monitor, title: "Online/Offline Training", description: "Flexible learning options with both online and offline modes of training", color: "from-orange-500 to-pink-600" },
-    { icon: UserCheck, title: "Expert Trainer", description: "Experienced mentors guiding students with real industry insights", color: "from-purple-500 to-fuchsia-600" },
-    { icon: FolderOpen, title: "Projects & Assessment", description: "Real-world projects & assessments to meet Industry demands", color: "from-cyan-500 to-blue-600" },
-    { icon: Presentation, title: "Guest Lecture", description: "Sessions by industry professionals sharing valuable insights & case studies", color: "from-indigo-500 to-pink-500" },
-    { icon: Briefcase, title: "Placement", description: "Strong placement support with resume building & HR interview preparations", color: "from-emerald-500 to-cyan-600" },
-    { icon: HeadphonesIcon, title: "Continuous Support", description: "Lifetime support, mentorship, and guidance even after placement", color: "from-rose-500 to-red-600" },
+    { icon: GraduationCap, image: "/images/WhyChooseus/industrialrequirement.jpg", title: "Industry Requirement", description: "Industry-focused syllabus with practical approach and latest technologies", color: "from-blue-500 to-indigo-600" },
+    { icon: DollarSign, image: "/images/WhyChooseus/costeffective.png", title: "Cost Effective", description: "Affordable fees with high-quality training and industry-relevant content", color: "from-green-500 to-teal-600" },
+    { icon: Monitor, image: "/images/WhyChooseus/onlineoffline-training.png", title: "Online/Offline Training", description: "Flexible learning options with both online and offline modes of training", color: "from-orange-500 to-pink-600" },
+    { icon: UserCheck, image: "/images/WhyChooseus/expertraning.png", title: "Expert Trainer", description: "Experienced mentors guiding students with real industry insights", color: "from-purple-500 to-fuchsia-600" },
+    { icon: FolderOpen, image: "/images/WhyChooseus/projectassesment.png", title: "Projects & Assessment", description: "Real-world projects & assessments to meet Industry demands", color: "from-cyan-500 to-blue-600" },
+    { icon: Presentation, image: "/images/WhyChooseus/guest leacture.png", title: "Guest Lecture", description: "Sessions by industry professionals sharing valuable insights & case studies", color: "from-indigo-500 to-pink-500" },
+    { icon: Briefcase, image: "/images/WhyChooseus/placementlogopre.png", title: "Placement", description: "Strong placement support with resume building & HR interview preparations", color: "from-emerald-500 to-cyan-600" },
+    { icon: HeadphonesIcon, image: "/images/WhyChooseus/continous suport.png", title: "Continuous Support", description: "Lifetime support, mentorship, and guidance even after placement", color: "from-rose-500 to-red-600" },
   ];
   // const achievements = [
   //   { icon: Users, value: "5000+", label: "Students Trained", color: "from-blue-500 to-cyan-500" },
@@ -386,8 +386,12 @@ const About = () => {
                 >
                   <div className="card-unified hover-lift">
                     <div className="card-content h-full flex flex-col items-center text-center">
-                      <div className={`w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}>
-                        <feature.icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                      <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 flex items-center justify-center">
+                        <img 
+                          src={feature.image} 
+                          alt={feature.title}
+                          className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                        />
                       </div>
                       
                       <h3 className="text-lg md:text-xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition-colors duration-300">

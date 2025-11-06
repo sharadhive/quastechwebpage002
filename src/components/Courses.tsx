@@ -203,8 +203,8 @@ const Courses = () => {
   };
 
   return (
-    <section id="courses" className="section-spacing-compact bg-gradient-mesh overflow-hidden relative z-10 max-w-full">
-      <div className="container mx-auto container-padding overflow-hidden px-4 sm:px-6 md:px-8 max-w-full">
+    <section id="courses" className="section-spacing-compact bg-gradient-mesh overflow-x-hidden relative z-10 max-w-full pt-12 md:pt-16">
+      <div className="container mx-auto container-padding overflow-x-hidden px-4 sm:px-6 md:px-8 max-w-full">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -223,7 +223,7 @@ const Courses = () => {
         </motion.div>
 
         {/* Courses Slider with Professional Cards */}
-        <div className="relative overflow-hidden py-4 max-w-full">
+        <div className="relative overflow-x-hidden py-8 md:py-12 max-w-full">
           {/* Mobile: Single Card with Navigation */}
           <div className="block md:hidden relative py-4 max-w-full">
             {/* Navigation Arrows for Mobile */}
@@ -255,8 +255,8 @@ const Courses = () => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                whileHover={{ y: -8, scale: 1.03 }}
-              className="group w-full max-w-md"
+                whileHover={{ y: -8, scale: 1.03, zIndex: 50 }}
+              className="group w-full max-w-md relative z-10 hover:z-50"
             >
                 <Card className="w-full h-[520px] overflow-hidden border-2 border-blue-100 shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.25)] hover:border-blue-300 transition-all duration-700 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 transform-gpu">
                   <CardContent className="p-4 sm:p-5 flex flex-col h-full">
@@ -290,9 +290,11 @@ const Courses = () => {
 
                     {/* Technology Logos - Hover/Click Controlled Animation */}
                     <div 
-                      className="mb-4 relative overflow-hidden cursor-pointer"
+                      className="mb-4 relative overflow-hidden cursor-pointer touch-pan-y"
                       onMouseEnter={() => handleTechAnimationStart(currentCourseIndex)}
                       onMouseLeave={() => handleTechAnimationStop(currentCourseIndex)}
+                      onTouchStart={() => handleTechAnimationStart(currentCourseIndex)}
+                      onTouchEnd={() => handleTechAnimationStop(currentCourseIndex)}
                       onClick={() => {
                         if (!techAnimationActive[currentCourseIndex]) {
                           handleTechAnimationStart(currentCourseIndex);
@@ -301,12 +303,6 @@ const Courses = () => {
                         }
                       }}
                     >
-                      {/* AI Badge */}
-                      <div className="absolute -top-1.5 -right-1.5 z-10 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full shadow-lg flex items-center gap-0.5 sm:gap-1">
-                        <Brain className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                        AI
-                      </div>
-                      
                       <div className="relative h-12 sm:h-14 flex items-center">
                         <motion.div 
                           className="flex gap-2 absolute"
@@ -423,9 +419,9 @@ const Courses = () => {
           </div>
 
           {/* Desktop: Manual Navigation with Arrows */}
-          <div className="hidden md:block relative py-4 max-w-full">
+          <div className="hidden md:block relative py-8 max-w-full">
             {/* Course Cards Display - Show 3 at a time */}
-            <div className="flex gap-4 md:gap-5 lg:gap-6 justify-center px-8 md:px-12 lg:px-16 max-w-full overflow-hidden relative">
+            <div className="flex gap-4 md:gap-5 lg:gap-6 justify-center px-8 md:px-12 lg:px-16 max-w-full overflow-x-hidden relative">
               {/* Navigation Arrows - Closer to Cards */}
               <motion.button
                 onClick={handleCoursePrevious}
@@ -451,11 +447,11 @@ const Courses = () => {
                 return (
               <motion.div
                 key={`${course.title}-${offset}`}
-                className="flex-shrink-0 w-[280px] md:w-[300px] lg:w-[320px] group"
+                className="flex-shrink-0 w-[280px] md:w-[300px] lg:w-[320px] group relative z-10 hover:z-50"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: offset * 0.1 }}
-                whileHover={{ y: -12, scale: 1.04 }}
+                whileHover={{ y: -12, scale: 1.04, zIndex: 50 }}
               >
                 <Card className="h-[500px] w-full overflow-hidden border-2 border-blue-100 shadow-[0_10px_40px_rgba(59,130,246,0.15)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.25)] hover:border-blue-300 transition-all duration-700 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 transform-gpu">
                   <CardContent className="p-4 md:p-5 flex flex-col h-full">
@@ -489,9 +485,11 @@ const Courses = () => {
 
                     {/* Technology Logos - Hover/Click Controlled Animation */}
                     <div 
-                      className="mb-4 relative overflow-hidden cursor-pointer"
+                      className="mb-4 relative overflow-hidden cursor-pointer touch-pan-y"
                       onMouseEnter={() => handleTechAnimationStart(courseIndex)}
                       onMouseLeave={() => handleTechAnimationStop(courseIndex)}
+                      onTouchStart={() => handleTechAnimationStart(courseIndex)}
+                      onTouchEnd={() => handleTechAnimationStop(courseIndex)}
                       onClick={() => {
                         if (!techAnimationActive[courseIndex]) {
                           handleTechAnimationStart(courseIndex);
@@ -500,12 +498,6 @@ const Courses = () => {
                         }
                       }}
                     >
-                      {/* AI Badge */}
-                      <div className="absolute -top-1.5 -right-1.5 z-10 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-[10px] md:text-xs font-bold px-2 md:px-2.5 py-0.5 md:py-1 rounded-full shadow-lg flex items-center gap-0.5 md:gap-1">
-                        <Brain className="w-3 h-3 md:w-3.5 md:h-3.5" />
-                        AI
-                      </div>
-                      
                       <div className="relative h-12 md:h-14 flex items-center">
                         <motion.div 
                           className="flex gap-2 absolute"

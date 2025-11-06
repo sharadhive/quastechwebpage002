@@ -67,7 +67,7 @@ const Card = ({ children }: { children: React.ReactNode }) => (
   <motion.div
     whileHover={{ y: -8 }}
     transition={{ type: "spring", stiffness: 300, damping: 15 }}
-    className="group relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-slate-200/50 bg-white p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+    className="group relative flex h-full w-full flex-col overflow-hidden rounded-xl border border-slate-200/50 bg-white p-4 md:p-5 shadow-sm hover:shadow-lg transition-all duration-300"
   >
     {children}
   </motion.div>
@@ -78,40 +78,25 @@ const SectionHeading = ({ title, subtitle }: { title: string; subtitle?: string 
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
-    className="text-center mb-12"
+    className="text-center mb-8 md:mb-10 mt-3 md:mt-4"
   >
-    <div className="inline-flex items-center gap-3 px-6 py-2 mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow text-white text-base font-semibold">
-      <Award className="w-6 h-6 mr-1 text-white" />
-      PLACEMENT
+    <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2 mb-5 md:mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow-lg text-white text-sm md:text-base font-semibold">
+      <Briefcase className="w-4 h-4 md:w-5 md:h-5" />
+      PLACEMENT SUPPORT
     </div>
-    <h2 className="text-4xl md:text-6xl font-extrabold mb-3">
-      <span className="bg-gradient-to-r from-[#6B5B95] via-[#9B6B8F] to-[#8B5A5A] bg-clip-text text-transparent">
-        {title}
-      </span>
+    <h2 className="heading-section gradient-text-primary mb-3 md:mb-4">
+      {title}
     </h2>
-    <div className="h-1 w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 mb-4" />
-    {subtitle && (
-      <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
-        {subtitle}
-      </p>
-    )}
+    <div className="h-0.5 w-24 md:w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
   </motion.div>
 );
 
 const Subtitle = ({ text, showBadge = false }: { text: string, showBadge?: boolean }) => (
-  <div className="text-center mb-10">
-    {showBadge && (
-      <div className="inline-flex items-center gap-2 px-6 py-2 mb-4 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow text-white text-sm font-bold uppercase">
-        <Building2 className="w-5 h-5 text-white drop-shadow" />
-        HIRING PARTNERS
-      </div>
-    )}
-    <h3 className="text-2xl md:text-3xl font-extrabold">
-      <span className="bg-gradient-to-r from-[#6B5B95] via-[#9B6B8F] to-[#8B5A5A] bg-clip-text text-transparent">
-        {text}
-      </span>
+  <div className="text-center mb-6 md:mb-8">
+    <h3 className="heading-subsection gradient-text-primary">
+      {text}
     </h3>
-    <div className="mt-2 h-1 w-24 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
+    <div className="mt-2 md:mt-3 h-0.5 w-20 md:w-24 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
   </div>
 );
 
@@ -144,13 +129,24 @@ const Placement = () => {
     <>
       {/* <style dangerouslySetInnerHTML={{ __html: partnersStyles }} /> */}
 
-      <section id="placement" className="py-8 md:py-12 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      <section id="placement" className="section-spacing-compact bg-gradient-to-br from-slate-50 via-white to-blue-50">
         <div className="container mx-auto px-4 max-w-7xl">
-          {/* <SectionHeading
-            title="Our Placement Success"
-            subtitle="QUASTECH students have transformed their careers by joining top MNCs with lucrative packages and exciting roles."
-          /> */}
-
+          {/* Section Header with Tag */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8 md:mb-10 mt-3 md:mt-4"
+          >
+            <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2 mb-5 md:mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow-lg text-white text-sm md:text-base font-semibold">
+              <Briefcase className="w-4 h-4 md:w-5 md:h-5" />
+              PLACEMENT SUCCESS
+            </div>
+            <h2 className="heading-section gradient-text-primary mb-3 md:mb-4">
+              Our Placement Success
+            </h2>
+            <div className="h-0.5 w-24 md:w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
+          </motion.div>
 
           {/* 📊 Stats */}
           <div className="mb-8">
@@ -186,13 +182,13 @@ const Placement = () => {
           </div>
 
           {/* 🤝 Hiring Partners - 3 Rows with Alternating Animations */}
-          <div className="overflow-hidden bg-gradient-to-br from-blue-100 via-slate-100 to-orange-100 rounded-3xl py-12 px-4">
+          <div className="overflow-hidden bg-gradient-to-br from-blue-100 via-slate-100 to-orange-100 rounded-2xl py-8 md:py-10 px-4">
             <Subtitle text="Associated with 800+ Hiring partners" showBadge={true} />
             
             {/* Row 1 - Slide Left */}
-            <div className="relative overflow-hidden mb-6">
+            <div className="relative overflow-hidden mb-4 md:mb-5">
               <motion.div
-                className="flex gap-6"
+                className="flex gap-4 md:gap-5"
                 animate={{ x: [0, -1500] }}
                 transition={{
                   x: {
@@ -206,36 +202,36 @@ const Placement = () => {
                 {partners.slice(0, 6).map((p, i) => (
                   <div
                     key={`row1-set1-${i}`}
-                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center rounded-xl bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 px-6"
+                    className="flex-shrink-0 w-40 h-20 flex items-center justify-center rounded-lg bg-white border border-slate-200 shadow-md hover:shadow-lg transition-all duration-300 px-3"
                   >
-                    <img src={p.logo} alt={p.name} className="max-h-16 max-w-full object-contain" />
+                    <img src={p.logo} alt={p.name} className="max-h-12 max-w-full object-contain" />
                   </div>
                 ))}
                 {/* Duplicate for seamless loop */}
                 {partners.slice(0, 6).map((p, i) => (
                   <div
                     key={`row1-set2-${i}`}
-                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center rounded-xl bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 px-6"
+                    className="flex-shrink-0 w-40 h-20 flex items-center justify-center rounded-lg bg-white border border-slate-200 shadow-md hover:shadow-lg transition-all duration-300 px-3"
                   >
-                    <img src={p.logo} alt={p.name} className="max-h-16 max-w-full object-contain" />
+                    <img src={p.logo} alt={p.name} className="max-h-12 max-w-full object-contain" />
                   </div>
                 ))}
                 {/* Third set for extra smoothness */}
                 {partners.slice(0, 6).map((p, i) => (
                   <div
                     key={`row1-set3-${i}`}
-                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center rounded-xl bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 px-6"
+                    className="flex-shrink-0 w-40 h-20 flex items-center justify-center rounded-lg bg-white border border-slate-200 shadow-md hover:shadow-lg transition-all duration-300 px-3"
                   >
-                    <img src={p.logo} alt={p.name} className="max-h-16 max-w-full object-contain" />
+                    <img src={p.logo} alt={p.name} className="max-h-12 max-w-full object-contain" />
                   </div>
                 ))}
               </motion.div>
             </div>
 
             {/* Row 2 - Slide Right */}
-            <div className="relative overflow-hidden mb-6">
+            <div className="relative overflow-hidden">
               <motion.div
-                className="flex gap-6"
+                className="flex gap-4 md:gap-5"
                 animate={{ x: [-1500, 0] }}
                 transition={{
                   x: {
@@ -249,81 +245,38 @@ const Placement = () => {
                 {partners.slice(3, 9).map((p, i) => (
                   <div
                     key={`row2-set1-${i}`}
-                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center rounded-xl bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 px-6"
+                    className="flex-shrink-0 w-40 h-20 flex items-center justify-center rounded-lg bg-white border border-slate-200 shadow-md hover:shadow-lg transition-all duration-300 px-3"
                   >
-                    <img src={p.logo} alt={p.name} className="max-h-16 max-w-full object-contain" />
+                    <img src={p.logo} alt={p.name} className="max-h-12 max-w-full object-contain" />
                   </div>
                 ))}
                 {/* Duplicate for seamless loop */}
                 {partners.slice(3, 9).map((p, i) => (
                   <div
                     key={`row2-set2-${i}`}
-                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center rounded-xl bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 px-6"
+                    className="flex-shrink-0 w-40 h-20 flex items-center justify-center rounded-lg bg-white border border-slate-200 shadow-md hover:shadow-lg transition-all duration-300 px-3"
                   >
-                    <img src={p.logo} alt={p.name} className="max-h-16 max-w-full object-contain" />
+                    <img src={p.logo} alt={p.name} className="max-h-12 max-w-full object-contain" />
                   </div>
                 ))}
                 {/* Third set */}
                 {partners.slice(3, 9).map((p, i) => (
                   <div
                     key={`row2-set3-${i}`}
-                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center rounded-xl bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 px-6"
+                    className="flex-shrink-0 w-40 h-20 flex items-center justify-center rounded-lg bg-white border border-slate-200 shadow-md hover:shadow-lg transition-all duration-300 px-3"
                   >
-                    <img src={p.logo} alt={p.name} className="max-h-16 max-w-full object-contain" />
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-
-            {/* Row 3 - Slide Left */}
-            <div className="relative overflow-hidden">
-              <motion.div
-                className="flex gap-6"
-                animate={{ x: [0, -1500] }}
-                transition={{
-                  x: {
-                    repeat: Infinity,
-                    duration: 25,
-                    ease: "linear",
-                  },
-                }}
-              >
-                {/* First set */}
-                {partners.slice(0, 6).map((p, i) => (
-                  <div
-                    key={`row3-set1-${i}`}
-                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center rounded-xl bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 px-6"
-                  >
-                    <img src={p.logo} alt={p.name} className="max-h-16 max-w-full object-contain" />
-                  </div>
-                ))}
-                {/* Duplicate for seamless loop */}
-                {partners.slice(0, 6).map((p, i) => (
-                  <div
-                    key={`row3-set2-${i}`}
-                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center rounded-xl bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 px-6"
-                  >
-                    <img src={p.logo} alt={p.name} className="max-h-16 max-w-full object-contain" />
-                  </div>
-                ))}
-                {/* Third set */}
-                {partners.slice(0, 6).map((p, i) => (
-                  <div
-                    key={`row3-set3-${i}`}
-                    className="flex-shrink-0 w-48 h-28 flex items-center justify-center rounded-xl bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 px-6"
-                  >
-                    <img src={p.logo} alt={p.name} className="max-h-16 max-w-full object-contain" />
+                    <img src={p.logo} alt={p.name} className="max-h-12 max-w-full object-contain" />
                   </div>
                 ))}
               </motion.div>
             </div>
 
             {/* View All Partners Button */}
-            <div className="text-center mt-10">
+            <div className="text-center mt-6 md:mt-8">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-sm md:text-base"
               >
                 View All Partners
               </motion.button>

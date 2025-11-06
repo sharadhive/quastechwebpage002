@@ -8,6 +8,9 @@
 /* Import Comprehensive Mobile Fix */
 @import './styles/mobile-responsive-fix.css';
 
+/* Import Unified Design System */
+@import './styles/unified-design-system.css';
+
 /* Dark Mode Styles */
 .dark-mode {
   /* Dark Background Colors */

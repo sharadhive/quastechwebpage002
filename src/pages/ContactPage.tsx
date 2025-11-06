@@ -571,9 +571,9 @@ I would like to get in touch with you regarding the course.`;
                     repeat: Infinity,
                     ease: "easeInOut" 
                   }}
-                  src="/assets/contact_imges/Contact_us-01-removebg-preview.png"
+                  src="/images/studentreviewnamesaspercourses/contect us.png"
                   alt="Contact Us"
-                  className="relative w-80 h-80 object-contain drop-shadow-2xl"
+                  className="relative w-96 h-96 md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px] object-contain drop-shadow-2xl"
                 />
               </div>
             </motion.div>

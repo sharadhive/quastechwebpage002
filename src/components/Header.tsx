@@ -339,7 +339,7 @@ const Header = () => {
                     className="flex items-center gap-1.5"
                     whileHover={{ scale: 1.05 }}
                   >
-                    <span className="font-medium text-xs">🎓 100+ Students Placed</span>
+                    <span className="font-medium text-xs">🎓 10k+ Students Placed</span>
                   </motion.div>
                   <motion.div 
                     className="flex items-center gap-1.5"

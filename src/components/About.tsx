@@ -257,7 +257,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      <section id="about" className="relative pt-4 pb-8 md:pt-6 md:pb-12 overflow-x-hidden">
+      <section id="about" className="relative section-spacing-compact overflow-x-hidden">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* UNIFIED HERO SECTION - REMOVED/COMMENTED OUT */}
           {/* <motion.div
@@ -359,17 +359,10 @@ const About = () => {
           {/* UNIFIED WHY US SECTION */}
           <div className="section-unified">
             <div className="section-header -mt-4">
-              <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full font-bold uppercase bg-gradient-to-r from-blue-500 to-orange-500 text-white shadow-lg mb-4 tracking-widest text-sm">
-                <Sparkles className="w-5 h-5 text-white drop-shadow" />
-                <span>WHY CHOOSE US</span>
+              <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2 mb-5 md:mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow-lg text-white text-sm md:text-base font-semibold">
+                <Sparkles className="w-4 h-4 md:w-5 md:h-5" />
+                WHY CHOOSE US
               </div>
-              <h2 className="heading-institute leading-tight">
-                Why Choose QUASTECH
-              </h2>
-              <div className="section-divider" />
-              <p className="section-subtitle">
-                Discover what makes QUASTECH the preferred choice for ambitious professionals
-              </p>
             </div>
             {/* UNIFIED GRID LAYOUT - Why Choose Us */}
             <div className="grid-features">

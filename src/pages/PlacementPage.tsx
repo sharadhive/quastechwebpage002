@@ -28,7 +28,7 @@ const students = [
   {
     name: "Dipesh Sawant",
     role: "Full Stack Developer",
-    image: "/images/studentreviews01/ReWDipeshSawant.jpg"
+    image: "/images/studentreviewnamesaspercourses/dipeshsavantsoftwaretesting.png"
   },
   {
     name: "Kanchan Rane",

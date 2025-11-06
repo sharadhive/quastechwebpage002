@@ -33,7 +33,7 @@ const Reviews = () => {
       role: "Full Stack Developer",
       course: "MERN Stack Development",
       rating: 5,
-      image: "/images/studentreviews01/ReWDipeshSawant.jpg",
+      image: "/images/studentreviewnamesaspercourses/dipeshsavantsoftwaretesting.png",
       review: "The Data Science course at QUASTECH is exceptional. The curriculum is up-to-date with industry standards, and the placement assistance is phenomenal. I highly recommend QUASTECH to anyone looking to break into tech.",
       videoUrl: "#"
     },
@@ -102,29 +102,23 @@ const Reviews = () => {
   };
 
   return (
-    <section id="reviews" className="py-8 md:py-12 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
-      <div className="container mx-auto px-4">
+    <section id="reviews" className="section-spacing-compact bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+      <div className="container mx-auto container-padding">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-10 mt-3 md:mt-4"
         >
-          <div className="inline-flex items-center gap-3 px-6 py-2 mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow text-white text-base font-semibold">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mr-1 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 17.27L18.18 21 16.54 14.42 22 10.08l-7.19-.61L12 3 9.19 9.47 2 10.08l5.46 4.34L5.82 21z" /></svg>
+          <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2 mb-5 md:mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow-lg text-white text-sm md:text-base font-semibold">
+            <Star className="w-4 h-4 md:w-5 md:h-5" />
             SUCCESS STORIES
           </div>
-          <h2 className="text-4xl lg:text-6xl font-extrabold mb-3">
-            <span className="bg-gradient-to-r from-[#6B5B95] via-[#9B6B8F] to-[#8B5A5A] bg-clip-text text-transparent">
-              Student Success Stories
-            </span>
+          <h2 className="heading-section gradient-text-primary mb-3 md:mb-4">
+            Alumni Transforming Their Careers
           </h2>
-          <div className="h-1 w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 mb-6" />
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Hear from our successful alumni who have transformed their careers and 
-            achieved their dream jobs after completing our courses.
-          </p>
+          <div className="h-0.5 w-24 md:w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
         </motion.div>
 
         {/* Stats */}
@@ -132,7 +126,7 @@ const Reviews = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-3 gap-6 mb-16"
+          className="grid grid-cols-3 gap-3 md:gap-5 mb-8 md:mb-10"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -140,11 +134,11 @@ const Reviews = () => {
               whileHover={{ scale: 1.05 }}
               className="text-center"
             >
-              <Card className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <Card className="p-4 md:p-5 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-0">
-                  <stat.icon className="w-8 h-8 text-yellow-500 mx-auto mb-4" />
-                  <div className="text-3xl font-bold mb-2">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <stat.icon className="w-6 h-6 md:w-7 md:h-7 text-yellow-500 mx-auto mb-2 md:mb-3" />
+                  <div className="text-2xl md:text-3xl font-bold mb-1 md:mb-2">{stat.value}</div>
+                  <div className="text-xs md:text-sm text-muted-foreground">{stat.label}</div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -156,10 +150,10 @@ const Reviews = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mb-16"
+          className="mb-8 md:mb-10"
         >
           <Card className="max-w-4xl mx-auto border-0 shadow-2xl overflow-hidden">
-            <div className="bg-gradient-primary p-8 text-white relative">
+            <div className="bg-gradient-primary p-5 md:p-6 text-white relative">
               <Quote className="absolute top-4 right-4 w-12 h-12 opacity-30" />
               <div className="flex items-center gap-6 mb-6">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white/20">
@@ -185,8 +179,8 @@ const Reviews = () => {
               </div>
             </div>
             
-            <CardContent className="p-8">
-              <blockquote className="text-lg text-muted-foreground mb-6 leading-relaxed">
+            <CardContent className="p-5 md:p-6">
+              <blockquote className="text-base md:text-lg text-muted-foreground mb-4 md:mb-5 leading-relaxed">
                 "{reviews[currentReview].review}"
               </blockquote>
               
@@ -230,10 +224,8 @@ const Reviews = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h3 className="text-3xl font-bold text-center mb-12">
-            <span className="bg-gradient-to-r from-[#6B5B95] via-[#9B6B8F] to-[#8B5A5A] bg-clip-text text-transparent">
-              More Success Stories
-            </span>
+          <h3 className="heading-subsection gradient-text-primary text-center mb-8 md:mb-10">
+            More Success Stories
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reviews.slice(0, 6).map((review, index) => (
@@ -245,8 +237,8 @@ const Reviews = () => {
                 whileHover={{ y: -10 }}
               >
                 <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4 mb-4">
+                  <CardContent className="p-4 md:p-5">
+                    <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
                       <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-200">
                         <img 
                           src={review.image} 
@@ -265,11 +257,11 @@ const Reviews = () => {
                       </div>
                     </div>
                     
-                    <blockquote className="text-sm text-muted-foreground mb-4 line-clamp-4">
+                    <blockquote className="text-sm text-muted-foreground mb-3 md:mb-4 line-clamp-4">
                       "{review.review.substring(0, 120)}..."
                     </blockquote>
                     
-                    <div className="flex items-center justify-between pt-4 border-t">
+                    <div className="flex items-center justify-between pt-3 md:pt-4 border-t">
                       {review.hasVideo && (
                         <Button 
                           variant="ghost" 
@@ -302,21 +294,21 @@ const Reviews = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-16"
+          className="text-center mt-10 md:mt-12"
         >
-          <div className="bg-gradient-hero rounded-3xl p-8 lg:p-12 text-white">
-            <h3 className="text-3xl font-bold mb-4">
+          <div className="bg-gradient-hero rounded-2xl p-6 md:p-8 lg:p-10 text-white shadow-xl">
+            <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
               Ready to Write Your Success Story?
             </h3>
-            <p className="text-xl mb-8 text-white/90">
+            <p className="text-sm md:text-base mb-5 md:mb-6 text-white/90 max-w-3xl mx-auto">
               Join thousands of successful professionals who transformed their careers with QUASTECH
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="glass" size="lg">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+              <Button variant="glass" size="lg" className="text-sm md:text-base font-semibold">
                 Start Your Journey Today
               </Button>
-              <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white hover:text-primary">
-                Placement
+              <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white hover:text-primary text-sm md:text-base">
+                View Placements
               </Button>
             </div>
           </div>

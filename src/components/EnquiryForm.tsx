@@ -143,26 +143,23 @@ Please provide me with more information about this course.`;
   ];
 
   return (
-    <section id="enquiry" className="py-8 md:py-12 relative bg-gradient-to-br from-gray-50 to-blue-50/30">
+    <section id="enquiry" className="section-spacing-compact relative bg-gradient-to-br from-gray-50 to-blue-50/30">
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-8"
+          className="text-center mb-8 md:mb-10 mt-3 md:mt-4"
         >
-          <div className="inline-flex items-center gap-2 px-6 py-2 mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow text-white text-sm font-bold uppercase">
-            <MessageCircle className="w-5 h-5 text-white drop-shadow" />
+          <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2 mb-5 md:mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow-lg text-white text-sm md:text-base font-semibold">
+            <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
             GET IN TOUCH
           </div>
-          <h2 className="heading-institute-lg mb-6">
-            Ready to Start Your
-            <span className="block text-gradient-institute">Career Journey?</span>
+          <h2 className="heading-section gradient-text-primary mb-3 md:mb-4">
+            Start Your Career Journey
           </h2>
-          <p className="text-lead max-w-3xl mx-auto">
-            Get personalized guidance and detailed information about our courses. Our experts are here to help you choose the right path.
-          </p>
+          <div className="h-0.5 w-24 md:w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto items-start">

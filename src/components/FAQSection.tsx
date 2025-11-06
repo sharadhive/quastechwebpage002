@@ -51,39 +51,37 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="py-20 px-4 bg-gradient-to-b from-blue-50 via-white to-orange-50">
+    <section id="faq" className="section-spacing-compact container-padding bg-gradient-to-b from-blue-50 via-white to-orange-50">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-6 py-2 mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow text-white text-base font-semibold">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mr-1 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 17.27L18.18 21 16.54 14.42 22 10.08l-7.19-.61L12 3 9.19 9.47 2 10.08l5.46 4.34L5.82 21z" /></svg>
-            FREQUENTLY ASKED QUESTIONS
+        <div className="text-center mb-8 md:mb-10 mt-3 md:mt-4">
+          <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2 mb-5 md:mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow-lg text-white text-sm md:text-base font-semibold">
+            <HelpCircle className="w-4 h-4 md:w-5 md:h-5" />
+            FAQ
           </div>
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-3">
-            <span className="bg-gradient-to-r from-[#6B5B95] via-[#9B6B8F] to-[#8B5A5A] bg-clip-text text-transparent">
-              Frequently Asked Questions
-            </span>
+          <h2 className="heading-section gradient-text-primary mb-3 md:mb-4">
+            Your Questions Answered
           </h2>
-          <div className="h-1 w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
+          <div className="h-0.5 w-24 md:w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 items-center">
           {/* FAQ Accordion */}
-          <div className="order-2 lg:order-1 space-y-4">
+          <div className="order-2 lg:order-1 space-y-3 md:space-y-4">
             {faqData.map((item) => (
               <div
                 key={item.id}
-                className="border border-blue-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden bg-white"
+                className="border border-blue-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden bg-white"
               >
                 <button
                   onClick={() => toggleItem(item.id)}
-                  className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                  className="w-full flex items-center justify-between p-4 md:p-5 text-left focus:outline-none"
                 >
-                  <div className="flex items-start gap-4">
-                    <span className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-orange-500 text-white font-bold rounded-lg shadow-md">
+                  <div className="flex items-start gap-3 md:gap-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 md:w-9 md:h-9 bg-gradient-to-br from-blue-600 to-orange-500 text-white text-sm md:text-base font-bold rounded-lg shadow-md flex-shrink-0">
                       {item.id.toString().padStart(2, "0")}
                     </span>
-                    <h3 className="text-lg font-semibold text-blue-900 leading-relaxed">
+                    <h3 className="text-base md:text-lg font-semibold text-blue-900 leading-snug">
                       {item.question}
                     </h3>
                   </div>
@@ -98,12 +96,12 @@ const FAQSection = () => {
 
                 <div
                   className={`transition-all duration-300 ${
-                    openItems.includes(item.id) ? "max-h-96 pb-6" : "max-h-0"
+                    openItems.includes(item.id) ? "max-h-96 pb-4 md:pb-5" : "max-h-0"
                   } overflow-hidden`}
                 >
-                  <div className="px-6">
-                    <div className="ml-14">
-                      <p className="text-gray-600 leading-relaxed">
+                  <div className="px-4 md:px-5">
+                    <div className="ml-11 md:ml-13">
+                      <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                         {item.answer}
                       </p>
                     </div>

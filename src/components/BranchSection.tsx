@@ -76,7 +76,7 @@ const BranchSection = () => {
   return (
     <section
       id="branches"
-      className="relative bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-24 overflow-hidden"
+      className="relative bg-gradient-to-br from-indigo-50 via-white to-purple-50 section-spacing-compact overflow-hidden"
     >
       {/* Animated Background Blobs */}
       <motion.div
@@ -93,23 +93,19 @@ const BranchSection = () => {
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         {/* Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-12 mt-3 md:mt-4"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 px-6 py-2 mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow text-white text-sm font-bold uppercase">
-            <Building2 className="w-5 h-5 text-white drop-shadow" />
-            OUR CAMPUSES
+          <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2 mb-5 md:mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow-lg text-white text-sm md:text-base font-semibold">
+            <MapPin className="w-4 h-4 md:w-5 md:h-5" />
+            OUR LOCATIONS
           </div>
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
-            <span className="bg-gradient-to-r from-[#6B5B95] via-[#9B6B8F] to-[#8B5A5A] bg-clip-text text-transparent">
-              Explore Our Branches
-            </span>
+          <h2 className="heading-section gradient-text-primary mb-3 md:mb-4">
+            Explore Our Branches
           </h2>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            Pick your city and see what our student-friendly campuses look like.
-          </p>
+          <div className="h-0.5 w-24 md:w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
         </motion.div>
 
         {/* Branch Selector with Animated Underline */}

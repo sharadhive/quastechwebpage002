@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
@@ -80,11 +80,11 @@ const SoftwareTestingTraining = () => {
     // Create WhatsApp message with all form details
     const whatsappMessage = `*New Counselling Session Request*
 
-👤 *Name:* ${formData.name}
-📧 *Email:* ${formData.email}
-📱 *Phone:* ${formData.phone}
-💬 *Message:* ${formData.message || 'No additional message'}
-📚 *Course Page:* Software Testing Training
+?? *Name:* ${formData.name}
+?? *Email:* ${formData.email}
+?? *Phone:* ${formData.phone}
+?? *Message:* ${formData.message || 'No additional message'}
+?? *Course Page:* Software Testing Training
 
 I am interested in booking a free counselling session. Please contact me at your earliest convenience.`;
 
@@ -92,12 +92,12 @@ I am interested in booking a free counselling session. Please contact me at your
     const whatsappNumber = "918422800381";
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
-    console.log("📱 Sending Counselling Request to WhatsApp:", whatsappMessage);
+    console.log("?? Sending Counselling Request to WhatsApp:", whatsappMessage);
     const whatsappWindow = window.open(whatsappURL, '_blank', 'noopener,noreferrer');
     
     if (whatsappWindow) {
       toast({
-        title: "✅ WhatsApp Opened!",
+        title: "? WhatsApp Opened!",
         description: "Your counselling request is ready in WhatsApp. Just click Send!",
       });
       setTimeout(() => {
@@ -105,7 +105,7 @@ I am interested in booking a free counselling session. Please contact me at your
       }, 2000);
     } else {
       toast({
-        title: "⚠️ Allow Popups",
+        title: "?? Allow Popups",
         description: "Please allow popups to send your request via WhatsApp",
         variant: "destructive"
       });
@@ -438,7 +438,7 @@ I am interested in booking a free counselling session. Please contact me at your
                   <div className="flex items-center gap-2 md:gap-3 flex-wrap mb-2">
                     {[
                       { icon: "G", label: "Google", rating: "4.2/5" },
-                      { icon: "⭐", label: "", rating: "4.8/5" },
+                      { icon: "?", label: "", rating: "4.8/5" },
                       { icon: "P", label: "", rating: "4.6/5" },
                       { icon: "Jd", label: "Justdial", rating: "4.3/5" },
                       { icon: "f", label: "Facebook", rating: "4.5/5" }
@@ -566,7 +566,7 @@ I am interested in booking a free counselling session. Please contact me at your
                     <div>
                       <div className="relative">
                         <div className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
-                          <span className="text-lg">🇮🇳</span>
+                          <span className="text-lg">????</span>
                           <span className="text-gray-600 font-medium text-sm">(+91)</span>
                           <ChevronRight className="w-3 h-3 text-gray-400" />
                         </div>
@@ -1136,169 +1136,102 @@ I am interested in booking a free counselling session. Please contact me at your
                     </span>
                   </h3>
                   
-                  {/* Circular Process Diagram */}
-                  <div className="relative w-full max-w-md mx-auto">
-                    <div className="relative w-full aspect-square">
-                      {/* Outer Circle Container */}
-                      <svg className="w-full h-full" viewBox="0 0 400 400">
-                        {/* Step 1: Program - Light Blue (Top) */}
-                        <g transform="rotate(-90 200 200)">
+                  {/* Circular Process Diagram - 3D Animated & Professional */}
+                  <div className="relative w-full max-w-lg mx-auto" style={{perspective: '1000px'}}>
+                    <motion.div 
+                      className="relative w-full aspect-square"
+                      initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
+                      whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                      transition={{ duration: 1, type: "spring", bounce: 0.4 }}
+                      whileHover={{ scale: 1.05, rotateZ: 2, transition: { duration: 0.3 } }}
+                      viewport={{ once: true }}
+                      style={{transformStyle: 'preserve-3d'}}
+                    >
+                      <svg className="w-full h-full" viewBox="0 0 400 400" style={{filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.25))'}}>
+                        {/* Step 1: Program Selection - Light Blue (Top, 12 o'clock) */}
+                        <g className="group">
                           <path
-                            d="M 200 200 L 200 50 A 150 150 0 0 1 350 200 Z"
+                            d="M 200 200 L 200 50 A 150 150 0 0 1 329.9 125 Z"
                             fill="#60a5fa"
-                            className="hover:opacity-90 transition-opacity"
+                            className="hover:opacity-90 transition-opacity cursor-pointer"
+                            style={{filter: 'drop-shadow(0 4px 6px rgba(59, 130, 246, 0.4))'}}
                           />
-                          <text
-                            x="270"
-                            y="130"
-                            transform="rotate(45 270 130)"
-                            fill="white"
-                            fontSize="14"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            1 Program
-                          </text>
+                          <text x="250" y="95" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">STEP 1</text>
+                          <text x="250" y="115" fill="white" fontSize="14" fontWeight="600" textAnchor="middle">Program</text>
                         </g>
 
-                        {/* Step 2: Experts Mentors - Dark Blue (Right) */}
-                        <g transform="rotate(30 200 200)">
+                        {/* Step 2: Expert Mentors - Dark Blue (2 o'clock) */}
+                        <g>
                           <path
-                            d="M 200 200 L 350 200 A 150 150 0 0 1 350 350 L 200 200 Z"
+                            d="M 200 200 L 329.9 125 A 150 150 0 0 1 329.9 275 Z"
                             fill="#2563eb"
-                            className="hover:opacity-90 transition-opacity"
+                            className="hover:opacity-80 transition-opacity cursor-pointer"
                           />
-                          <text
-                            x="330"
-                            y="280"
-                            transform="rotate(105 330 280)"
-                            fill="white"
-                            fontSize="13"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            Experts Mentors
-                          </text>
+                          <text x="315" y="185" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">STEP 2</text>
+                          <text x="315" y="205" fill="white" fontSize="13" fontWeight="600" textAnchor="middle">Expert</text>
+                          <text x="315" y="222" fill="white" fontSize="13" fontWeight="600" textAnchor="middle">Mentors</text>
                         </g>
 
-                        {/* Step 3: Project Preparation - Teal/Green (Bottom-Right) */}
-                        <g transform="rotate(90 200 200)">
+                        {/* Step 3: Project Preparation - Teal (4 o'clock) */}
+                        <g>
                           <path
-                            d="M 200 200 L 350 350 A 150 150 0 0 1 200 350 Z"
+                            d="M 200 200 L 329.9 275 A 150 150 0 0 1 200 350 Z"
                             fill="#14b8a6"
-                            className="hover:opacity-90 transition-opacity"
+                            className="hover:opacity-80 transition-opacity cursor-pointer"
                           />
-                          <text
-                            x="330"
-                            y="380"
-                            transform="rotate(165 330 380)"
-                            fill="white"
-                            fontSize="12"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            Project Preparation
-                          </text>
+                          <text x="250" y="295" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">STEP 3</text>
+                          <text x="250" y="315" fill="white" fontSize="12" fontWeight="600" textAnchor="middle">Project</text>
+                          <text x="250" y="330" fill="white" fontSize="12" fontWeight="600" textAnchor="middle">Preparation</text>
                         </g>
 
-                        {/* Step 4: Assignment Process - Orange (Bottom-Left) */}
-                        <g transform="rotate(150 200 200)">
+                        {/* Step 4: Assignment - Orange (8 o'clock) */}
+                        <g>
                           <path
-                            d="M 200 200 L 200 350 A 150 150 0 0 1 50 350 L 200 200 Z"
+                            d="M 200 200 L 200 350 A 150 150 0 0 1 70.1 275 Z"
                             fill="#f97316"
-                            className="hover:opacity-90 transition-opacity"
+                            className="hover:opacity-80 transition-opacity cursor-pointer"
                           />
-                          <text
-                            x="70"
-                            y="380"
-                            transform="rotate(225 70 380)"
-                            fill="white"
-                            fontSize="12"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            STEP 4 Process
-                          </text>
+                          <text x="150" y="295" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">STEP 4</text>
+                          <text x="150" y="315" fill="white" fontSize="13" fontWeight="600" textAnchor="middle">Assignment</text>
+                          <text x="150" y="332" fill="white" fontSize="13" fontWeight="600" textAnchor="middle">Process</text>
                         </g>
 
-                        {/* Step 5: Grooming Session - Pink/Magenta (Left) */}
-                        <g transform="rotate(210 200 200)">
+                        {/* Step 5: Grooming Session - Pink (10 o'clock) */}
+                        <g>
                           <path
-                            d="M 200 200 L 50 350 A 150 150 0 0 1 50 200 L 200 200 Z"
+                            d="M 200 200 L 70.1 275 A 150 150 0 0 1 70.1 125 Z"
                             fill="#ec4899"
-                            className="hover:opacity-90 transition-opacity"
+                            className="hover:opacity-80 transition-opacity cursor-pointer"
                           />
-                          <text
-                            x="70"
-                            y="280"
-                            transform="rotate(285 70 280)"
-                            fill="white"
-                            fontSize="12"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            STEP 5
-                          </text>
-                          <text
-                            x="70"
-                            y="300"
-                            transform="rotate(285 70 300)"
-                            fill="white"
-                            fontSize="12"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            Grooming Session
-                          </text>
+                          <text x="85" y="185" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">STEP 5</text>
+                          <text x="85" y="205" fill="white" fontSize="12" fontWeight="600" textAnchor="middle">Grooming</text>
+                          <text x="85" y="222" fill="white" fontSize="12" fontWeight="600" textAnchor="middle">Session</text>
                         </g>
 
-                        {/* Step 6: STUDENT PLACED - Green (Top-Left, Larger segment) */}
-                        <g transform="rotate(270 200 200)">
+                        {/* Step 6: Student Placed - Green (11 o'clock) */}
+                        <g>
                           <path
-                            d="M 200 200 L 50 200 A 150 150 0 0 1 200 50 L 200 200 Z"
+                            d="M 200 200 L 70.1 125 A 150 150 0 0 1 200 50 Z"
                             fill="#10b981"
-                            className="hover:opacity-90 transition-opacity"
+                            className="hover:opacity-80 transition-opacity cursor-pointer"
                           />
-                          <text
-                            x="130"
-                            y="120"
-                            transform="rotate(315 130 120)"
-                            fill="white"
-                            fontSize="14"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            STEP 6
-                          </text>
-                          <text
-                            x="130"
-                            y="145"
-                            transform="rotate(315 130 145)"
-                            fill="white"
-                            fontSize="16"
-                            fontWeight="extrabold"
-                            textAnchor="middle"
-                          >
-                            STUDENT PLACED
-                          </text>
+                          <text x="150" y="95" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">STEP 6</text>
+                          <text x="150" y="115" fill="white" fontSize="13" fontWeight="600" textAnchor="middle">STUDENT</text>
+                          <text x="150" y="132" fill="white" fontSize="13" fontWeight="600" textAnchor="middle">PLACED</text>
                         </g>
 
-                        {/* Center Circle */}
-                        <circle cx="200" cy="200" r="80" fill="white" className="shadow-xl" />
-                        <text
-                          x="200"
-                          y="200"
-                          transform="rotate(-90 200 200)"
-                          fill="#1f2937"
-                          fontSize="14"
-                          fontWeight="bold"
-                          textAnchor="middle"
-                          dominantBaseline="middle"
-                        >
-                          PROCESS
-                        </text>
+                        {/* Center Circle - Clean & Professional */}
+                        <defs>
+                          <radialGradient id="centerGrad">
+                            <stop offset="0%" style={{stopColor: '#ffffff', stopOpacity: 1}} />
+                            <stop offset="100%" style={{stopColor: '#f0f9ff', stopOpacity: 1}} />
+                          </radialGradient>
+                        </defs>
+                        <circle cx="200" cy="200" r="75" fill="url(#centerGrad)" style={{filter: 'drop-shadow(0 8px 16px rgba(30, 64, 175, 0.3))'}} />
+                        <text x="200" y="190" fill="#1e40af" fontSize="26" fontWeight="extrabold" textAnchor="middle">MOCK</text>
+                        <text x="200" y="220" fill="#1e40af" fontSize="22" fontWeight="extrabold" textAnchor="middle">INTERVIEW</text>
                       </svg>
-                    </div>
+                    </motion.div>
                   </div>
                 </motion.div>
               </div>
@@ -1362,7 +1295,7 @@ I am interested in booking a free counselling session. Please contact me at your
                       </label>
                       <div className="flex items-center gap-2">
                         <div className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg bg-gray-50">
-                          <span className="text-sm font-semibold">🇮🇳</span>
+                          <span className="text-sm font-semibold">????</span>
                           <span className="text-sm font-semibold">(+91)</span>
                         </div>
                         <Input
@@ -1994,7 +1927,7 @@ I am interested in booking a free counselling session. Please contact me at your
                 </span>
               </h2>
               <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-                Clear, concise answers about our Software Testing Training—curriculum, format, placement, and more.
+                Clear, concise answers about our Software Testing Training�curriculum, format, placement, and more.
               </p>
             </motion.div>
 
@@ -2039,13 +1972,13 @@ I am interested in booking a free counselling session. Please contact me at your
                       <span className="text-gray-900">What is the course duration and weekly schedule?</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 text-gray-700 leading-relaxed">
-                      Typical duration is 10–14 weeks depending on the track. Sessions are planned on weekdays/weekends with additional practice and doubt-clearing support.
+                      Typical duration is 10�14 weeks depending on the track. Sessions are planned on weekdays/weekends with additional practice and doubt-clearing support.
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="faq-5" className="group bg-white border border-blue-100 rounded-2xl mb-1 shadow-sm hover:shadow-lg transition-shadow">
                     <AccordionTrigger className="px-6 py-5 text-left font-semibold hover:no-underline">
-                      <span className="text-gray-900">Who can join—do I need coding experience?</span>
+                      <span className="text-gray-900">Who can join�do I need coding experience?</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 text-gray-700 leading-relaxed">
                       No prior coding is required for the Manual Testing track. Basic programming is introduced gradually for the Automation track with simple, guided practice.

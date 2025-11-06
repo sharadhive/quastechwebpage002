@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
@@ -1097,169 +1097,116 @@ const JavaDevelopmentTraining = () => {
                     </span>
                   </h3>
                   
-                  {/* Circular Process Diagram */}
-                  <div className="relative w-full max-w-md mx-auto">
-                    <div className="relative w-full aspect-square">
-                      {/* Outer Circle Container */}
-                      <svg className="w-full h-full" viewBox="0 0 400 400">
-                        {/* Step 1: Program - Light Blue (Top) */}
-                        <g transform="rotate(-90 200 200)">
+                  {/* Circular Process Diagram - 3D Animated & Professional */}
+                  <div className="relative w-full max-w-lg mx-auto" style={{perspective: '1000px'}}>
+                    <motion.div 
+                      className="relative w-full aspect-square"
+                      initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
+                      whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                      transition={{ duration: 1, type: "spring", bounce: 0.4 }}
+                      whileHover={{ scale: 1.05, rotateZ: 2, transition: { duration: 0.3 } }}
+                      viewport={{ once: true }}
+                      style={{transformStyle: 'preserve-3d'}}
+                    >
+                      <svg className="w-full h-full" viewBox="0 0 400 400" style={{filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.25))'}}>
+                        {/* Step 1: Program Selection - Light Blue (Top, 12 o'clock) */}
+                        <g className="group">
+                          <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" style={{stopColor: '#60a5fa', stopOpacity: 1}} />
+                              <stop offset="100%" style={{stopColor: '#3b82f6', stopOpacity: 1}} />
+                            </linearGradient>
+                            <filter id="glow1">
+                              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                              <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                              </feMerge>
+                            </filter>
+                          </defs>
                           <path
-                            d="M 200 200 L 200 50 A 150 150 0 0 1 350 200 Z"
-                            fill="#60a5fa"
-                            className="hover:opacity-90 transition-opacity"
-                          />
-                          <text
-                            x="270"
-                            y="130"
-                            transform="rotate(45 270 130)"
-                            fill="white"
-                            fontSize="14"
-                            fontWeight="bold"
-                            textAnchor="middle"
+                            d="M 200 200 L 200 50 A 150 150 0 0 1 329.9 125 Z"
+                            fill="url(#grad1)"
+                            className="transition-all duration-500 cursor-pointer"
+                            style={{filter: 'drop-shadow(0 4px 6px rgba(59, 130, 246, 0.4))'}}
                           >
-                            1 Program
-                          </text>
+                            </path>
+                          <text x="250" y="95" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle" filter="url(#glow1)">STEP 1</text>
+                          <text x="250" y="115" fill="white" fontSize="14" fontWeight="600" textAnchor="middle">Program</text>
                         </g>
 
-                        {/* Step 2: Experts Mentors - Dark Blue (Right) */}
-                        <g transform="rotate(30 200 200)">
+                        {/* Step 2: Expert Mentors - Dark Blue (2 o'clock) */}
+                        <g>
                           <path
-                            d="M 200 200 L 350 200 A 150 150 0 0 1 350 350 L 200 200 Z"
+                            d="M 200 200 L 329.9 125 A 150 150 0 0 1 329.9 275 Z"
                             fill="#2563eb"
-                            className="hover:opacity-90 transition-opacity"
+                            className="hover:opacity-80 transition-opacity cursor-pointer"
                           />
-                          <text
-                            x="330"
-                            y="280"
-                            transform="rotate(105 330 280)"
-                            fill="white"
-                            fontSize="13"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            Experts Mentors
-                          </text>
+                          <text x="315" y="185" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">STEP 2</text>
+                          <text x="315" y="205" fill="white" fontSize="13" fontWeight="600" textAnchor="middle">Expert</text>
+                          <text x="315" y="222" fill="white" fontSize="13" fontWeight="600" textAnchor="middle">Mentors</text>
                         </g>
 
-                        {/* Step 3: Project Preparation - Teal/Green (Bottom-Right) */}
-                        <g transform="rotate(90 200 200)">
+                        {/* Step 3: Project Preparation - Teal (4 o'clock) */}
+                        <g>
                           <path
-                            d="M 200 200 L 350 350 A 150 150 0 0 1 200 350 Z"
+                            d="M 200 200 L 329.9 275 A 150 150 0 0 1 200 350 Z"
                             fill="#14b8a6"
-                            className="hover:opacity-90 transition-opacity"
+                            className="hover:opacity-80 transition-opacity cursor-pointer"
                           />
-                          <text
-                            x="330"
-                            y="380"
-                            transform="rotate(165 330 380)"
-                            fill="white"
-                            fontSize="12"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            Project Preparation
-                          </text>
+                          <text x="250" y="295" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">STEP 3</text>
+                          <text x="250" y="315" fill="white" fontSize="12" fontWeight="600" textAnchor="middle">Project</text>
+                          <text x="250" y="330" fill="white" fontSize="12" fontWeight="600" textAnchor="middle">Preparation</text>
                         </g>
 
-                        {/* Step 4: Assignment Process - Orange (Bottom-Left) */}
-                        <g transform="rotate(150 200 200)">
+                        {/* Step 4: Assignment - Orange (8 o'clock) */}
+                        <g>
                           <path
-                            d="M 200 200 L 200 350 A 150 150 0 0 1 50 350 L 200 200 Z"
+                            d="M 200 200 L 200 350 A 150 150 0 0 1 70.1 275 Z"
                             fill="#f97316"
-                            className="hover:opacity-90 transition-opacity"
+                            className="hover:opacity-80 transition-opacity cursor-pointer"
                           />
-                          <text
-                            x="70"
-                            y="380"
-                            transform="rotate(225 70 380)"
-                            fill="white"
-                            fontSize="12"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            STEP 4 Process
-                          </text>
+                          <text x="150" y="295" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">STEP 4</text>
+                          <text x="150" y="315" fill="white" fontSize="13" fontWeight="600" textAnchor="middle">Assignment</text>
+                          <text x="150" y="332" fill="white" fontSize="13" fontWeight="600" textAnchor="middle">Process</text>
                         </g>
 
-                        {/* Step 5: Grooming Session - Pink/Magenta (Left) */}
-                        <g transform="rotate(210 200 200)">
+                        {/* Step 5: Grooming Session - Pink (10 o'clock) */}
+                        <g>
                           <path
-                            d="M 200 200 L 50 350 A 150 150 0 0 1 50 200 L 200 200 Z"
+                            d="M 200 200 L 70.1 275 A 150 150 0 0 1 70.1 125 Z"
                             fill="#ec4899"
-                            className="hover:opacity-90 transition-opacity"
+                            className="hover:opacity-80 transition-opacity cursor-pointer"
                           />
-                          <text
-                            x="70"
-                            y="280"
-                            transform="rotate(285 70 280)"
-                            fill="white"
-                            fontSize="12"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            STEP 5
-                          </text>
-                          <text
-                            x="70"
-                            y="300"
-                            transform="rotate(285 70 300)"
-                            fill="white"
-                            fontSize="12"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            Grooming Session
-                          </text>
+                          <text x="85" y="185" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">STEP 5</text>
+                          <text x="85" y="205" fill="white" fontSize="12" fontWeight="600" textAnchor="middle">Grooming</text>
+                          <text x="85" y="222" fill="white" fontSize="12" fontWeight="600" textAnchor="middle">Session</text>
                         </g>
 
-                        {/* Step 6: STUDENT PLACED - Green (Top-Left, Larger segment) */}
-                        <g transform="rotate(270 200 200)">
+                        {/* Step 6: Student Placed - Green (11 o'clock) */}
+                        <g>
                           <path
-                            d="M 200 200 L 50 200 A 150 150 0 0 1 200 50 L 200 200 Z"
+                            d="M 200 200 L 70.1 125 A 150 150 0 0 1 200 50 Z"
                             fill="#10b981"
-                            className="hover:opacity-90 transition-opacity"
+                            className="hover:opacity-80 transition-opacity cursor-pointer"
                           />
-                          <text
-                            x="130"
-                            y="120"
-                            transform="rotate(315 130 120)"
-                            fill="white"
-                            fontSize="14"
-                            fontWeight="bold"
-                            textAnchor="middle"
-                          >
-                            STEP 6
-                          </text>
-                          <text
-                            x="130"
-                            y="145"
-                            transform="rotate(315 130 145)"
-                            fill="white"
-                            fontSize="16"
-                            fontWeight="extrabold"
-                            textAnchor="middle"
-                          >
-                            STUDENT PLACED
-                          </text>
+                          <text x="150" y="95" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">STEP 6</text>
+                          <text x="150" y="115" fill="white" fontSize="13" fontWeight="600" textAnchor="middle">STUDENT</text>
+                          <text x="150" y="132" fill="white" fontSize="13" fontWeight="600" textAnchor="middle">PLACED</text>
                         </g>
 
-                        {/* Center Circle */}
-                        <circle cx="200" cy="200" r="80" fill="white" className="shadow-xl" />
-                        <text
-                          x="200"
-                          y="200"
-                          transform="rotate(-90 200 200)"
-                          fill="#1f2937"
-                          fontSize="14"
-                          fontWeight="bold"
-                          textAnchor="middle"
-                          dominantBaseline="middle"
-                        >
-                          PROCESS
-                        </text>
+                        {/* Center Circle - Animated & Glowing */}
+                        <defs>
+                          <radialGradient id="centerGrad">
+                            <stop offset="0%" style={{stopColor: '#ffffff', stopOpacity: 1}} />
+                            <stop offset="100%" style={{stopColor: '#f0f9ff', stopOpacity: 1}} />
+                          </radialGradient>
+                        </defs>
+                        <circle cx="200" cy="200" r="75" fill="url(#centerGrad)" style={{filter: 'drop-shadow(0 8px 16px rgba(30, 64, 175, 0.3))'}} />
+                        <text x="200" y="190" fill="#1e40af" fontSize="26" fontWeight="extrabold" textAnchor="middle">MOCK</text>
+                        <text x="200" y="220" fill="#1e40af" fontSize="22" fontWeight="extrabold" textAnchor="middle">INTERVIEW</text>
                       </svg>
-                    </div>
+                    </motion.div>
                   </div>
                 </motion.div>
               </div>

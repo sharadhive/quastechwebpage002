@@ -82,7 +82,7 @@ const About = () => {
   const whyUsFeatures = [
     { icon: GraduationCap, title: "Industry Requirement", description: "Industry-focused syllabus with practical approach and latest technologies", color: "from-blue-500 to-indigo-600" },
     { icon: DollarSign, title: "Cost Effective", description: "Affordable fees with high-quality training and industry-relevant content", color: "from-green-500 to-teal-600" },
-    { icon: Monitor, title: "Online/Offline Training", description: "Flexible learning options with both online and offline modes to suit your schedule and learning style", color: "from-orange-500 to-pink-600" },
+    { icon: Monitor, title: "Online/Offline Training", description: "Flexible learning options with both online and offline modes of training", color: "from-orange-500 to-pink-600" },
     { icon: UserCheck, title: "Expert Trainer", description: "Experienced mentors guiding students with real industry insights", color: "from-purple-500 to-fuchsia-600" },
     { icon: FolderOpen, title: "Projects & Assessment", description: "Real-world projects & assessments to meet Industry demands", color: "from-cyan-500 to-blue-600" },
     { icon: Presentation, title: "Guest Lecture", description: "Sessions by industry professionals sharing valuable insights & case studies", color: "from-indigo-500 to-pink-500" },
@@ -257,7 +257,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      <section id="about" className="relative section-spacing-compact overflow-x-hidden">
+      <section id="about" className="relative section-spacing-compact">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* UNIFIED HERO SECTION - REMOVED/COMMENTED OUT */}
           {/* <motion.div

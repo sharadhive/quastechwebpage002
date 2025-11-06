@@ -142,15 +142,13 @@ const Placement = () => {
               <Briefcase className="w-4 h-4 md:w-5 md:h-5" />
               PLACEMENT SUCCESS
             </div>
-            <h2 className="heading-section gradient-text-primary mb-3 md:mb-4">
-              Our Placement Success
-            </h2>
-            <div className="h-0.5 w-24 md:w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
+            <Subtitle text="Quastech Stats at a Glance" />
+            {/* <div className="h-0.5 w-24 md:w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" /> */}
           </motion.div>
 
           {/* 📊 Stats */}
           <div className="mb-8">
-            <Subtitle text="Quastech Stats at a Glance" />
+            {/* <Subtitle text="Quastech Stats at a Glance" /> */}
             <Swiper
               loop
               autoplay={{ delay: 3000 }}

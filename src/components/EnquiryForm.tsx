@@ -25,56 +25,16 @@ const EnquiryForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Format the WhatsApp message with all enquiry form data
-    const whatsappMessage = `*New Course Enquiry*
-
-👤 *Name:* ${formData.name}
-📧 *Email:* ${formData.email}
-📱 *Phone:* ${formData.phone}
-📚 *Course Interest:* ${formData.course || 'Not specified'}
-💬 *Message:* ${formData.message || 'No additional message'}
-
-Please provide me with more information about this course.`;
-
-    // Encode the message for URL
-    const encodedMessage = encodeURIComponent(whatsappMessage);
+    // Show success message
+    toast({
+      title: "✅ Enquiry Submitted!",
+      description: "Thank you for your interest. We'll contact you shortly.",
+    });
     
-    // QUASTECH WhatsApp number
-    const whatsappNumber = "918422800381";
-    
-    // Create WhatsApp URL
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-    
-    // Log for debugging
-    console.log("📱 Sending Enquiry to WhatsApp:");
-    console.log("Message:", whatsappMessage);
-    console.log("URL:", whatsappURL);
-    
-    // Open WhatsApp with the enquiry
-    const whatsappWindow = window.open(whatsappURL, '_blank', 'noopener,noreferrer');
-    
-    if (whatsappWindow) {
-      // Successfully opened
-      toast({
-        title: "✅ WhatsApp Opened!",
-        description: "Your enquiry is ready in WhatsApp. Just click Send!",
-      });
-      
-      // Reset form after a short delay
-      setTimeout(() => {
-        setFormData({ name: "", email: "", phone: "", course: "", message: "" });
-      }, 2000);
-    } else {
-      // Popup blocked - try alternative
-      toast({
-        title: "⚠️ Allow Popups",
-        description: "Please allow popups to send your enquiry via WhatsApp",
-        variant: "destructive"
-      });
-      
-      // Try opening in same window as fallback
-      window.location.href = whatsappURL;
-    }
+    // Reset form
+    setTimeout(() => {
+      setFormData({ name: "", email: "", phone: "", course: "", message: "" });
+    }, 1500);
   };
 
   const handleChange = (field: string, value: string) => {
@@ -85,29 +45,10 @@ Please provide me with more information about this course.`;
   const handleQuickAction = (actionType: string) => {
     switch(actionType) {
       case "Live Chat":
-        // Open WhatsApp with greeting message pre-filled
-        const chatMessage = "Hi, I would like to chat with a counselor about your courses.";
-        const encodedChatMessage = encodeURIComponent(chatMessage);
-        const whatsappURL = `https://wa.me/918422800381?text=${encodedChatMessage}`;
-        
-        console.log("📱 Opening Live Chat in WhatsApp:", chatMessage);
-        
-        const whatsappWindow = window.open(whatsappURL, '_blank', 'noopener,noreferrer');
-        
-        if (whatsappWindow) {
-          toast({
-            title: "✅ WhatsApp Opened!",
-            description: "Message is ready. Just click Send to start chat!",
-          });
-        } else {
-          toast({
-            title: "⚠️ Allow Popups",
-            description: "Please allow popups to open WhatsApp",
-            variant: "destructive"
-          });
-          // Fallback to same window
-          window.location.href = whatsappURL;
-        }
+        toast({
+          title: "Live Chat",
+          description: "Chat feature coming soon!",
+        });
         break;
       case "Book Demo":
         setShowBookDemoForm(true);
@@ -423,15 +364,15 @@ Please provide me with more information about this course.`;
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <Button 
                       type="submit" 
-                      className="w-full h-12 text-base font-bold bg-gradient-to-r from-green-500 via-green-600 to-green-700 hover:from-green-600 hover:via-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg"
+                      className="w-full h-12 text-base font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-orange-600 hover:from-blue-700 hover:via-blue-800 hover:to-orange-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg"
                     >
                       <Send className="w-4 h-4 mr-2" />
-                      Send to WhatsApp
+                      Submit Enquiry
                     </Button>
                   </motion.div>
                   
                   <p className="text-xs text-gray-500 text-center mt-2">
-                    ✓ Opens WhatsApp with your enquiry details. Just click Send there!
+                    ✓ We'll get back to you within 24 hours
                   </p>
 
                   {/* Partner Logos Section */}

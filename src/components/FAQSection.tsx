@@ -51,7 +51,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="section-spacing-compact container-padding bg-gradient-to-b from-blue-50 via-white to-orange-50">
+    <section id="faq" className="section-spacing-compact container-padding bg-gradient-to-b from-blue-50 via-white to-orange-50 pb-6 md:pb-8 pt-8 md:pt-10">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-8 md:mb-10 mt-3 md:mt-4">
@@ -115,8 +115,8 @@ const FAQSection = () => {
           <div className="order-1 lg:order-2">
             <div className="relative h-[350px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="/images/faq.png"
-                alt="FAQ"
+                src="/images/FAQ[1].png"
+                alt="Frequently Asked Questions"
                 className="w-full h-full object-contain bg-gradient-to-tr from-blue-100 to-orange-100 p-6"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>

@@ -16,7 +16,6 @@ import {
 
 // Helper component for list items
 const FooterLink = ({ href, name }) => {
-  // Check if it's an internal link (starts with /) or external link
   const isInternalLink = href.startsWith('/');
   
   if (isInternalLink) {
@@ -32,7 +31,7 @@ const FooterLink = ({ href, name }) => {
           }}
           className="flex items-center text-gray-300 hover:text-white transition-colors text-sm group"
         >
-          <ArrowRight className="w-3 h-3 mr-2 text-blue-400 group-hover:text-white transition-colors" />
+          <ArrowRight className="w-3 h-3 mr-2 text-blue-400 group-hover:text-orange-400 transition-colors" />
           {name}
         </Link>
       </li>
@@ -49,27 +48,42 @@ const FooterLink = ({ href, name }) => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           } else if (name === "Faq's") {
             e.preventDefault();
-            // Navigate to home page first, then scroll to FAQ section
             window.location.href = '/#faq';
           }
         }}
         className="flex items-center text-gray-300 hover:text-white transition-colors text-sm group"
       >
-        <ArrowRight className="w-3 h-3 mr-2 text-blue-400 group-hover:text-white transition-colors" />
+        <ArrowRight className="w-3 h-3 mr-2 text-blue-400 group-hover:text-orange-400 transition-colors" />
         {name}
       </a>
     </li>
   );
 };
 
-// Helper component for section titles
-const FooterTitle = ({ title }) => (
-  <h4 className="text-lg font-semibold mb-6 text-white uppercase tracking-wider">
+// Helper component for main section titles
+const FooterMainTitle = ({ title }) => (
+  <h3 className="text-lg md:text-xl font-extrabold mb-5 text-white uppercase tracking-wider border-b-2 border-orange-500 pb-2 inline-block">
     {title}
-  </h4>
+  </h3>
+);
+
+// Helper component for subsection titles
+const FooterSubTitle = ({ title }) => (
+  <h5 className="text-sm font-semibold text-blue-300 mb-3 mt-5 first:mt-0">{title}</h5>
 );
 
 const Footer = () => {
+  // Placement Courses with AI
+  const placementCoursesWithAI = [
+    { name: "Software Testing with AI", href: "/software-testing-training" },
+    { name: "Full Stack Java with AI", href: "/full-stack-java-development" },
+    { name: "Full Stack Python with AI", href: "/full-stack-python-development" },
+    { name: "Full Stack .NET with AI", href: "/full-stack-dotnet-development" },
+    { name: "Digital Marketing with AI", href: "/digital-marketing" },
+    { name: "Data Science with AI", href: "/python-data-science" },
+    { name: "Data Analytics with AI", href: "/data-analysis-visualization" },
+  ];
+
   // Certification Courses - Organized by Category
   const certificationCourses = {
     softwareTesting: [
@@ -83,10 +97,6 @@ const Footer = () => {
       { name: "Full Stack Python", href: "/full-stack-python-development" },
       { name: "Full Stack Web", href: "/web-development-course" },
       { name: "Full Stack .NET", href: "/full-stack-dotnet-development" },
-    ],
-    softwareDevelopment: [
-      { name: "Java Development", href: "/java-training" },
-      { name: "Python Development", href: "/python-training" },
       { name: "MEAN Stack", href: "/mean-stack-development" },
       { name: "MERN Stack", href: "/mern-stack-development" },
     ],
@@ -95,41 +105,30 @@ const Footer = () => {
       { name: "Angular", href: "/angular-course" },
       { name: "Web Designing", href: "/web-designing-training" },
     ],
-    dataScience: [
-      { name: "Data Science & Analytics", href: "/python-data-science" },
-    ],
-    bigDataRPA: [
+    dataScienceAnalytics: [
+      { name: "Data Science with Python", href: "/python-data-science" },
+      { name: "Data Analysis & Visualization", href: "/data-analysis-visualization" },
       { name: "Big Data Engineering", href: "/big-data-engineering" },
-      { name: "RPA", href: "/rpa" },
+    ],
+    otherCourses: [
+      { name: "Java Development", href: "/java-training" },
+      { name: "Python Development", href: "/python-training" },
+      { name: "RPA Training", href: "/rpa" },
     ]
   };
-
-  // Placement Courses with AI
-  const placementCoursesWithAI = [
-    { name: "Software Testing with AI", href: "/software-testing-training" },
-    { name: "Full Stack Java Development with AI", href: "/full-stack-java-development" },
-    { name: "Full Stack Python Development with AI", href: "/full-stack-python-development" },
-    { name: "Full Stack .NET Development with AI", href: "/full-stack-dotnet-development" },
-    { name: "Digital Marketing with AI", href: "/digital-marketing" },
-    { name: "Data Science with AI", href: "/python-data-science" },
-    { name: "Data Analytics with AI", href: "/data-analysis-visualization" },
-  ];
 
   const dualDegreeLinks = [
     { name: "BCA (Bachelor of Computer Applications)", href: "/bca" },
     { name: "Quastech Degree Program", href: "/quastech-degree-program" }
   ];
   
-  const onlineLinks = [
-    { name: "Software Testing Training", href: "/software-testing-training" },
-    { name: "Full Stack Java Development Training", href: "/full-stack-java-development" },
-    { name: "Full Stack Python Development Training", href: "/full-stack-python-development" },
-    { name: "Full Stack Web Development Training", href: "/web-development-course" },
-    { name: "Java Development Training", href: "/java-training" },
-    { name: "Python Development Training", href: "/python-training" },
-    { name: "Web Designing Training", href: "/web-designing-training" },
-    { name: "Data Science with Python", href: "/python-data-science" },
-    { name: "Digital Marketing", href: "/digital-marketing" }
+  const nonItTrainingLinks = [
+    { name: "Digital Marketing", href: "/digital-marketing" },
+    { name: "Graphic Designing", href: "/graphic-designing" },
+    { name: "Web Graphic Designing", href: "/web-graphic-designing" },
+    { name: "Financial Accounting", href: "/financial-accounting" },
+    { name: "Accounting", href: "/accounting" },
+    { name: "Taxation", href: "/taxation" }
   ];
 
   const quickLinks = [
@@ -143,16 +142,6 @@ const Footer = () => {
     { name: "Faq's", href: "#" }
   ];
 
-  const nonItTrainingLinks = [
-    { name: "Digital Marketing", href: "/digital-marketing" },
-    { name: "Data Analysis & Visualization", href: "/data-analysis-visualization" },
-    { name: "Graphic Designing", href: "/graphic-designing" },
-    { name: "Web Graphic Designing", href: "/web-graphic-designing" },
-    { name: "Financial Accounting", href: "/financial-accounting" },
-    { name: "Accounting", href: "/accounting" },
-    { name: "Taxation", href: "/taxation" }
-  ];
-
   const socialLinks = [
     { icon: Facebook, href: "https://www.facebook.com/QuasTech", color: "hover:text-blue-500" },
     { icon: Twitter, href: "https://twitter.com/quastech", color: "hover:text-sky-400" },
@@ -162,14 +151,12 @@ const Footer = () => {
   ];
 
   return (
-    // Changed to dark blue background and white text
-    <footer className="bg-blue-950 text-white">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
-        {/* Changed to 5 columns to accommodate all content */}
-        <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-8">
+    <footer className="bg-gradient-to-b from-blue-950 to-blue-900 text-white mt-6 md:mt-8">
+      {/* MAIN FOOTER CONTENT */}
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10">
           
-          {/* Column 1: Company Info (From Code) */}
+          {/* Column 1: Company Info & Contact */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -177,183 +164,51 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <div className="mb-6">
-              {/* Using the logo path from your code */}
               <img
                 src="/uploads/64f34837-4f64-4bbc-886b-305630eefd79.png"
                 alt="QUASTECH Logo"
-                className="h-10 w-auto mb-4 brightness-0 invert" // Kept invert filter to make logo white
+                className="h-10 w-auto mb-4 brightness-0 invert"
               />
-              <p className="text-gray-300 leading-relaxed text-sm">
-                Leading IT education institute with ISO 9001:2015 certification. 
-                Transforming careers through innovative technology training.
+              <p className="text-gray-300 leading-relaxed text-sm mb-4">
+                Leading IT education institute with ISO 9001:2015 certification. Transforming careers through innovative technology training.
               </p>
             </div>
             
-            {/* Contact Info - Thane Branch */}
-            <div className="space-y-3">
-              <h5 className="text-white font-semibold mb-3">Thane Branch</h5>
+            {/* Thane Branch Address */}
+            <div className="space-y-3 bg-blue-900/30 rounded-lg p-4 border border-blue-800/50 mb-6">
+              <h5 className="text-white font-bold mb-3 text-base">📍 Thane Branch</h5>
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
-                <span className="text-sm text-gray-300">
-                  Office No. 305, 3rd Floor, Mangalya Building,<br />
-                  Near Cadbury Junction, Pokhran Road No. 1,<br />
-                  Thane West, Maharashtra 400606
+                <MapPin className="w-4 h-4 text-orange-400 flex-shrink-0 mt-1" />
+                <span className="text-xs text-gray-300 leading-relaxed">
+                  201, Anant Laxmi Chambers, Dada Patil Marg, opp. Waman Hari Pethe Jewellers, Thane (W), Maharashtra 400602
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                <Phone className="w-4 h-4 text-orange-400 flex-shrink-0" />
                 <a 
                   href="https://wa.me/918422800381" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-300 hover:text-green-400 transition-colors flex items-center gap-2"
+                  className="text-xs text-gray-300 hover:text-green-400 transition-colors flex items-center gap-2"
                 >
-                  +91 84228 00381
+                  +91 8422800381
                   <span className="text-xs text-green-400">(WhatsApp)</span>
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                <Mail className="w-4 h-4 text-orange-400 flex-shrink-0" />
                 <a 
-                  href="mailto:info@quastech.co.in"
-                  className="text-sm text-gray-300 hover:text-blue-400 transition-colors"
+                  href="mailto:info@quastech.in"
+                  className="text-xs text-gray-300 hover:text-orange-400 transition-colors"
                 >
-                  info@quastech.co.in
+                  info@quastech.in
                 </a>
               </div>
             </div>
-          </motion.div>
 
-          {/* Column 2: CERTIFICATION COURSES */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <FooterTitle title="CERTIFICATION COURSES" />
-            
-            {/* Software Testing */}
-            <h5 className="text-sm font-semibold text-blue-300 mb-2 mt-4">Software Testing</h5>
-            <ul className="space-y-2">
-              {certificationCourses.softwareTesting.map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-
-            {/* Fullstack Development */}
-            <h5 className="text-sm font-semibold text-blue-300 mb-2 mt-4">Fullstack Development</h5>
-            <ul className="space-y-2">
-              {certificationCourses.fullstackDevelopment.map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-
-            {/* Software Development */}
-            <h5 className="text-sm font-semibold text-blue-300 mb-2 mt-4">Software Development</h5>
-            <ul className="space-y-2">
-              {certificationCourses.softwareDevelopment.map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Column 3: MORE CERTIFICATION COURSES & PLACEMENT WITH AI */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            {/* Frontend Development */}
-            <h5 className="text-sm font-semibold text-blue-300 mb-2">Frontend Development</h5>
-            <ul className="space-y-2">
-              {certificationCourses.frontendDevelopment.map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-
-            {/* Data Science & Analytics */}
-            <h5 className="text-sm font-semibold text-blue-300 mb-2 mt-4">Data Science & Analytics</h5>
-            <ul className="space-y-2">
-              {certificationCourses.dataScience.map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-
-            {/* Big Data & RPA */}
-            <h5 className="text-sm font-semibold text-blue-300 mb-2 mt-4">Big Data & RPA</h5>
-            <ul className="space-y-2">
-              {certificationCourses.bigDataRPA.map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-
-            {/* Placement Courses with AI */}
-            <FooterTitle title="PLACEMENT COURSES WITH AI" />
-            <ul className="space-y-2">
-              {placementCoursesWithAI.slice(0, 4).map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Column 4: PLACEMENT COURSES WITH AI & MORE */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            {/* Remaining Placement Courses with AI */}
-            <ul className="space-y-2 mb-4">
-              {placementCoursesWithAI.slice(4).map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-
-            {/* Dual Degree */}
-            <h4 className="text-lg font-semibold mt-4 mb-3 text-white uppercase tracking-wider">
-              DUAL DEGREE
-            </h4>
-            <ul className="space-y-2">
-              {dualDegreeLinks.map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-
-            {/* Non-IT Training */}
-            <h4 className="text-lg font-semibold mt-4 mb-3 text-white uppercase tracking-wider">
-              NON IT TRAINING
-            </h4>
-            <ul className="space-y-2">
-              {nonItTrainingLinks.slice(0, 4).map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-          </motion.div>
-          
-          {/* Column 5: QUICK LINKS & CONNECT */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            {/* Quick Links */}
-            <FooterTitle title="QUICK LINKS" />
-            <ul className="space-y-2 mb-6">
-              {quickLinks.map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-
-            {/* More Non-IT Courses */}
-            <ul className="space-y-2 mb-6">
-              {nonItTrainingLinks.slice(4).map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-            
             {/* Social Links */}
             <div>
-              <h5 className="font-semibold mb-4 text-white">Follow Us</h5>
+              <h5 className="font-bold mb-3 text-white text-sm">Connect With Us</h5>
               <div className="flex gap-3">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -361,24 +216,118 @@ const Footer = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileHover={{ scale: 1.15, y: -3 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center text-gray-300 ${social.color} transition-colors border border-blue-700`}
+                    className={`w-9 h-9 bg-blue-800/50 rounded-full flex items-center justify-center text-gray-300 ${social.color} transition-all border border-blue-700/50 hover:border-white/30`}
                   >
-                    <social.icon className="w-5 h-5" />
+                    <social.icon className="w-4 h-4" />
                   </motion.a>
                 ))}
               </div>
             </div>
           </motion.div>
 
+          {/* Column 2: Placement Courses with AI */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <FooterMainTitle title="Placement Courses with AI" />
+            <ul className="space-y-2 mt-5">
+              {placementCoursesWithAI.map((link) => (
+                <FooterLink key={link.name} {...link} />
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Column 3: Certification Courses - Part 1 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <FooterMainTitle title="Certification Courses" />
+            
+            <FooterSubTitle title="Software Testing" />
+            <ul className="space-y-2">
+              {certificationCourses.softwareTesting.map((link) => (
+                <FooterLink key={link.name} {...link} />
+              ))}
+            </ul>
+
+            <FooterSubTitle title="Frontend Development" />
+            <ul className="space-y-2">
+              {certificationCourses.frontendDevelopment.map((link) => (
+                <FooterLink key={link.name} {...link} />
+              ))}
+            </ul>
+
+            <FooterSubTitle title="Other Courses" />
+            <ul className="space-y-2">
+              {certificationCourses.otherCourses.map((link) => (
+                <FooterLink key={link.name} {...link} />
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Column 4: Certification Courses - Part 2 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <div className="lg:mt-[52px]"> {/* Align with other columns after title */}
+              <FooterSubTitle title="Fullstack Development" />
+              <ul className="space-y-2">
+                {certificationCourses.fullstackDevelopment.map((link) => (
+                  <FooterLink key={link.name} {...link} />
+                ))}
+              </ul>
+
+              <FooterSubTitle title="Data Science & Analytics" />
+              <ul className="space-y-2">
+                {certificationCourses.dataScienceAnalytics.map((link) => (
+                  <FooterLink key={link.name} {...link} />
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+
+          {/* Column 5: Programs & Quick Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <FooterMainTitle title="Dual Degree" />
+            <ul className="space-y-2 mt-5 mb-6">
+              {dualDegreeLinks.map((link) => (
+                <FooterLink key={link.name} {...link} />
+              ))}
+            </ul>
+
+            <FooterMainTitle title="Non-IT Training" />
+            <ul className="space-y-2 mt-5 mb-6">
+              {nonItTrainingLinks.map((link) => (
+                <FooterLink key={link.name} {...link} />
+              ))}
+            </ul>
+
+            <FooterMainTitle title="Quick Links" />
+            <ul className="space-y-2 mt-5">
+              {quickLinks.map((link) => (
+                <FooterLink key={link.name} {...link} />
+              ))}
+            </ul>
+          </motion.div>
         </div>
       </div>
 
-      {/* Bottom Bar (From Code) */}
-      <div className="border-t border-blue-800">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+      {/* Bottom Bar */}
+      <div className="border-t border-blue-800/50 bg-blue-950">
+        <div className="container mx-auto px-4 py-5">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3">
             <div className="text-sm text-gray-400 text-center md:text-left">
               © 2025 QUASTECH. All rights reserved. | ISO 9001:2015 Certified
             </div>

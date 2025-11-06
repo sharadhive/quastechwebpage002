@@ -11,7 +11,7 @@ const branchesData = [
     id: "Thane",
     name: "Thane Branch",
     address:
-      "Office No. 305, 3rd Floor, Mangalya Building, Near Cadbury Junction, Pokhran Road No. 1, Thane West, Maharashtra 400606",
+      "201, Anant Laxmi Chambers, Dada Patil Marg, opp. Waman Hari Pethe Jewellers, Thane (W), Maharashtra 400602",
     phone: "+91 8422800381",
     email: "info@quastech.in",
     map: "https://www.google.com/search?q=quastech+thane",
@@ -27,7 +27,7 @@ const branchesData = [
     name: "Borivali Branch",
     address:
       "A/401, Court Chamber, Swami Vivekananda Rd, opp. Moksh Plaza, Borivali West, Maharashtra 400092",
-    phone: "+91 8422800384/81",
+    phone: "+91 8422800384",
     email: "info@quastech.in",
     map: "https://www.google.com/search?q=quastech+borivali",
     images: [
@@ -42,7 +42,7 @@ const branchesData = [
     name: "Vashi Branch",
     address:
       "Corporate Wing, Haware Fantasia Business Park, F-185(A, behind Inorbit Mall, Sector 30, Vashi, Navi Mumbai, Maharashtra 400703",
-    phone: "+91 8422800384/81",
+    phone: "+91 8422800381",
     email: "info@quastech.in",
     map: "https://www.google.com/search?q=quastech+vashi",
     images: [
@@ -57,7 +57,7 @@ const branchesData = [
     name: "Mohali Branch",
     address:
       "SCF 62, Third Floor, Phase 7, Sector 61, Sahibzada Ajit Singh Nagar, Punjab 160062",
-    phone: "+91 72080 08461/62",
+    phone: "+91 7208008461",
     email: "info@quastech.in",
     map: "https://www.google.com/search?q=quastech+mohali",
     images: [

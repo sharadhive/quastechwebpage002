@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
@@ -1987,7 +1987,7 @@ I'm interested in the React JS Development course. Please provide more details.`
               >
                 <div className="absolute -inset-4 bg-gradient-to-tr from-blue-200/40 via-purple-200/40 to-orange-200/40 rounded-3xl blur-2xl" aria-hidden></div>
                 <img
-                  src="/uploads/FAQ-vector-design-concept.jpg"
+                  src="/images/FAQ[1].png"
                   alt="Frequently Asked Questions"
                   className="relative w-full h-auto rounded-3xl ring-1 ring-blue-100 shadow-xl"
                 />

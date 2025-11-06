@@ -20,84 +20,138 @@ import { BreadcrumbStructuredData } from "@/components/StructuredData";
 
 // Our placement students for banner and stories
 const students = [
+  // Named students with course info - High Quality Images
   {
     name: "Saurabh Devlekar",
     role: "Software Engineer",
+    course: "Full Stack Development",
     image: "/images/studentreviews01/RewSaurabhDevlekar.jpg"
   },
   {
     name: "Dipesh Sawant",
-    role: "Full Stack Developer",
-    image: "/images/studentreviewnamesaspercourses/dipeshsavantsoftwaretesting.png"
+    role: "Software Testing Engineer",
+    course: "Software Testing",
+    image: "/images/NewStudentReview/Dipesh sawant -Software Testing.png"
+  },
+  {
+    name: "Nidhi Yelonde",
+    role: "Full Stack Java Developer",
+    course: "Full Stack Java Development",
+    image: "/images/NewStudentReview/Nidhi Yelonde - Full stack java Development.png"
+  },
+  {
+    name: "Amey Pakhare",
+    role: "Software Testing Engineer",
+    course: "Software Testing",
+    image: "/images/NewStudentReview/Amey Pakhare-Software Testing.png"
+  },
+  {
+    name: "Ashish Raut",
+    role: "Software Testing Engineer",
+    course: "Software Testing",
+    image: "/images/NewStudentReview/ashish raut -Software Testing.png"
+  },
+  {
+    name: "Karishma Yadav",
+    role: "Software Testing Engineer",
+    course: "Software Testing",
+    image: "/images/NewStudentReview/karishma yadav - Software Testing.png"
+  },
+  {
+    name: "Prashant Karande",
+    role: "Software Testing Engineer",
+    course: "Software Testing",
+    image: "/images/NewStudentReview/Prashant Karande -Software Testing.png"
+  },
+  {
+    name: "Yesh Mhatre",
+    role: "Software Testing Engineer",
+    course: "Software Testing",
+    image: "/images/NewStudentReview/Yesh Mhatre -Software Testing.png"
   },
   {
     name: "Kanchan Rane",
     role: "Data Scientist",
+    course: "Data Science",
     image: "/images/studentreviews01/RewKanchanRane.jpg"
   },
   {
     name: "Omkar Bhagojikarkare",
     role: "DevOps Engineer",
+    course: "DevOps & Cloud",
     image: "/images/studentreviews01/RewOmkarBhagojikarkare.jpg"
   },
   {
     name: "Pooja Khapar",
     role: "Mobile App Developer",
+    course: "Mobile Development",
     image: "/images/studentreviews01/RewPoojaKhapar.jpg"
   },
   {
     name: "Sarjerao Sanjay Patil",
     role: "Software Engineer",
+    course: "Full Stack Development",
     image: "/images/studentreviews01/RewSarjeraoSanjayPatil.jpg"
   },
+  // Unnamed students - placed last
   {
     name: "Student 7",
     role: "Data Analyst",
+    course: "Data Analytics",
     image: "/images/studentreviews01/IMG-20251102-WA0002.jpg"
   },
   {
     name: "Student 8",
     role: "Software Tester",
+    course: "Software Testing",
     image: "/images/studentreviews01/IMG-20251102-WA0003.jpg"
   },
   {
     name: "Student 9",
     role: "Web Developer",
+    course: "Web Development",
     image: "/images/studentreviews01/IMG-20251102-WA0004.jpg"
   },
   {
     name: "Student 10",
     role: "React Developer",
+    course: "React Development",
     image: "/images/studentreviews01/IMG-20251102-WA0005.jpg"
   },
   {
     name: "Student 11",
     role: "Python Developer",
+    course: "Python Development",
     image: "/images/studentreviews01/IMG-20251102-WA0006.jpg"
   },
   {
     name: "Student 12",
     role: "Java Developer",
+    course: "Java Development",
     image: "/images/studentreviews01/IMG-20251102-WA0007.jpg"
   },
   {
     name: "Student 13",
     role: "Angular Developer",
+    course: "Angular Development",
     image: "/images/studentreviews01/IMG-20251102-WA0008.jpg"
   },
   {
     name: "Student 14",
     role: "Digital Marketer",
+    course: "Digital Marketing",
     image: "/images/studentreviews01/IMG-20251102-WA0009.jpg"
   },
   {
     name: "Student 15",
     role: "UI/UX Designer",
+    course: "UI/UX Design",
     image: "/images/studentreviews01/IMG-20251102-WA0011.jpg"
   },
   {
     name: "Student 16",
     role: "Data Engineer",
+    course: "Data Engineering",
     image: "/images/studentreviews01/IMG-20251102-WA0012.jpg"
   }
 ];
@@ -141,6 +195,7 @@ const companyList = [
 // Placement roles by category
 const placementCategories = [
   { key: 'all', label: 'All Placements' },
+  { key: 'software-testing', label: 'Software Testing' },
   { key: 'data-analyst', label: 'Data Analyst' },
   { key: 'data-science', label: 'Data Science' },
   { key: 'web-developer', label: 'Web Developer' },
@@ -149,60 +204,85 @@ const placementCategories = [
 
 // Placement data
 const roleData = {
+  'software-testing': [
+    {name: 'Dipesh Sawant', role: 'Software Testing Engineer', company: {name: 'TCS', logo: '/images/Logo folder/tcs.jpg'}},
+    {name: 'Amey Pakhare', role: 'Software Testing Engineer', company: {name: 'Infosys', logo: '/images/Logo folder/capgemini.jpg'}},
+    {name: 'Ashish Raut', role: 'Software Testing Engineer', company: {name: 'Capgemini', logo: '/images/Logo folder/accenture.jpg'}},
+    {name: 'Karishma Yadav', role: 'Software Testing Engineer', company: {name: 'Wipro', logo: '/images/Logo folder/mind gate.jpg'}},
+    {name: 'Prashant Karande', role: 'Software Testing Engineer', company: {name: 'Tech Mahindra', logo: '/images/Logo folder/tcs.jpg'}},
+    {name: 'Yesh Mhatre', role: 'Software Testing Engineer', company: {name: 'Accenture', logo: '/images/Logo folder/infibeam.jpg'}},
+  ],
   'data-analyst': [
     {name: 'Nandesh Ringe', role: 'Data Analyst', company: {name: 'Drone Pay', logo: '/images/Logo folder/tcs.jpg'}},
     {name: 'Isha Wase', role: 'Data Analyst', company: {name: 'Hexatic Tech Ltd', logo: '/images/Logo folder/capgemini.jpg'}},
   ],
   'data-science': [
-    {name: 'Aditya Mistry', role: 'Data Scientist', company: {name: 'TCS', logo: '/images/Logo folder/tcs.jpg'}},
+    {name: 'Kanchan Rane', role: 'Data Scientist', company: {name: 'TCS', logo: '/images/Logo folder/tcs.jpg'}},
+    {name: 'Aditya Mistry', role: 'Data Scientist', company: {name: 'Wipro', logo: '/images/Logo folder/tcs.jpg'}},
     {name: 'Anurag Rajpurohit', role: 'Data Scientist', company: {name: 'Microsoft', logo: '/images/Logo folder/accenture.jpg'}},
   ],
   'web-developer': [
-    {name: 'Sagar Chaudhari', role: 'Web Developer', company: {name: 'IBM', logo: '/images/Logo folder/mind gate.jpg'}},
-    {name: 'Sonakshi Saxena', role: 'Web Developer', company: {name: 'Flipkart', logo: '/images/Logo folder/infibeam.jpg'}},
+    {name: 'Sagar Chaudhari', role: 'Web Developer', company: {name: 'TCS', logo: '/images/Logo folder/mind gate.jpg'}},
+    {name: 'Sonakshi Saxena', role: 'Web Developer', company: {name: 'Infosys', logo: '/images/Logo folder/infibeam.jpg'}},
   ],
   'software-engineer': [
-    {name: 'Jesica Mistry', role: 'Software Engineer', company: {name: 'Hexatic Tech Ltd', logo: '/images/Logo folder/capgemini.jpg'}},
+    {name: 'Saurabh Devlekar', role: 'Software Engineer', company: {name: 'Hexatic Tech Ltd', logo: '/images/Logo folder/capgemini.jpg'}},
+    {name: 'Nidhi Yelonde', role: 'Full Stack Java Developer', company: {name: 'TCS', logo: '/images/Logo folder/tcs.jpg'}},
+    {name: 'Sarjerao Sanjay Patil', role: 'Software Engineer', company: {name: 'Capgemini', logo: '/images/Logo folder/accenture.jpg'}},
+    {name: 'Jesica Mistry', role: 'Software Engineer', company: {name: 'Wipro', logo: '/images/Logo folder/capgemini.jpg'}},
     {name: 'Atish Satpute', role: 'Software Engineer', company: {name: 'Core6 Systems', logo: '/images/Logo folder/tcs.jpg'}},
-    {name: 'Shubham Dongarwar', role: 'Software Engineer', company: {name: 'Core6 Systems', logo: '/images/Logo folder/accenture.jpg'}},
+    {name: 'Shubham Dongarwar', role: 'Software Engineer', company: {name: 'Infosys', logo: '/images/Logo folder/accenture.jpg'}},
   ],
 };
 
 const getPlacements = (category) => {
-  // Use ONLY IMG students (indices 6-15) to avoid repeating Reviews component faces
   if(category === 'all') {
-    // Show only IMG students (10 total) - NO named students to avoid duplication with Reviews
-    return students.slice(6, 16).map((student, i) => ({
+    // Show first 12 named students for "All Placements"
+    return students.slice(0, 12).map((student, i) => ({
       name: student.name,
       role: student.role,
       image: student.image,
-      company: companyList[(i + 6) % companyList.length],
+      company: companyList[i % companyList.length],
     }));
-  } else if (category === 'data-analyst') {
-    // Data Analyst: Only IMG students (3 total)
+  } else if (category === 'software-testing') {
+    // Software Testing: Show all testing students (6 total)
     return [
-      { name: students[6].name, role: 'Data Analyst', image: students[6].image, company: companyList[6] }, // Student 7
-      { name: students[7].name, role: 'Data Analyst', image: students[7].image, company: companyList[7] }, // Student 8
-      { name: students[8].name, role: 'Data Analyst', image: students[8].image, company: companyList[8] }, // Student 9
+      { name: students[1].name, role: students[1].role, image: students[1].image, company: companyList[1] }, // Dipesh Sawant
+      { name: students[3].name, role: students[3].role, image: students[3].image, company: companyList[3] }, // Amey Pakhare
+      { name: students[4].name, role: students[4].role, image: students[4].image, company: companyList[4] }, // Ashish Raut
+      { name: students[5].name, role: students[5].role, image: students[5].image, company: companyList[5] }, // Karishma Yadav
+      { name: students[6].name, role: students[6].role, image: students[6].image, company: companyList[6] }, // Prashant Karande
+      { name: students[7].name, role: students[7].role, image: students[7].image, company: companyList[7] }, // Yesh Mhatre
+    ];
+  } else if (category === 'data-analyst') {
+    // Data Analyst: Use unnamed students
+    return [
+      { name: students[12].name, role: 'Data Analyst', image: students[12].image, company: companyList[12] }, // Student 7
+      { name: students[13].name, role: 'Data Analyst', image: students[13].image, company: companyList[13] }, // Student 8
+      { name: students[14].name, role: 'Data Analyst', image: students[14].image, company: companyList[14] }, // Student 9
     ];
   } else if (category === 'data-science') {
-    // Data Science: Only IMG students (2 total)
+    // Data Science: Kanchan + unnamed students
     return [
-      { name: students[9].name, role: 'Data Science', image: students[9].image, company: companyList[9] }, // Student 10
-      { name: students[10].name, role: 'Data Science', image: students[10].image, company: companyList[10] }, // Student 11
+      { name: students[8].name, role: students[8].role, image: students[8].image, company: companyList[8] }, // Kanchan Rane
+      { name: students[15].name, role: 'Data Scientist', image: students[15].image, company: companyList[15] }, // Student 10
+      { name: students[16].name, role: 'Data Scientist', image: students[16].image, company: companyList[16] }, // Student 11
     ];
   } else if (category === 'web-developer') {
-    // Web Developer: Only IMG students (3 total)
+    // Web Developer: Use unnamed students
     return [
-      { name: students[11].name, role: 'Web Developer', image: students[11].image, company: companyList[11] }, // Student 12
-      { name: students[12].name, role: 'Web Developer', image: students[12].image, company: companyList[12] }, // Student 13
-      { name: students[13].name, role: 'Web Developer', image: students[13].image, company: companyList[13] }, // Student 14
+      { name: students[17].name, role: 'Web Developer', image: students[17].image, company: companyList[17] }, // Student 12
+      { name: students[18].name, role: 'Web Developer', image: students[18].image, company: companyList[18] }, // Student 13
+      { name: students[14].name, role: 'Web Developer', image: students[14].image, company: companyList[14] }, // Student 9
     ];
   } else if (category === 'software-engineer') {
-    // Software Engineer: Only IMG students (2 total)
+    // Software Engineer: Saurabh + Nidhi + Sarjerao + unnamed
     return [
-      { name: students[14].name, role: 'Software Engineer', image: students[14].image, company: companyList[14] }, // Student 15
-      { name: students[15].name, role: 'Software Engineer', image: students[15].image, company: companyList[15] }, // Student 16
+      { name: students[0].name, role: students[0].role, image: students[0].image, company: companyList[0] }, // Saurabh Devlekar
+      { name: students[2].name, role: students[2].role, image: students[2].image, company: companyList[2] }, // Nidhi Yelonde
+      { name: students[11].name, role: students[11].role, image: students[11].image, company: companyList[11] }, // Sarjerao Sanjay Patil
+      { name: students[19].name, role: 'Software Engineer', image: students[19].image, company: companyList[19] }, // Student 14
+      { name: students[20].name, role: 'Software Engineer', image: students[20].image, company: companyList[20] }, // Student 15
     ];
   }
   return [];
@@ -215,42 +295,42 @@ const branchImages = [
   "/images/branches/IMG20240104153526.jpg",
 ];
 
-// Testimonials data - using ONLY IMG students (not in Reviews)
+// Testimonials data - using named students for better credibility
 const testimonials = [
+  {
+    name: "Omkar Bhagojikarkare",
+    role: "DevOps Engineer",
+    company: "Top IT Company",
+    image: "/images/studentreviews01/RewOmkarBhagojikarkare.jpg",
+    review: "QUASTECH's comprehensive training helped me transition into DevOps. The practical approach and industry-focused curriculum gave me the confidence to excel. The placement support was exceptional!"
+  },
+  {
+    name: "Pooja Khapar",
+    role: "Mobile App Developer",
+    company: "Tech Startup",
+    image: "/images/studentreviews01/RewPoojaKhapar.jpg",
+    review: "From zero coding knowledge to becoming a Mobile App Developer - QUASTECH made it possible. The hands-on projects and expert mentorship prepared me for real-world challenges. Highly recommend!"
+  },
+  {
+    name: "Kanchan Rane",
+    role: "Data Scientist",
+    company: "Analytics Firm",
+    image: "/images/studentreviews01/RewKanchanRane.jpg",
+    review: "The Data Science course at QUASTECH is exceptional. The practical approach and live projects made all the difference. The mentorship and career guidance helped me land my dream job!"
+  },
+  {
+    name: "Sarjerao Sanjay Patil",
+    role: "Software Engineer",
+    company: "Leading IT Company",
+    image: "/images/studentreviews01/RewSarjeraoSanjayPatil.jpg",
+    review: "QUASTECH provided me with the perfect foundation for my tech career. The comprehensive curriculum and practical projects helped me develop strong technical skills. The placement support was outstanding!"
+  },
   {
     name: "Student 7",
     role: "Data Analyst",
     company: "Top Company",
     image: "/images/studentreviews01/IMG-20251102-WA0002.jpg",
-    review: "Stuck after graduation with just theory, Quastech turned my career around. With their practical training and expert guidance, I gained the skills and confidence to crack interviews. Now, I'm placed at a top company with a great package, all thanks to Quastech's structured learning and constant support."
-  },
-  {
-    name: "Student 10",
-    role: "Full Stack Developer",
-    company: "IT Industry",
-    image: "/images/studentreviews01/IMG-20251102-WA0005.jpg",
-    review: "I joined Quastech's Full Stack Java Web Development course after thorough research. From mock interviews to technical training, every session helped me upskill with confidence. Thanks to Quastech's support, I successfully transitioned to a high-paying role."
-  },
-  {
-    name: "Student 12",
-    role: "Python Developer",
-    company: "Tech Startup",
-    image: "/images/studentreviews01/IMG-20251102-WA0007.jpg",
-    review: "Quastech exceeded my expectations with their well-structured curriculum and knowledgeable instructors. The instructors were not only skilled but also supportive throughout the course. Their guidance played a big role in helping me build a strong foundation in Python web development."
-  },
-  {
-    name: "Student 14",
-    role: "DevOps Engineer",
-    company: "Banking Sector",
-    image: "/images/studentreviews01/IMG-20251102-WA0009.jpg",
-    review: "After facing multiple rejections due to a career gap, Quastech helped me regain my confidence and sharpen my technical skills. From SQL to coding, I received all the support needed to restart my career successfully."
-  },
-  {
-    name: "Student 16",
-    role: "Mobile App Developer",
-    company: "Tech Company",
-    image: "/images/studentreviews01/IMG-20251102-WA0012.jpg",
-    review: "From challenges and uncertainty to success, Quastech's expert trainers and hands-on training gave me the confidence and skills to secure my dream job. Their support and real-world projects truly made all the difference."
+    review: "Stuck after graduation with just theory, Quastech turned my career around. With their practical training and expert guidance, I gained the skills and confidence to crack interviews. Now, I'm placed at a top company!"
   },
 ];
 
@@ -853,7 +933,7 @@ const PlacementPage = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center mb-9">
               <h2 className="heading-institute-lg flex-1 tracking-tight">Recent Placements</h2>
-              <span className="ml-3 bg-blue-50 text-blue-700 rounded-full px-4 py-1 text-xs font-bold shadow">1578+</span>
+              <span className="ml-3 bg-blue-50 text-blue-700 rounded-full px-4 py-1 text-xs font-bold shadow">2000+</span>
             </div>
             <div className="flex flex-wrap gap-4 justify-center mb-10">
               {placementCategories.map(cat => (
@@ -885,7 +965,7 @@ const PlacementPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 32 }}
                 transition={{ duration: 0.45, ease: "easeInOut" }}
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-6"
+                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-6"
               >
                 {placements.map((item, i) => (
                   <motion.div

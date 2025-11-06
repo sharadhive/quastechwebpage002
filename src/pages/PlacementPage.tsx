@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+﻿import { useEffect, useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Users, Award, Target, Star, ChevronLeft, ChevronRight, Phone, Mail, CheckCircle2, FileText, Briefcase, Code, Terminal, GitBranch } from "lucide-react";
 import Header from "@/components/Header";
@@ -18,15 +18,9 @@ import {
 import SEO from "@/components/SEO";
 import { BreadcrumbStructuredData } from "@/components/StructuredData";
 
-// Our placement students for banner and stories
+// Our placement students for banner and stories - ALL from NewStudentReview folder
 const students = [
-  // Named students with course info - High Quality Images
-  {
-    name: "Saurabh Devlekar",
-    role: "Software Engineer",
-    course: "Full Stack Development",
-    image: "/images/studentreviews01/RewSaurabhDevlekar.jpg"
-  },
+  // Named students with course info from NewStudentReview - High Quality Images
   {
     name: "Dipesh Sawant",
     role: "Software Testing Engineer",
@@ -70,10 +64,65 @@ const students = [
     image: "/images/NewStudentReview/Yesh Mhatre -Software Testing.png"
   },
   {
+    name: "Akshay Patil",
+    role: "Software Testing Engineer",
+    course: "Software Testing",
+    image: "/images/NewStudentReview/Akshay patil -Software Testing.png"
+  },
+  {
+    name: "Barkha Tiwari",
+    role: "Java Developer",
+    course: "Java Development",
+    image: "/images/NewStudentReview/Barkha Tiwari - Java Development.png"
+  },
+  {
     name: "Kanchan Rane",
-    role: "Data Scientist",
-    course: "Data Science",
-    image: "/images/studentreviews01/RewKanchanRane.jpg"
+    role: "Java Developer",
+    course: "Java Development",
+    image: "/images/NewStudentReview/Kanchan Rane - Java Developer.png"
+  },
+  {
+    name: "Mahalaxmi Karthesan",
+    role: "Software Testing Engineer",
+    course: "Software Testing",
+    image: "/images/NewStudentReview/Mahalaxmi Karthesan -Software Testing.png"
+  },
+  {
+    name: "Mayur Hedau",
+    role: "Java Developer",
+    course: "Java Development",
+    image: "/images/NewStudentReview/Mayur Hedau- Java Developer.png"
+  },
+  {
+    name: "Parav Thakur",
+    role: "Full Stack Python Developer",
+    course: "Full Stack Python Development",
+    image: "/images/NewStudentReview/Parav Thakur  - Full Stack Python.png"
+  },
+  {
+    name: "Rohan Kute",
+    role: ".NET Developer",
+    course: ".NET Development",
+    image: "/images/NewStudentReview/Rohan Kute - .Net Development.png"
+  },
+  {
+    name: "Roshni Pathak",
+    role: "Software Testing Engineer",
+    course: "Software Testing",
+    image: "/images/NewStudentReview/Roshni Pathak - Software Testing.png"
+  },
+  {
+    name: "Sarjerao Patil",
+    role: "Software Testing Engineer",
+    course: "Software Testing",
+    image: "/images/NewStudentReview/Sarjerao Patil  -Software Testing.png"
+  },
+  // Additional students for variety (keeping some old ones for more content)
+  {
+    name: "Saurabh Devlekar",
+    role: "Software Engineer",
+    course: "Full Stack Development",
+    image: "/images/studentreviews01/RewSaurabhDevlekar.jpg"
   },
   {
     name: "Omkar Bhagojikarkare",
@@ -88,71 +137,10 @@ const students = [
     image: "/images/studentreviews01/RewPoojaKhapar.jpg"
   },
   {
-    name: "Sarjerao Sanjay Patil",
-    role: "Software Engineer",
-    course: "Full Stack Development",
-    image: "/images/studentreviews01/RewSarjeraoSanjayPatil.jpg"
-  },
-  // Unnamed students - placed last
-  {
     name: "Student 7",
     role: "Data Analyst",
     course: "Data Analytics",
     image: "/images/studentreviews01/IMG-20251102-WA0002.jpg"
-  },
-  {
-    name: "Student 8",
-    role: "Software Tester",
-    course: "Software Testing",
-    image: "/images/studentreviews01/IMG-20251102-WA0003.jpg"
-  },
-  {
-    name: "Student 9",
-    role: "Web Developer",
-    course: "Web Development",
-    image: "/images/studentreviews01/IMG-20251102-WA0004.jpg"
-  },
-  {
-    name: "Student 10",
-    role: "React Developer",
-    course: "React Development",
-    image: "/images/studentreviews01/IMG-20251102-WA0005.jpg"
-  },
-  {
-    name: "Student 11",
-    role: "Python Developer",
-    course: "Python Development",
-    image: "/images/studentreviews01/IMG-20251102-WA0006.jpg"
-  },
-  {
-    name: "Student 12",
-    role: "Java Developer",
-    course: "Java Development",
-    image: "/images/studentreviews01/IMG-20251102-WA0007.jpg"
-  },
-  {
-    name: "Student 13",
-    role: "Angular Developer",
-    course: "Angular Development",
-    image: "/images/studentreviews01/IMG-20251102-WA0008.jpg"
-  },
-  {
-    name: "Student 14",
-    role: "Digital Marketer",
-    course: "Digital Marketing",
-    image: "/images/studentreviews01/IMG-20251102-WA0009.jpg"
-  },
-  {
-    name: "Student 15",
-    role: "UI/UX Designer",
-    course: "UI/UX Design",
-    image: "/images/studentreviews01/IMG-20251102-WA0011.jpg"
-  },
-  {
-    name: "Student 16",
-    role: "Data Engineer",
-    course: "Data Engineering",
-    image: "/images/studentreviews01/IMG-20251102-WA0012.jpg"
   }
 ];
 
@@ -196,93 +184,59 @@ const companyList = [
 const placementCategories = [
   { key: 'all', label: 'All Placements' },
   { key: 'software-testing', label: 'Software Testing' },
-  { key: 'data-analyst', label: 'Data Analyst' },
-  { key: 'data-science', label: 'Data Science' },
-  { key: 'web-developer', label: 'Web Developer' },
-  { key: 'software-engineer', label: 'Software Engineer' }
+  { key: 'java-development', label: 'Java Development' },
+  { key: 'fullstack-development', label: 'Full Stack Development' },
+  { key: 'data-analytics-science', label: 'Data Analytics / Data Science' }
 ];
-
-// Placement data
-const roleData = {
-  'software-testing': [
-    {name: 'Dipesh Sawant', role: 'Software Testing Engineer', company: {name: 'TCS', logo: '/images/Logo folder/tcs.jpg'}},
-    {name: 'Amey Pakhare', role: 'Software Testing Engineer', company: {name: 'Infosys', logo: '/images/Logo folder/capgemini.jpg'}},
-    {name: 'Ashish Raut', role: 'Software Testing Engineer', company: {name: 'Capgemini', logo: '/images/Logo folder/accenture.jpg'}},
-    {name: 'Karishma Yadav', role: 'Software Testing Engineer', company: {name: 'Wipro', logo: '/images/Logo folder/mind gate.jpg'}},
-    {name: 'Prashant Karande', role: 'Software Testing Engineer', company: {name: 'Tech Mahindra', logo: '/images/Logo folder/tcs.jpg'}},
-    {name: 'Yesh Mhatre', role: 'Software Testing Engineer', company: {name: 'Accenture', logo: '/images/Logo folder/infibeam.jpg'}},
-  ],
-  'data-analyst': [
-    {name: 'Nandesh Ringe', role: 'Data Analyst', company: {name: 'Drone Pay', logo: '/images/Logo folder/tcs.jpg'}},
-    {name: 'Isha Wase', role: 'Data Analyst', company: {name: 'Hexatic Tech Ltd', logo: '/images/Logo folder/capgemini.jpg'}},
-  ],
-  'data-science': [
-    {name: 'Kanchan Rane', role: 'Data Scientist', company: {name: 'TCS', logo: '/images/Logo folder/tcs.jpg'}},
-    {name: 'Aditya Mistry', role: 'Data Scientist', company: {name: 'Wipro', logo: '/images/Logo folder/tcs.jpg'}},
-    {name: 'Anurag Rajpurohit', role: 'Data Scientist', company: {name: 'Microsoft', logo: '/images/Logo folder/accenture.jpg'}},
-  ],
-  'web-developer': [
-    {name: 'Sagar Chaudhari', role: 'Web Developer', company: {name: 'TCS', logo: '/images/Logo folder/mind gate.jpg'}},
-    {name: 'Sonakshi Saxena', role: 'Web Developer', company: {name: 'Infosys', logo: '/images/Logo folder/infibeam.jpg'}},
-  ],
-  'software-engineer': [
-    {name: 'Saurabh Devlekar', role: 'Software Engineer', company: {name: 'Hexatic Tech Ltd', logo: '/images/Logo folder/capgemini.jpg'}},
-    {name: 'Nidhi Yelonde', role: 'Full Stack Java Developer', company: {name: 'TCS', logo: '/images/Logo folder/tcs.jpg'}},
-    {name: 'Sarjerao Sanjay Patil', role: 'Software Engineer', company: {name: 'Capgemini', logo: '/images/Logo folder/accenture.jpg'}},
-    {name: 'Jesica Mistry', role: 'Software Engineer', company: {name: 'Wipro', logo: '/images/Logo folder/capgemini.jpg'}},
-    {name: 'Atish Satpute', role: 'Software Engineer', company: {name: 'Core6 Systems', logo: '/images/Logo folder/tcs.jpg'}},
-    {name: 'Shubham Dongarwar', role: 'Software Engineer', company: {name: 'Infosys', logo: '/images/Logo folder/accenture.jpg'}},
-  ],
-};
 
 const getPlacements = (category) => {
   if(category === 'all') {
-    // Show first 12 named students for "All Placements"
-    return students.slice(0, 12).map((student, i) => ({
+    // Show first 16 students (all NewStudentReview images)
+    return students.slice(0, 16).map((student, i) => ({
       name: student.name,
       role: student.role,
       image: student.image,
       company: companyList[i % companyList.length],
     }));
   } else if (category === 'software-testing') {
-    // Software Testing: Show all testing students (6 total)
+    // Software Testing: All students who completed Software Testing course
+    const testingStudents = students.filter(s => s.course === 'Software Testing');
+    return testingStudents.map((student, i) => ({
+      name: student.name,
+      role: student.role,
+      image: student.image,
+      company: companyList[i % companyList.length],
+    }));
+  } else if (category === 'java-development') {
+    // Java Development: All students who completed Java Development course
+    const javaStudents = students.filter(s => s.course === 'Java Development' || s.course === 'Full Stack Java Development');
+    return javaStudents.map((student, i) => ({
+      name: student.name,
+      role: student.role,
+      image: student.image,
+      company: companyList[(i + 8) % companyList.length],
+    }));
+  } else if (category === 'fullstack-development') {
+    // Full Stack Development: Python, .NET, Java Full Stack
+    const fullstackStudents = students.filter(s => 
+      s.course === 'Full Stack Python Development' || 
+      s.course === '.NET Development' ||
+      s.course === 'Full Stack Java Development' ||
+      s.course === 'Full Stack Development'
+    );
+    return fullstackStudents.map((student, i) => ({
+      name: student.name,
+      role: student.role,
+      image: student.image,
+      company: companyList[(i + 12) % companyList.length],
+    }));
+  } else if (category === 'data-analytics-science') {
+    // Data Analytics / Data Science: Use old images for now
     return [
-      { name: students[1].name, role: students[1].role, image: students[1].image, company: companyList[1] }, // Dipesh Sawant
-      { name: students[3].name, role: students[3].role, image: students[3].image, company: companyList[3] }, // Amey Pakhare
-      { name: students[4].name, role: students[4].role, image: students[4].image, company: companyList[4] }, // Ashish Raut
-      { name: students[5].name, role: students[5].role, image: students[5].image, company: companyList[5] }, // Karishma Yadav
-      { name: students[6].name, role: students[6].role, image: students[6].image, company: companyList[6] }, // Prashant Karande
-      { name: students[7].name, role: students[7].role, image: students[7].image, company: companyList[7] }, // Yesh Mhatre
-    ];
-  } else if (category === 'data-analyst') {
-    // Data Analyst: Use unnamed students
-    return [
-      { name: students[12].name, role: 'Data Analyst', image: students[12].image, company: companyList[12] }, // Student 7
-      { name: students[13].name, role: 'Data Analyst', image: students[13].image, company: companyList[13] }, // Student 8
-      { name: students[14].name, role: 'Data Analyst', image: students[14].image, company: companyList[14] }, // Student 9
-    ];
-  } else if (category === 'data-science') {
-    // Data Science: Kanchan + unnamed students
-    return [
-      { name: students[8].name, role: students[8].role, image: students[8].image, company: companyList[8] }, // Kanchan Rane
-      { name: students[15].name, role: 'Data Scientist', image: students[15].image, company: companyList[15] }, // Student 10
-      { name: students[16].name, role: 'Data Scientist', image: students[16].image, company: companyList[16] }, // Student 11
-    ];
-  } else if (category === 'web-developer') {
-    // Web Developer: Use unnamed students
-    return [
-      { name: students[17].name, role: 'Web Developer', image: students[17].image, company: companyList[17] }, // Student 12
-      { name: students[18].name, role: 'Web Developer', image: students[18].image, company: companyList[18] }, // Student 13
-      { name: students[14].name, role: 'Web Developer', image: students[14].image, company: companyList[14] }, // Student 9
-    ];
-  } else if (category === 'software-engineer') {
-    // Software Engineer: Saurabh + Nidhi + Sarjerao + unnamed
-    return [
-      { name: students[0].name, role: students[0].role, image: students[0].image, company: companyList[0] }, // Saurabh Devlekar
-      { name: students[2].name, role: students[2].role, image: students[2].image, company: companyList[2] }, // Nidhi Yelonde
-      { name: students[11].name, role: students[11].role, image: students[11].image, company: companyList[11] }, // Sarjerao Sanjay Patil
-      { name: students[19].name, role: 'Software Engineer', image: students[19].image, company: companyList[19] }, // Student 14
-      { name: students[20].name, role: 'Software Engineer', image: students[20].image, company: companyList[20] }, // Student 15
+      { name: students[16].name, role: 'Data Scientist', image: students[16].image, company: companyList[16] }, // Saurabh
+      { name: students[17].name, role: 'Data Analyst', image: students[17].image, company: companyList[17] }, // Omkar
+      { name: students[18].name, role: 'Data Scientist', image: students[18].image, company: companyList[18] }, // Pooja
+      { name: students[19].name, role: 'Data Analyst', image: students[19].image, company: companyList[19] }, // Student 7
     ];
   }
   return [];
@@ -514,9 +468,9 @@ const PlacementPage = () => {
             />
           </div>
           
-          <div className="relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-6 md:gap-10 items-start md:items-start py-2">
+          <div className="relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-6 md:gap-10 items-end md:items-end py-2">
             {/* Left Side - Text Content */}
-            <div className="flex-1 flex flex-col items-start justify-start -mt-4 md:-mt-6">
+            <div className="flex-1 flex flex-col items-end justify-start -mt-4 md:-mt-6">
               <motion.span 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -610,12 +564,8 @@ const PlacementPage = () => {
                   // Position grid higher - shifted more upward to prevent bottom cutoff
                   const startTop = Math.max(0, (containerHeight - totalHeight) / 22); // Shifted a bit more upward
                   
-                  // Create array of IMG student images only (indices 6-15) to avoid duplicating Reviews faces
-                  const imgStudents = students.slice(6, 16); // Only IMG students (10 total)
-                  const studentImagesForGrid = [];
-                  for (let i = 0; i < totalImages; i++) {
-                    studentImagesForGrid.push(imgStudents[i % imgStudents.length]);
-                  }
+                  // Use first 16 unique students from NewStudentReview - NO DUPLICATES
+                  const studentImagesForGrid = students.slice(0, 16);
                   
                   return studentImagesForGrid.map((student, idx) => {
                     const row = Math.floor(idx / numCols);
@@ -649,8 +599,13 @@ const PlacementPage = () => {
                         <motion.img
                           src={student.image}
                           alt={student.name}
-                          className="w-full h-full object-cover bg-white border-3 border-white shadow-2xl rounded-full cursor-pointer"
-                          style={{ transformStyle: 'preserve-3d' }}
+                          className="w-full h-full object-cover border-3 border-white shadow-2xl rounded-full cursor-pointer"
+                          style={{ 
+                            transformStyle: 'preserve-3d',
+                            objectPosition: 'center center',
+                            objectFit: 'cover',
+                            backgroundColor: '#3b82f6'
+                          }}
                           initial={{ y: 0, rotateY: 0 }}
                           animate={{
                             y: -10,
@@ -737,7 +692,7 @@ const PlacementPage = () => {
 
         {/* 3. Campus Placement's Drive Section */}
         <section className="w-full bg-gradient-to-r from-blue-100 via-blue-50 to-blue-100 py-10 md:py-16 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid md:grid-cols-[260px_1fr] gap-6 items-start">
+          <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid md:grid-cols-[260px_1fr] gap-6 items-end">
             <div className="hidden md:flex flex-col pt-2">
               <h2 className="heading-institute text-left leading-tight">
                 Campus<br />Placement's<br />Drive
@@ -873,7 +828,7 @@ const PlacementPage = () => {
             </div>
             <div className="flex flex-col gap-4 w-full md:w-auto max-w-[380px]">
               <motion.div
-                className="flex flex-col items-start"
+                className="flex flex-col items-end"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -898,7 +853,7 @@ const PlacementPage = () => {
                 </motion.a>
               </motion.div>
               <motion.div
-                className="flex flex-col items-start"
+                className="flex flex-col items-end"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -1114,7 +1069,7 @@ const PlacementPage = () => {
                   transition={{ delay: i * 0.1 }}
                   className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border border-blue-100"
                 >
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-end justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-gray-800 mb-1">{drive.company}</h3>
                       <a href={drive.website} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">{drive.website}</a>
@@ -1244,28 +1199,13 @@ const PlacementPage = () => {
               </p>
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-10 max-w-7xl mx-auto items-center">
-              {/* Left - Illustration Image */}
+            <div className="grid lg:grid-cols-[1fr_1.4fr] gap-6 lg:gap-8 max-w-7xl mx-auto items-end">
+              {/* Right - FAQ Accordions */}
               <motion.div
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="relative"
-              >
-                <div className="absolute -inset-4 bg-gradient-to-tr from-blue-200/40 via-purple-200/40 to-orange-200/40 rounded-3xl blur-2xl" aria-hidden></div>
-                <img
-                  src="/images/FAQ[1].png"
-                  alt="Frequently Asked Questions about Placements"
-                  className="relative w-full h-auto rounded-3xl ring-1 ring-blue-100 shadow-xl"
-                />
-              </motion.div>
-
-              {/* Right - FAQ Accordions */}
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="w-full"
+                className="w-full order-2"
               >
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="faq-1" className="group bg-white border border-blue-100 rounded-2xl mb-4 shadow-sm hover:shadow-lg transition-shadow">
@@ -1322,6 +1262,22 @@ const PlacementPage = () => {
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
+              </motion.div>
+
+              {/* Left - Image Side */}
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="order-1"
+              >
+                <div className="relative">
+                  <img
+                    src="/uploads/FAQ.png"
+                    alt="Frequently Asked Questions about Placements"
+                    className="w-full h-auto object-contain max-h-[580px]"
+                  />
+                </div>
               </motion.div>
             </div>
           </div>

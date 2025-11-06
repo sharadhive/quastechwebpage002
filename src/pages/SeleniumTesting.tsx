@@ -749,7 +749,7 @@ const SeleniumTesting = () => {
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: topicIndex * 0.05 }}
-                                className="flex items-start gap-2"
+                                className="flex items-end gap-2"
                               >
                                 <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 flex-shrink-0" />
                                 <span className="text-gray-700 text-sm">{topic}</span>
@@ -1080,19 +1080,19 @@ const SeleniumTesting = () => {
                   viewport={{ once: true }}
                   className="space-y-6 mb-12"
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-end gap-4">
                     <CheckCircle className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
                     <p className="text-gray-700 leading-relaxed">
                       Prepare & Practice for real-life job interviews by joining the Mock Interviews drive at Quastech and learn to perform with confidence with our expert team.
                     </p>
                   </div>
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-end gap-4">
                     <CheckCircle className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
                     <p className="text-gray-700 leading-relaxed">
                       Not sure of Interview environments? Don't worry, our team will familiarize you and help you in giving your best shot even under heavy pressures.
                     </p>
                   </div>
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-end gap-4">
                     <CheckCircle className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
                     <p className="text-gray-700 leading-relaxed">
                       Our Mock Interviews are conducted by trailblazing industry-experts having years of experience and they will surely help you to improve your chances of getting hired in real.
@@ -1483,7 +1483,7 @@ const SeleniumTesting = () => {
                     {/* Card Content */}
                     <div className="relative z-10">
                       {/* Icon with Q badge */}
-                      <div className="flex items-start gap-4 mb-4">
+                      <div className="flex items-end gap-4 mb-4">
                         <div className="relative flex-shrink-0">
                           <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-orange-400 to-orange-500 shadow-md group-hover:shadow-lg transition-shadow">
                             <item.icon className="w-6 h-6 text-white" strokeWidth={2} />
@@ -1827,19 +1827,19 @@ const SeleniumTesting = () => {
 
                 {/* Key Features */}
                 <div className="space-y-4 mb-8">
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-end gap-4">
                     <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
                     <p className="text-gray-700 text-lg leading-relaxed">
                       Training Certificate is Govern By 12 Global Associations.
                     </p>
                   </div>
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-end gap-4">
                     <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
                     <p className="text-gray-700 text-lg leading-relaxed">
                       Training Certificate is Powered by "Wipro DICE ID"
                     </p>
                   </div>
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-end gap-4">
                     <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
                     <p className="text-gray-700 text-lg leading-relaxed">
                       Training Certificate is Powered by "Verifiable Skill Credentials"
@@ -1902,7 +1902,7 @@ const SeleniumTesting = () => {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative">
                   <img
                     src="/images/certificate.jpg"
                     alt="Certificate Of Achievement"
@@ -1976,28 +1976,13 @@ const SeleniumTesting = () => {
               </p>
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-10 max-w-7xl mx-auto items-center">
-              {/* Left - Illustration Image */}
+            <div className="grid lg:grid-cols-[1fr_1.4fr] gap-6 lg:gap-8 max-w-7xl mx-auto items-end">
+              {/* Right - FAQ Accordions */}
               <motion.div
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="relative"
-              >
-                <div className="absolute -inset-4 bg-gradient-to-tr from-blue-200/40 via-purple-200/40 to-orange-200/40 rounded-3xl blur-2xl" aria-hidden></div>
-                <img
-                  src="/images/FAQ[1].png"
-                  alt="Frequently Asked Questions"
-                  className="relative w-full h-auto rounded-3xl ring-1 ring-blue-100 shadow-xl"
-                />
-              </motion.div>
-
-              {/* Right - FAQ Accordions */}
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="w-full"
+                className="w-full order-2"
               >
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="faq-1" className="group bg-white border border-blue-100 rounded-2xl mb-4 shadow-sm hover:shadow-lg transition-shadow">
@@ -2045,6 +2030,22 @@ const SeleniumTesting = () => {
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
+              </motion.div>
+
+              {/* Left - Image Side */}
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="order-1"
+              >
+                <div className="relative">
+                <img
+                  src="/uploads/FAQ.png"
+                  alt="Frequently Asked Questions"
+                  className="w-full h-auto object-contain max-h-[580px]"
+                />
+                </div>
               </motion.div>
             </div>
           </div>

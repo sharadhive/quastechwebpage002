@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
 
 interface FAQItem {
@@ -51,7 +52,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="section-spacing-compact container-padding bg-gradient-to-b from-blue-50 via-white to-orange-50 pb-6 md:pb-8 pt-8 md:pt-10">
+    <section id="faq" className="section-spacing-compact container-padding bg-gradient-to-b from-blue-50 via-white to-orange-50 pb-4 md:pb-6 pt-8 md:pt-10">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-8 md:mb-10 mt-3 md:mt-4">
@@ -65,9 +66,9 @@ const FAQSection = () => {
           <div className="h-0.5 w-24 md:w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 items-center">
-          {/* FAQ Accordion */}
-          <div className="order-2 lg:order-1 space-y-3 md:space-y-4">
+        <div className="grid lg:grid-cols-[1fr_1.4fr] gap-6 lg:gap-8 max-w-7xl mx-auto items-end">
+          {/* Right - FAQ Accordion */}
+          <div className="order-2 space-y-3">
             {faqData.map((item) => (
               <div
                 key={item.id}
@@ -75,33 +76,33 @@ const FAQSection = () => {
               >
                 <button
                   onClick={() => toggleItem(item.id)}
-                  className="w-full flex items-center justify-between p-4 md:p-5 text-left focus:outline-none"
+                  className="w-full flex items-center justify-between p-4 md:p-5 text-left focus:outline-none hover:bg-blue-50/50 transition-colors"
                 >
-                  <div className="flex items-start gap-3 md:gap-4">
-                    <span className="inline-flex items-center justify-center w-8 h-8 md:w-9 md:h-9 bg-gradient-to-br from-blue-600 to-orange-500 text-white text-sm md:text-base font-bold rounded-lg shadow-md flex-shrink-0">
+                  <div className="flex items-start gap-3">
+                    <span className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-br from-blue-600 to-orange-500 text-white text-sm font-bold rounded-lg shadow-md flex-shrink-0">
                       {item.id.toString().padStart(2, "0")}
                     </span>
-                    <h3 className="text-base md:text-lg font-semibold text-blue-900 leading-snug">
+                    <h3 className="text-sm md:text-base font-semibold text-gray-900 leading-snug pr-2">
                       {item.question}
                     </h3>
                   </div>
-                  <div>
+                  <div className="flex-shrink-0">
                     {openItems.includes(item.id) ? (
-                      <ChevronUp className="w-6 h-6 text-orange-500" />
+                      <ChevronUp className="w-5 h-5 text-orange-500" />
                     ) : (
-                      <ChevronDown className="w-6 h-6 text-blue-400" />
+                      <ChevronDown className="w-5 h-5 text-blue-500" />
                     )}
                   </div>
                 </button>
 
                 <div
                   className={`transition-all duration-300 ${
-                    openItems.includes(item.id) ? "max-h-96 pb-4 md:pb-5" : "max-h-0"
+                    openItems.includes(item.id) ? "max-h-96 pb-4" : "max-h-0"
                   } overflow-hidden`}
                 >
                   <div className="px-4 md:px-5">
-                    <div className="ml-11 md:ml-13">
-                      <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    <div className="ml-11">
+                      <p className="text-gray-600 text-sm leading-relaxed">
                         {item.answer}
                       </p>
                     </div>
@@ -111,16 +112,20 @@ const FAQSection = () => {
             ))}
           </div>
 
-          {/* Image Side */}
-          <div className="order-1 lg:order-2">
-            <div className="relative h-[350px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+          {/* Left - Image Side */}
+          <div className="order-1">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
               <img
-                src="/images/FAQ[1].png"
+                src="/uploads/FAQ.png"
                 alt="Frequently Asked Questions"
-                className="w-full h-full object-contain bg-gradient-to-tr from-blue-100 to-orange-100 p-6"
+                className="w-full h-auto object-contain max-h-[580px]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

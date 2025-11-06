@@ -19,16 +19,6 @@ const Reviews = () => {
 
   const reviews = [
     {
-      name: "Saurabh Devlekar",
-      role: "Software Engineer",
-      course: "Full Stack Development",
-      rating: 5,
-      image: "/images/studentreviews01/RewSaurabhDevlekar.jpg",
-      review: "QUASTECH completely transformed my career. The instructors are industry experts, and the hands-on projects gave me real-world experience. Within 3 months of completing the course, I landed my dream job!",
-      videoUrl: "https://www.instagram.com/p/DKhjEbATXjN/?hl=en",
-      hasVideo: true
-    },
-    {
       name: "Dipesh Sawant",
       role: "Software Testing Engineer",
       course: "Software Testing",
@@ -92,39 +82,84 @@ const Reviews = () => {
       videoUrl: "#"
     },
     {
+      name: "Akshay Patil",
+      role: "Software Testing Engineer",
+      course: "Software Testing",
+      rating: 5,
+      image: "/images/NewStudentReview/Akshay patil -Software Testing.png",
+      review: "QUASTECH's testing program is thorough and industry-oriented. The practical approach and real-world scenarios prepared me perfectly for my testing career. The placement support was outstanding!",
+      videoUrl: "#"
+    },
+    {
+      name: "Barkha Tiwari",
+      role: "Java Developer",
+      course: "Java Development",
+      rating: 5,
+      image: "/images/NewStudentReview/Barkha Tiwari - Java Development.png",
+      review: "The Java Development course at QUASTECH gave me a strong foundation in programming. From core Java to advanced frameworks, I learned everything needed to excel. The instructors are truly knowledgeable!",
+      videoUrl: "#"
+    },
+    {
       name: "Kanchan Rane",
-      role: "Data Scientist",
-      course: "Data Science & AI",
+      role: "Java Developer",
+      course: "Java Development",
       rating: 5,
-      image: "/images/studentreviews01/RewKanchanRane.jpg",
-      review: "The practical approach and live projects at QUASTECH made all the difference. The mentorship and career guidance helped me transition from a non-tech background to landing a role at a top company.",
+      image: "/images/NewStudentReview/Kanchan Rane - Java Developer.png",
+      review: "QUASTECH's Java training is exceptional. The hands-on projects and expert mentorship helped me transition into a successful Java developer role. The placement assistance made all the difference!",
       videoUrl: "#"
     },
     {
-      name: "Omkar Bhagojikarkare",
-      role: "DevOps Engineer",
-      course: "DevOps & Cloud Computing",
+      name: "Mahalaxmi Karthesan",
+      role: "Software Testing Engineer",
+      course: "Software Testing",
       rating: 5,
-      image: "/images/studentreviews01/RewOmkarBhagojikarkare.jpg",
-      review: "QUASTECH's mobile development course is comprehensive and practical. The instructors provide personal attention, and the placement cell worked tirelessly to help me secure my position.",
+      image: "/images/NewStudentReview/Mahalaxmi Karthesan -Software Testing.png",
+      review: "The comprehensive Software Testing program at QUASTECH equipped me with all necessary skills. From manual to automation testing, the training was top-notch. Successfully placed with great package!",
       videoUrl: "#"
     },
     {
-      name: "Pooja Khapar",
-      role: "Mobile App Developer",
-      course: "Mobile App Development",
+      name: "Mayur Hedau",
+      role: "Java Developer",
+      course: "Java Development",
       rating: 5,
-      image: "/images/studentreviews01/RewPoojaKhapar.jpg",
-      review: "The cybersecurity program at QUASTECH is world-class. Real-world scenarios, hands-on labs, and expert mentorship prepared me for the challenges in the industry. Grateful for the excellent placement support!",
+      image: "/images/NewStudentReview/Mayur Hedau- Java Developer.png",
+      review: "QUASTECH's Java course is well-structured and practical. The trainers provided excellent guidance throughout. The real-world projects helped me build a strong portfolio. Highly recommend!",
       videoUrl: "#"
     },
     {
-      name: "Sarjerao Sanjay Patil",
-      role: "Software Engineer",
-      course: "Full Stack Development",
+      name: "Parav Thakur",
+      role: "Full Stack Python Developer",
+      course: "Full Stack Python Development",
       rating: 5,
-      image: "/images/studentreviews01/RewSarjeraoSanjayPatil.jpg",
-      review: "QUASTECH provided me with the perfect foundation for my tech career. The comprehensive curriculum and practical projects helped me develop strong technical skills. The placement support was outstanding!",
+      image: "/images/NewStudentReview/Parav Thakur  - Full Stack Python.png",
+      review: "The Full Stack Python program at QUASTECH is comprehensive. From Django to React integration, I learned cutting-edge technologies. The placement support helped me land my dream job!",
+      videoUrl: "#"
+    },
+    {
+      name: "Rohan Kute",
+      role: ".NET Developer",
+      course: ".NET Development",
+      rating: 5,
+      image: "/images/NewStudentReview/Rohan Kute - .Net Development.png",
+      review: "QUASTECH's .NET Development course gave me the skills to build enterprise applications. The practical training and expert guidance were invaluable. Successfully transitioned to a high-paying developer role!",
+      videoUrl: "#"
+    },
+    {
+      name: "Roshni Pathak",
+      role: "Software Testing Engineer",
+      course: "Software Testing",
+      rating: 5,
+      image: "/images/NewStudentReview/Roshni Pathak - Software Testing.png",
+      review: "The Software Testing training at QUASTECH is excellent. The combination of theory and practical sessions made learning effective. The placement team's support was phenomenal in securing my job!",
+      videoUrl: "#"
+    },
+    {
+      name: "Sarjerao Patil",
+      role: "Software Testing Engineer",
+      course: "Software Testing",
+      rating: 5,
+      image: "/images/NewStudentReview/Sarjerao Patil  -Software Testing.png",
+      review: "QUASTECH's Software Testing program transformed my career. The comprehensive curriculum and hands-on training gave me the confidence to excel. The placement assistance was exceptional!",
       videoUrl: "#"
     }
   ];
@@ -279,7 +314,7 @@ const Reviews = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-7xl mx-auto">
-            {reviews.slice(0, 8).map((review, index) => (
+            {reviews.map((review, index) => (
               <motion.div
                 key={review.name}
                 initial={{ opacity: 0, y: 50 }}

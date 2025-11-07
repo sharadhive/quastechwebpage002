@@ -637,7 +637,7 @@ Please provide course details and guidance.
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         brochureUrl="/Quastech-Course-Brochure.pdf"
-        brochureImageUrl="/images/brochure-preview.jpg"
+        brochureImageUrl={encodeURI("/images/bookyourdemo/ChatGPT Image Nov 7, 2025, 03_09_34 PM (1)[1].png")}
         whatsappNumber="+919876543210"
       />
     </section>

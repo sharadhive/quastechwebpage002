@@ -59,12 +59,12 @@ const Courses = () => {
       trainingType: "Classroom & Online Training",
       batchTypes: "Weekday and Weekend Batches",
       features: [
-        "/coursesicons/bootstrap.jpg",
-        "/coursesicons/css.jpg",
-        "/coursesicons/html.jpg",
-        "/coursesicons/jquery.jpg",
-        "/coursesicons/mysql.jpg",
-        "/coursesicons/python.jpg"
+        "/images/icons/python.png",
+        "/images/icons/se.png",
+        "/images/icons/jmeter.png",
+        "/images/icons/postman.png",
+        "/images/icons/SQLZ.png",
+        "/images/icons/Mysql.png"
       ],
       color: "from-purple-500 to-pink-600"
     },
@@ -75,12 +75,12 @@ const Courses = () => {
       trainingType: "Classroom & Online Training",
       batchTypes: "Weekday and Weekend Batches",
       features: [
-        "/coursesicons/bootstrap.jpg",
-        "/coursesicons/css.jpg",
-        "/coursesicons/jquery.jpg",
-        "/coursesicons/html.jpg",
-        "/coursesicons/mysql.jpg",
-        "/coursesicons/django.jpg"
+        "/images/icons/full%20stack%20java%20development.png",
+        "/images/icons/Boot.png",
+        "/images/icons/angular.png",
+        "/images/icons/react.png",
+        "/images/icons/Mysql.png",
+        "/images/icons/docker.png"
       ],
       color: "from-orange-500 to-red-600"
     },
@@ -91,12 +91,12 @@ const Courses = () => {
       trainingType: "Classroom & Online Training",
       batchTypes: "Weekday and Weekend Batches",
       features: [
-        "/coursesicons/python.jpg",
-        "/coursesicons/django.jpg",
-        "/coursesicons/mysql.jpg",
-        "/coursesicons/html.jpg",
-        "/coursesicons/css.jpg",
-        "/coursesicons/bootstrap.jpg"
+        "/images/icons/python.png",
+        "/images/icons/django.png",
+        "/images/icons/flask.png",
+        "/images/icons/HTML.png",
+        "/images/icons/CSS.png",
+        "/images/icons/JS.png"
       ],
       color: "from-green-500 to-teal-600"
     },
@@ -107,12 +107,12 @@ const Courses = () => {
       trainingType: "Classroom & Online Training",
       batchTypes: "Weekday and Weekend Batches",
       features: [
-        "/coursesicons/bootstrap.jpg",
-        "/coursesicons/css.jpg",
-        "/coursesicons/jquery.jpg",
-        "/coursesicons/html.jpg",
-        "/coursesicons/mysql.jpg",
-        "/coursesicons/django.jpg"
+        "/images/icons/ASP%20net.png",
+        "/images/icons/MS.png",
+        "/images/icons/SQLZ.png",
+        "/images/icons/HTML.png",
+        "/images/icons/CSS.png",
+        "/images/icons/TS.png"
       ],
       color: "from-blue-500 to-purple-600"
     },
@@ -123,12 +123,12 @@ const Courses = () => {
       trainingType: "Classroom & Online Training",
       batchTypes: "Weekday and Weekend Batches",
       features: [
-        "/coursesicons/html.jpg",
-        "/coursesicons/css.jpg",
-        "/coursesicons/jquery.jpg",
-        "/coursesicons/bootstrap.jpg",
-        "/coursesicons/python.jpg",
-        "/coursesicons/mysql.jpg"
+        "/images/icons/ai.png",
+        "/images/icons/HTML.png",
+        "/images/icons/CSS.png",
+        "/images/icons/JS.png",
+        "/images/icons/x.png",
+        "/images/icons/yi.png"
       ],
       color: "from-pink-500 to-rose-600"
     },
@@ -139,12 +139,12 @@ const Courses = () => {
       trainingType: "Classroom & Online Training",
       batchTypes: "Weekday and Weekend Batches",
       features: [
-        "/coursesicons/python.jpg",
-        "/coursesicons/django.jpg",
-        "/coursesicons/mysql.jpg",
-        "/coursesicons/html.jpg",
-        "/coursesicons/css.jpg",
-        "/coursesicons/bootstrap.jpg"
+        "/images/icons/python.png",
+        "/images/icons/pandsa.png",
+        "/images/icons/num.png",
+        "/images/icons/SQLZ.png",
+        "/images/icons/ai.png",
+        "/images/icons/docker.png"
       ],
       color: "from-cyan-500 to-blue-600"
     },
@@ -155,12 +155,12 @@ const Courses = () => {
       trainingType: "Classroom & Online Training",
       batchTypes: "Weekday and Weekend Batches",
       features: [
-        "/coursesicons/bootstrap.jpg",
-        "/coursesicons/css.jpg",
-        "/coursesicons/django.jpg",
-        "/coursesicons/html.jpg",
-        "/coursesicons/jquery.jpg",
-        "/coursesicons/mysql.jpg"
+        "/images/icons/python.png",
+        "/images/icons/pandsa.png",
+        "/images/icons/num.png",
+        "/images/icons/BI.png",
+        "/images/icons/SQLZ.png",
+        "/images/icons/Mysql.png"
       ],
       color: "from-indigo-500 to-purple-600"
     }
@@ -203,29 +203,29 @@ const Courses = () => {
   };
 
   return (
-    <section id="courses" className="section-spacing-compact bg-gradient-mesh overflow-x-hidden relative z-10 max-w-full pt-12 md:pt-16">
+    <section id="courses" className="section-spacing-compact bg-gradient-mesh overflow-x-hidden relative z-10 max-w-full pt-6 md:pt-8">
       <div className="container mx-auto container-padding overflow-x-hidden px-4 sm:px-6 md:px-8 max-w-full">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8 md:mb-10 mt-3 md:mt-4"
+          className="text-center mb-4 md:mb-6 mt-2 md:mt-3"
         >
-          <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2 mb-5 md:mb-6 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow-lg text-white text-sm md:text-base font-semibold">
+          <div className="inline-flex items-center gap-2 px-5 md:px-6 py-2 mb-3 md:mb-4 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 shadow-lg text-white text-sm md:text-base font-semibold">
             <Brain className="w-4 h-4 md:w-5 md:h-5" />
             AI-ENHANCED COURSES
           </div>
-          <h2 className="heading-section gradient-text-primary mb-3 md:mb-4">
+          <h2 className="heading-section gradient-text-primary mb-2 md:mb-3">
             Transform Your Career with AI Technology
           </h2>
           <div className="h-0.5 w-24 md:w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
         </motion.div>
 
         {/* Courses Slider with Professional Cards */}
-        <div className="relative overflow-x-hidden py-8 md:py-12 max-w-full">
+        <div className="relative overflow-x-hidden py-4 md:py-6 max-w-full">
           {/* Mobile: Single Card with Navigation */}
-          <div className="block md:hidden relative py-4 max-w-full">
+          <div className="block md:hidden relative py-2 max-w-full">
             {/* Navigation Arrows for Mobile */}
             <motion.button
               onClick={handleCoursePrevious}
@@ -419,7 +419,7 @@ const Courses = () => {
           </div>
 
           {/* Desktop: Manual Navigation with Arrows */}
-          <div className="hidden md:block relative py-8 max-w-full">
+          <div className="hidden md:block relative py-4 max-w-full">
             {/* Course Cards Display - Show 3 at a time */}
             <div className="flex gap-4 md:gap-5 lg:gap-6 justify-center px-8 md:px-12 lg:px-16 max-w-full overflow-x-hidden relative">
               {/* Navigation Arrows - Closer to Cards */}
@@ -619,7 +619,7 @@ const Courses = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-8 md:mt-10"
+        className="text-center mt-6 md:mt-8"
         >
           <div className="bg-gradient-hero rounded-2xl p-6 md:p-8 lg:p-10 text-white shadow-xl">
             <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">

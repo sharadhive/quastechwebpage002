@@ -162,148 +162,125 @@ const RPATraining = () => {
     },
   ];
 
-  // Software Testing Curriculum Modules
+  // RPA Curriculum Modules
   const curriculumModules = [
     {
       id: "module-1",
-      title: "SQL",
-      category: "#Database",
-      duration: "2 Weeks",
+      title: "RPA Fundamentals & UiPath Overview",
+      category: "#Foundations",
+      duration: "1 Week",
       topics: [
-        "Introduction to SQL",
-        "What is Data and Database?",
-        "Types of Database DBMS - Database Management System",
-        "RDBMS - Relational Database Management System",
-        "Operators",
-        "Statements",
-        "DDL",
-        "DML",
-        "TCL",
-        "DQL",
-        "Aggregate Function",
-        "Count(), Sum(), Min(), Max(), Avg()",
-        "Clauses",
-        "Subquery",
-        "Joins"
+        "Understanding Robotic Process Automation",
+        "History, future trends & career opportunities",
+        "UiPath Studio installation & setup",
+        "Workflow types & designer panel tour"
       ]
     },
     {
       id: "module-2",
-      title: "Basic Java",
-      category: "#Programming",
-      duration: "3 Weeks",
+      title: "Variables, Data Types & Control Flow",
+      category: "#Core Skills",
+      duration: "1 Week",
       topics: [
-        "Introduction of Java",
-        "Features of Java",
-        "JDK - Java Development Kit",
-        "Variables",
-        "Operators",
-        "Conditional Statement",
-        "String and String Method",
-        "Array",
-        "For Each Loop"
+        "System activities & properties",
+        "Variables, arguments & data management",
+        "Control flow statements",
+        "Reusable workflow patterns"
       ]
     },
     {
       id: "module-3",
-      title: "Manual Testing",
-      category: "#Testing",
-      duration: "4 Weeks",
+      title: "Recording & UI Interaction Automation",
+      category: "#Automation",
+      duration: "1 Week",
       topics: [
-        "Introduction to Software Testing",
-        "SDLC Models - Software Development Life Cycle",
-        "Configuration Management",
-        "Quality Assurance (QA) & Quality Control (QC)",
-        "Verification and Validation (V & V- Model)",
-        "Software Test Life Cycle (STLC)",
-        "Test Methods, Levels and Types",
-        "Requirements Analysis",
-        "Use Cases",
-        "Test Design Techniques",
-        "Defect Management",
-        "Agile Testing",
-        "Manual and Automation Testing"
+        "UiPath recording types",
+        "Screen, web & basic recording demos",
+        "Data scraping techniques",
+        "Working with OCR engines"
       ]
     },
     {
       id: "module-4",
-      title: "ISTQB",
-      category: "#Certification",
-      duration: "2 Weeks",
+      title: "Selectors & Dynamic Automation",
+      category: "#Automation",
+      duration: "1 Week",
       topics: [
-        "Fundamentals Of Testing",
-        "Testing Throughout The Software Development Lifecycle",
-        "Static Testing",
-        "Test Techniques",
-        "Test Management",
-        "Tool Support For Testing"
+        "Selector anatomy & troubleshooting",
+        "Dynamic selectors with variables & wildcards",
+        "UiExplorer deep dive",
+        "Best practices for reliable bots"
       ]
     },
     {
       id: "module-5",
-      title: "Testing Tools",
-      category: "#Tools",
-      duration: "2 Weeks",
+      title: "Citrix & Image-based Automation",
+      category: "#Citrix",
+      duration: "1 Week",
       topics: [
-        "JIRA",
-        "JMETER"
+        "Citrix recorder & remote automation",
+        "Image automation techniques",
+        "Text automation with UI activities",
+        "Building resilient surface automation"
       ]
     },
     {
       id: "module-6",
-      title: "Selenium Java",
-      category: "#Automation",
-      duration: "3 Weeks",
+      title: "Excel Automation & Data Tables",
+      category: "#Data Handling",
+      duration: "1 Week",
       topics: [
-        "Class and Object",
-        "Inheritance",
-        "Polymorphism",
-        "Constructor",
-        "Encapsulation",
-        "Abstraction",
-        "Exception Handling"
+        "Excel activities & workbook operations",
+        "Data table manipulation",
+        "Filtering, sorting & joining data",
+        "Using queues for structured data"
       ]
     },
     {
       id: "module-7",
-      title: "Selenium",
-      category: "#Automation",
-      duration: "5 Weeks",
+      title: "PDF Processing & Email Automation",
+      category: "#Communication",
+      duration: "1 Week",
       topics: [
-        "Introduction to Selenium Automation",
-        "Introduction & Installation of Selenium IDE",
-        "What is Selenium",
-        "Component of Selenium",
-        "Locators using WebDrivers",
-        "Handling Pop Up Messages",
-        "Selenium Webdrivers waits",
-        "Checkboxes, Radio Button, Drop down list",
-        "Action Classes",
-        "POM (Page Object Model)",
-        "POI (Poor Objection Implementation) fetch the data",
-    "Database Testing",
-        "Types of Frameworks",
-        "TestNG Introduction & Need",
-        "Advantages over Junit",
-        "Understanding usage of annotations",
-        "Running a test in TestNG",
-        "Assertions/reporting errors",
-        "Creating Data Driven & Keyword Driven Framework",
-        "Creating Hybrid Framework",
-        "Testing on Web Application using Selenium",
-        "MAVEN (Maven Project)",
-        "JENKINS (Jenkins Project)"
+        "Extracting data from PDFs with OCR",
+        "Anchor-based extraction",
+        "Email activities & automation",
+        "Designing unattended email bots"
+      ]
+    },
+    {
+      id: "module-8",
+      title: "UiPath Orchestrator & Robots",
+      category: "#Orchestration",
+      duration: "1 Week",
+      topics: [
+        "Orchestrator architecture & concepts",
+        "Provisioning & connecting robots",
+        "Publishing & scheduling processes",
+        "Monitoring jobs & queue status flags"
+      ]
+    },
+    {
+      id: "module-9",
+      title: "Robotic Enterprise Framework (REFramework)",
+      category: "#Enterprise",
+      duration: "1 Week",
+      topics: [
+        "REFramework building blocks",
+        "State machine architecture",
+        "Exception handling & transaction processing",
+        "Developing enterprise-grade automations"
       ]
     }
   ];
 
   const careerOpportunities = [
-    "Software Test Engineer",
-    "QA Analyst",
-    "Test Automation Engineer",
-    "Performance Test Engineer",
-    "Mobile App Tester",
-    "API Test Engineer"
+    "RPA Developer",
+    "Automation Engineer",
+    "UiPath Developer",
+    "Intelligent Automation Consultant",
+    "Process Automation Analyst",
+    "RPA Support Engineer"
   ];
 
   return (
@@ -577,17 +554,25 @@ const RPATraining = () => {
                   Course Overview
                 </span>
               </h2>
-              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-                Our Software Testing Training program is designed to provide you with comprehensive knowledge and hands-on experience in all aspects of software testing.
-              </p>
+              <div className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto space-y-4 leading-relaxed">
+                <p>
+                  Automation has transformed the way businesses operate, and Robotic Process Automation (RPA) has emerged as one of the most impactful tools to accelerate digital transformation. As processes scale, organizations rely on RPA to eliminate repetitive tasks, improve speed, and bring consistency across operations without replacing their human workforce.
+                </p>
+                <p>
+                  With UiPath and other leading RPA platforms, software robots can handle labour-intensive, back-office workflows while teams focus on strategic initiatives. Even without coding knowledge or direct access to application databases, RPA enables rapid automation through visual workflows, OCR, and intelligent selectors—helping you gain a competitive edge quickly.
+                </p>
+                <p>
+                  This program walks you through the complete automation journey—from installation and workflow design to orchestrator deployment and REFramework implementation—so you can confidently automate real business processes end-to-end.
+                </p>
+              </div>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { icon: Target, title: "Manual Testing", desc: "Learn fundamental testing concepts" },
-                { icon: Code, title: "Automation Testing", desc: "Master Selenium and other tools" },
-                { icon: TrendingUp, title: "Performance Testing", desc: "Optimize application performance" },
-                { icon: Star, title: "Industry Best Practices", desc: "Follow industry standards" }
+                { icon: Target, title: "Process Discovery", desc: "Identify and prioritise high-impact automation opportunities." },
+                { icon: Code, title: "UiPath Mastery", desc: "Design, build, and debug bots using UiPath Studio and selectors." },
+                { icon: TrendingUp, title: "Automation at Scale", desc: "Deploy unattended robots with Orchestrator for enterprise workloads." },
+                { icon: Star, title: "Future-ready Skills", desc: "Leverage REFramework, OCR, and analytics to deliver resilient automations." }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -618,7 +603,7 @@ const RPATraining = () => {
             >
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">
-                  Software Testing Training Curriculum
+                  RPA Training Curriculum
                 </span>
               </h2>
             </motion.div>
@@ -633,7 +618,7 @@ const RPATraining = () => {
               >
                   <h3 className="text-xl md:text-2xl font-bold mb-4">Industry Oriented Curriculum</h3>
                 <p className="text-white/90 mb-8 leading-relaxed text-sm">
-                  Explore each topic in-depth through interactive sessions, real-world use cases, and tool-based learning. You'll not only understand the theory but also build practical skills that matter in actual roles.
+                  Build, manage, and scale software robots with a curriculum that blends UiPath Studio workflows, orchestrator administration, surface automation, and REFramework best practices. Every module is paired with business scenarios so you can automate real processes confidently.
                 </p>
 
                 {/* Stats Cards */}
@@ -644,8 +629,8 @@ const RPATraining = () => {
                         <Database className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">30+</div>
-                        <div className="text-sm text-gray-600 font-medium">Case Studies & Projects</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">25+</div>
+                        <div className="text-sm text-gray-600 font-medium">Bots & Automation Use Cases</div>
                       </div>
                     </div>
                   </div>
@@ -655,8 +640,8 @@ const RPATraining = () => {
                         <Wrench className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent">10+</div>
-                        <div className="text-sm text-gray-600 font-medium">Languages & Tools</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent">8+</div>
+                        <div className="text-sm text-gray-600 font-medium">Automation Tools & Integrations</div>
                       </div>
                     </div>
                   </div>

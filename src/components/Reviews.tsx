@@ -16,6 +16,7 @@ const Reviews = () => {
   const [currentReview, setCurrentReview] = useState(0);
   const [showVideoModal, setShowVideoModal] = useState(false);
   const [currentVideoUrl, setCurrentVideoUrl] = useState("");
+  const [showAllReviews, setShowAllReviews] = useState(false);
 
   const reviews = [
     {
@@ -25,7 +26,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Dipesh sawant -Software Testing.png",
       review: "The Software Testing course at QUASTECH is exceptional. The curriculum is up-to-date with industry standards, and the placement assistance is phenomenal. I highly recommend QUASTECH to anyone looking to break into tech.",
-      videoUrl: "#"
+      videoUrl: "https://www.instagram.com/p/DPd7LVYjEN9/?hl=en",
+      hasVideo: true
     },
     {
       name: "Nidhi Yelonde",
@@ -34,7 +36,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Nidhi Yelonde - Full stack java Development.png",
       review: "QUASTECH's Full Stack Java program gave me the skills and confidence I needed. The hands-on projects and expert guidance helped me secure a great position. Highly recommended for anyone serious about Java development!",
-      videoUrl: "#"
+      videoUrl: "https://www.instagram.com/p/C5a4Qj4JoBC/?hl=en3",
+      hasVideo: true
     },
     {
       name: "Amey Pakhare",
@@ -43,7 +46,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Amey Pakhare-Software Testing.png",
       review: "The practical testing approach at QUASTECH helped me master manual and automation testing. The trainers are industry experts who provided valuable insights. Thanks to their support, I landed my dream testing job!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Ashish Raut",
@@ -52,7 +56,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/ashish raut -Software Testing.png",
       review: "QUASTECH's Software Testing course is comprehensive and practical. From Selenium to manual testing, I gained all the skills needed for the industry. The placement support was exceptional!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Karishma Yadav",
@@ -61,7 +66,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/karishma yadav - Software Testing.png",
       review: "The testing methodologies and tools I learned at QUASTECH made me industry-ready. The mock interviews and resume guidance helped me crack multiple interviews. Grateful for the amazing support!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Prashant Karande",
@@ -70,7 +76,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Prashant Karande -Software Testing.png",
       review: "QUASTECH's hands-on approach to software testing gave me real-world experience. The instructors are supportive and the curriculum is industry-focused. Successfully placed within weeks of completing the course!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Yesh Mhatre",
@@ -79,7 +86,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Yesh Mhatre -Software Testing.png",
       review: "From basics to advanced automation, QUASTECH covered everything needed for a testing career. The practical sessions and live projects built my confidence. Highly recommend for aspiring testers!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Akshay Patil",
@@ -88,7 +96,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Akshay patil -Software Testing.png",
       review: "QUASTECH's testing program is thorough and industry-oriented. The practical approach and real-world scenarios prepared me perfectly for my testing career. The placement support was outstanding!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Barkha Tiwari",
@@ -97,7 +106,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Barkha Tiwari - Java Development.png",
       review: "The Java Development course at QUASTECH gave me a strong foundation in programming. From core Java to advanced frameworks, I learned everything needed to excel. The instructors are truly knowledgeable!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Kanchan Rane",
@@ -106,7 +116,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Kanchan Rane - Java Developer.png",
       review: "QUASTECH's Java training is exceptional. The hands-on projects and expert mentorship helped me transition into a successful Java developer role. The placement assistance made all the difference!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Mahalaxmi Karthesan",
@@ -115,7 +126,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Mahalaxmi Karthesan -Software Testing.png",
       review: "The comprehensive Software Testing program at QUASTECH equipped me with all necessary skills. From manual to automation testing, the training was top-notch. Successfully placed with great package!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Mayur Hedau",
@@ -124,7 +136,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Mayur Hedau- Java Developer.png",
       review: "QUASTECH's Java course is well-structured and practical. The trainers provided excellent guidance throughout. The real-world projects helped me build a strong portfolio. Highly recommend!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Parav Thakur",
@@ -133,7 +146,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Parav Thakur  - Full Stack Python.png",
       review: "The Full Stack Python program at QUASTECH is comprehensive. From Django to React integration, I learned cutting-edge technologies. The placement support helped me land my dream job!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Rohan Kute",
@@ -142,7 +156,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Rohan Kute - .Net Development.png",
       review: "QUASTECH's .NET Development course gave me the skills to build enterprise applications. The practical training and expert guidance were invaluable. Successfully transitioned to a high-paying developer role!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Roshni Pathak",
@@ -151,7 +166,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Roshni Pathak - Software Testing.png",
       review: "The Software Testing training at QUASTECH is excellent. The combination of theory and practical sessions made learning effective. The placement team's support was phenomenal in securing my job!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     },
     {
       name: "Sarjerao Patil",
@@ -160,7 +176,8 @@ const Reviews = () => {
       rating: 5,
       image: "/images/NewStudentReview/Sarjerao Patil  -Software Testing.png",
       review: "QUASTECH's Software Testing program transformed my career. The comprehensive curriculum and hands-on training gave me the confidence to excel. The placement assistance was exceptional!",
-      videoUrl: "#"
+      videoUrl: "#",
+      hasVideo: false
     }
   ];
 
@@ -179,8 +196,13 @@ const Reviews = () => {
   };
 
   const openVideoModal = (videoUrl: string) => {
-    // Convert Instagram URL to embed format
-    const embedUrl = videoUrl.replace('/p/', '/p/').replace('/?hl=en', '/embed/');
+    if (!videoUrl || videoUrl === "#") {
+      return;
+    }
+
+    const match = videoUrl.match(/\/p\/([^/?]+)/);
+    const embedUrl = match ? `https://www.instagram.com/p/${match[1]}/embed` : videoUrl;
+
     setCurrentVideoUrl(embedUrl);
     setShowVideoModal(true);
   };
@@ -210,44 +232,38 @@ const Reviews = () => {
           <div className="h-0.5 w-24 md:w-32 mx-auto rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500" />
         </motion.div>
 
-        {/* Stats */}
+        {/* Featured Success Stories */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-3 gap-3 md:gap-4 mb-6 md:mb-8 max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto space-y-4 md:space-y-6"
         >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              whileHover={{ scale: 1.05 }}
-              className="text-center"
-            >
-              <Card className="p-3 md:p-4 border-0 shadow-md hover:shadow-lg transition-all duration-300 h-full">
-                <CardContent className="p-0 flex flex-col items-center justify-center">
-                  <stat.icon className="w-5 h-5 md:w-6 md:h-6 text-yellow-500 mb-2" />
-                  <div className="text-xl md:text-2xl font-bold mb-1">{stat.value}</div>
-                  <div className="text-xs text-muted-foreground leading-tight">{stat.label}</div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-6">
+            <div className="text-center md:text-left">
+              <p className="uppercase tracking-[0.25em] text-xs font-semibold text-blue-600 mb-1">Featured Stories</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Hear From Our Standout Alumni</h3>
+            </div>
+            <div className="grid grid-cols-3 sm:grid-cols-3 gap-3 md:gap-4 w-full md:w-auto">
+              {stats.map((stat) => (
+                <Card key={stat.label} className="p-3 md:p-4 border-0 shadow-md h-full">
+                  <CardContent className="p-0 flex flex-col items-center justify-center">
+                    <stat.icon className="w-5 h-5 md:w-6 md:h-6 text-yellow-500 mb-1.5" />
+                    <div className="text-lg md:text-xl font-bold mb-0.5">{stat.value}</div>
+                    <div className="text-[11px] text-muted-foreground leading-tight text-center">{stat.label}</div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
 
-        {/* Featured Review */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mb-6 md:mb-8"
-        >
-          <Card className="max-w-4xl mx-auto border-0 shadow-xl overflow-hidden">
+          <Card className="border-0 shadow-xl overflow-hidden">
             <div className="bg-gradient-primary p-4 md:p-5 text-white relative">
               <Quote className="absolute top-3 right-3 w-10 h-10 md:w-12 md:h-12 opacity-30" />
-              <div className="flex items-center gap-4 md:gap-6 mb-4 md:mb-5">
+              <div className="flex items-center gap-4 md:gap-6">
                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-3 border-white/20 flex-shrink-0">
-                  <img 
-                    src={reviews[currentReview].image} 
+                  <img
+                    src={reviews[currentReview].image}
                     alt={reviews[currentReview].name}
                     className="w-full h-full object-cover"
                   />
@@ -267,16 +283,16 @@ const Reviews = () => {
                 </div>
               </div>
             </div>
-            
+
             <CardContent className="p-4 md:p-5">
               <blockquote className="text-sm md:text-base text-muted-foreground mb-3 md:mb-4 leading-relaxed">
                 "{reviews[currentReview].review}"
               </blockquote>
-              
-              <div className="flex items-center justify-end gap-3">
+
+              <div className="flex flex-wrap items-center justify-between gap-3">
                 {reviews[currentReview].hasVideo && (
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     size="sm"
                     onClick={() => openVideoModal(reviews[currentReview].videoUrl)}
                   >
@@ -284,7 +300,8 @@ const Reviews = () => {
                     Watch Video
                   </Button>
                 )}
-                <div className="flex gap-2">
+
+                <div className="flex gap-2 ml-auto">
                   <Button
                     variant="ghost"
                     size="sm"
@@ -307,14 +324,20 @@ const Reviews = () => {
           </Card>
         </motion.div>
 
-        {/* All Reviews Grid */}
+        {/* Student Review Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-8"
         >
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-7xl mx-auto">
-            {reviews.map((review, index) => (
+          <div className="text-center mb-5 md:mb-6 max-w-2xl mx-auto">
+            <p className="uppercase tracking-[0.25em] text-xs font-semibold text-blue-600 mb-1">Student Voices</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">What Learners Say About QUASTECH</h3>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 max-w-7xl mx-auto">
+            {(showAllReviews ? reviews : reviews.slice(0, 8)).map((review, index) => (
               <motion.div
                 key={review.name}
                 initial={{ opacity: 0, y: 50 }}
@@ -381,28 +404,44 @@ const Reviews = () => {
           </div>
         </motion.div>
 
+        {!showAllReviews && reviews.length > 8 && (
+          <div className="mt-5 md:mt-6 flex justify-center">
+            <Button
+              variant="secondary"
+              className="px-6 md:px-8 py-2 md:py-2.5 text-sm md:text-base font-semibold"
+              onClick={() => setShowAllReviews(true)}
+            >
+              View More Reviews
+            </Button>
+          </div>
+        )}
+
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-8 md:mt-10"
+        className="mt-6 md:mt-8"
         >
-          <div className="bg-gradient-hero rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8 text-white shadow-lg max-w-4xl mx-auto">
-            <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3">
-              Ready to Write Your Success Story?
-            </h3>
-            <p className="text-xs md:text-sm mb-4 md:mb-5 text-white/90">
-              Join thousands of successful professionals who transformed their careers with QUASTECH
-            </p>
-            <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center">
-              <Button variant="glass" size="lg" className="text-xs md:text-sm font-semibold h-10 md:h-11">
+        <div className="bg-gradient-hero rounded-xl md:rounded-2xl p-5 md:p-6 lg:p-8 text-white shadow-lg max-w-7xl mx-auto">
+          <div className="grid gap-4 md:gap-6 lg:gap-8 md:grid-cols-[1.2fr_1fr] items-center">
+            <div className="md:text-left text-center">
+              <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2 md:mb-3">
+                Ready to Write Your Success Story?
+              </h3>
+              <p className="text-xs md:text-sm lg:text-base text-white/90 max-w-xl mx-auto md:mx-0">
+                Join thousands of successful professionals who transformed their careers with QUASTECH. Get personalized guidance, live projects, and 100% placement support tailored to your goals.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-2 md:gap-3 justify-center md:justify-end">
+              <Button variant="glass" size="lg" className="text-xs md:text-sm lg:text-base font-semibold h-10 md:h-11 lg:h-12 px-5 md:px-6">
                 Start Your Journey Today
               </Button>
-              <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white hover:text-primary text-xs md:text-sm h-10 md:h-11">
+              <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white hover:text-primary text-xs md:text-sm lg:text-base h-10 md:h-11 lg:h-12 px-5 md:px-6">
                 View Placements
               </Button>
             </div>
+          </div>
           </div>
         </motion.div>
 
@@ -439,8 +478,8 @@ const Reviews = () => {
                   className="w-full h-full"
                   frameBorder="0"
                   scrolling="no"
-                  allowTransparency
-                  allow="encrypted-media"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                  allowFullScreen
                   title="Student Video Review"
                 />
               </div>

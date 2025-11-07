@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import React from "react"; // Import React for useMemo
 import {
   Award,
@@ -18,14 +18,6 @@ import {
   TrendingUp,
   Shield,
   Zap,
-  Cpu,
-  Server,
-  Database,
-  Cloud,
-  Code,
-  ShieldCheck,
-  GitBranch,
-  Layers,
   Sparkles,
 } from "lucide-react";
 
@@ -80,7 +72,7 @@ const Marquee = ({
 const About = () => {
   // --- Data Arrays (unchanged) ---
   const whyUsFeatures = [
-    { icon: GraduationCap, image: "/images/WhyChooseus/industrialrequirement.jpg", title: "Industry Requirement", description: "Industry-focused syllabus with practical approach and latest technologies", color: "from-blue-500 to-indigo-600" },
+    { icon: GraduationCap, image: "/images/WhyChooseus/industrialrequirement.png", title: "Industry Requirement", description: "Industry-focused syllabus with practical approach and latest technologies", color: "from-blue-500 to-indigo-600" },
     { icon: DollarSign, image: "/images/WhyChooseus/costeffective.png", title: "Cost Effective", description: "Affordable fees with high-quality training and industry-relevant content", color: "from-green-500 to-teal-600" },
     { icon: Monitor, image: "/images/WhyChooseus/onlineoffline-training.png", title: "Online/Offline Training", description: "Flexible learning options with both online and offline modes of training", color: "from-orange-500 to-pink-600" },
     { icon: UserCheck, image: "/images/WhyChooseus/expertraning.png", title: "Expert Trainer", description: "Experienced mentors guiding students with real industry insights", color: "from-purple-500 to-fuchsia-600" },
@@ -104,66 +96,47 @@ const About = () => {
     { year: "2024", event: "5000+ Alumni Network", description: "Built a strong network of successful professionals", icon: TrendingUp },
   ];
   const techCards = [
-    { 
-      icon: Cpu, 
-      label: "Core Java", 
-      logo: "/coursesicons/html.jpg", 
-      color: "from-orange-500 to-orange-600",
-      description: "Object-oriented programming"
-    },
-    { 
-      icon: Database, 
-      label: "SQL", 
-      logo: "/coursesicons/mysql.jpg", 
-      color: "from-blue-500 to-blue-600",
-      description: "Database management"
-    },
-    { 
-      icon: Layers, 
-      label: "Spring Boot", 
-      logo: "/coursesicons/django.jpg", 
-      color: "from-green-500 to-green-600",
-      description: "Enterprise applications"
-    },
-    { 
-      icon: Server, 
-      label: "Microservices", 
-      logo: "/coursesicons/bootstrap.jpg", 
-      color: "from-purple-500 to-purple-600",
-      description: "Scalable architecture"
-    },
-    { 
-      icon: Cloud, 
-      label: "Cloud AWS", 
-      logo: "/coursesicons/css.jpg", 
-      color: "from-yellow-500 to-orange-500",
-      description: "Cloud computing"
-    },
-    { 
-      icon: ShieldCheck, 
-      label: "Cyber Security", 
-      logo: "/coursesicons/jquery.jpg", 
-      color: "from-red-500 to-red-600",
-      description: "Security protocols"
-    },
-    { 
-      icon: GitBranch, 
-      label: "DevOps", 
-      logo: "/coursesicons/python.jpg", 
-      color: "from-indigo-500 to-indigo-600",
-      description: "Development operations"
-    },
-    { 
-      icon: Code, 
-      label: "Web UI", 
-      logo: "/coursesicons/html.jpg", 
-      color: "from-cyan-500 to-cyan-600",
-      description: "User interface design"
-    },
+    "/images/icons/HTML.png",
+    "/images/icons/CSS.png",
+    "/images/icons/JS.png",
+    "/images/icons/TS.png",
+    "/images/icons/angular.png",
+    "/images/icons/react.png",
+    "/images/icons/node%20js.png",
+    "/images/icons/express%20js.png",
+    "/images/icons/rest.png",
+    "/images/icons/Boot.png",
+    "/images/icons/ASP%20net.png",
+    "/images/icons/full%20stack%20java%20development.png",
+    "/images/icons/mean%20logo.png",
+    "/images/icons/mearn%20logo.png",
+    "/images/icons/python.png",
+    "/images/icons/pandsa.png",
+    "/images/icons/django.png",
+    "/images/icons/flask.png",
+    "/images/icons/ai.png",
+    "/images/icons/Mysql.png",
+    "/images/icons/SQLZ.png",
+    "/images/icons/mango%20db.png",
+    "/images/icons/BI.png",
+    "/images/icons/postman.png",
+    "/images/icons/docker.png",
+    "/images/icons/git.png",
+    "/images/icons/github.png",
+    "/images/icons/jira.png",
+    "/images/icons/jmeter.png",
+    "/images/icons/jenkis.png",
+    "/images/icons/istq.png",
+    "/images/icons/se.png",
+    "/images/icons/loc.png",
+    "/images/icons/C.png",
+    "/images/icons/C%2B%2B.png",
+    "/images/icons/MS.png",
+    "/images/icons/AM.png",
+    "/images/icons/num.png",
+    "/images/icons/x.png",
+    "/images/icons/yi.png"
   ];
-  const topRow = techCards.slice(0, 4);
-  const bottomRow = techCards.slice(4, 8);
-
   // --- Enhanced Reusable Components ---
   const Card = ({
     children, className = "", ...props
@@ -229,29 +202,29 @@ const About = () => {
   );
   
   // --- Simple Animation Variants for Single Line Animation ---
-  const sectionVariants = {
+  const sectionVariants: Variants = {
     hidden: { opacity: 0, y: 100 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
-        duration: 1.0, 
-        ease: "easeOut",
+      transition: {
+        duration: 1,
+        ease: [0.42, 0, 0.58, 1],
         staggerChildren: 0.2
-      } 
+      }
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
+    visible: {
+      opacity: 1,
+      y: 0,
       scale: 1,
-      transition: { 
-        duration: 0.8, 
-        ease: "easeOut"
-      } 
+      transition: {
+        duration: 0.8,
+        ease: [0.42, 0, 0.58, 1]
+      }
     }
   };
 
@@ -433,7 +406,7 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="py-8 md:py-12"
+            className="py-5 md:py-7"
           >
             <motion.div variants={itemVariants} className="section-header">
               <h2 className="heading-institute-lg">
@@ -462,52 +435,49 @@ const About = () => {
                 style={{ width: "max-content" }}
               >
                 {/* First set of cards */}
-                {techCards.map((card, index) => (
+                {techCards.map((logo, index) => (
                   <div
                     key={`set1-${index}`}
-                    className="flex-shrink-0 w-24 sm:w-28 lg:w-32"
+                    className="flex-shrink-0 w-28 sm:w-32 lg:w-36"
                   >
-                    <div className={`w-full h-20 sm:h-24 lg:h-28 rounded-xl bg-gradient-to-r ${card.color} flex items-center justify-center shadow-lg hover:shadow-2xl relative overflow-hidden group cursor-pointer transition-all duration-300 hover:scale-105`}>
-                      <img 
-                        src={card.logo} 
-                        alt={card.label}
-                        className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-300"
+                    <div className="w-full h-24 sm:h-28 lg:h-32 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                      <img
+                        src={logo}
+                        alt="technology logo"
+                        className="max-w-[85%] max-h-[85%] object-contain"
                       />
-                      <card.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white relative z-10 drop-shadow-lg" />
                     </div>
-            </div>
+                  </div>
                 ))}
                 
                 {/* Second set of cards for seamless loop */}
-                {techCards.map((card, index) => (
+                {techCards.map((logo, index) => (
                   <div
                     key={`set2-${index}`}
-                    className="flex-shrink-0 w-24 sm:w-28 lg:w-32"
+                    className="flex-shrink-0 w-28 sm:w-32 lg:w-36"
                   >
-                    <div className={`w-full h-20 sm:h-24 lg:h-28 rounded-xl bg-gradient-to-r ${card.color} flex items-center justify-center shadow-lg hover:shadow-2xl relative overflow-hidden group cursor-pointer transition-all duration-300 hover:scale-105`}>
-                      <img 
-                        src={card.logo} 
-                        alt={card.label}
-                        className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-300"
+                    <div className="w-full h-24 sm:h-28 lg:h-32 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                      <img
+                        src={logo}
+                        alt="technology logo"
+                        className="max-w-[85%] max-h-[85%] object-contain"
                       />
-                      <card.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white relative z-10 drop-shadow-lg" />
                     </div>
                   </div>
                 ))}
                 
                 {/* Third set for extra smoothness */}
-                {techCards.map((card, index) => (
+                {techCards.map((logo, index) => (
                   <div
                     key={`set3-${index}`}
-                    className="flex-shrink-0 w-24 sm:w-28 lg:w-32"
+                    className="flex-shrink-0 w-28 sm:w-32 lg:w-36"
                   >
-                    <div className={`w-full h-20 sm:h-24 lg:h-28 rounded-xl bg-gradient-to-r ${card.color} flex items-center justify-center shadow-lg hover:shadow-2xl relative overflow-hidden group cursor-pointer transition-all duration-300 hover:scale-105`}>
-                      <img 
-                        src={card.logo} 
-                        alt={card.label}
-                        className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-300"
+                    <div className="w-full h-24 sm:h-28 lg:h-32 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                      <img
+                        src={logo}
+                        alt="technology logo"
+                        className="max-w-[85%] max-h-[85%] object-contain"
                       />
-                      <card.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white relative z-10 drop-shadow-lg" />
                     </div>
                   </div>
                 ))}

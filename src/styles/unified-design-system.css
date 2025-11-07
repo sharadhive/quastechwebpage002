@@ -140,21 +140,21 @@
 
 /* Compact Section Spacing */
 .section-spacing-compact {
-  padding-top: 2.5rem; /* 40px */
-  padding-bottom: 2.5rem; /* 40px */
+  padding-top: 1.75rem; /* 28px */
+  padding-bottom: 1.75rem; /* 28px */
 }
 
 @media (min-width: 768px) {
   .section-spacing-compact {
-    padding-top: 3rem; /* 48px */
-    padding-bottom: 3rem; /* 48px */
+    padding-top: 2.25rem; /* 36px */
+    padding-bottom: 2.25rem; /* 36px */
   }
 }
 
 @media (min-width: 1024px) {
   .section-spacing-compact {
-    padding-top: 3.5rem; /* 56px */
-    padding-bottom: 3.5rem; /* 56px */
+    padding-top: 2.75rem; /* 44px */
+    padding-bottom: 2.75rem; /* 44px */
   }
 }
 

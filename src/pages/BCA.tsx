@@ -121,182 +121,166 @@ const BCA = () => {
 
   const courseHighlights = [
     {
-      title: "Pan India Placements",
-      icon: MapPin,
-      description: "Access to placement opportunities across India.",
-    },
-    {
-      title: "80% Practical Training",
-      icon: Laptop,
-      secondaryIcon: Lightbulb,
-      description: "Hands-on experience with real-world projects.",
-    },
-    {
-      title: "2 Global Certifications",
-      icon: Award,
-      description: "Earn industry-recognized global certifications.",
-    },
-    {
-      title: "Personalised Career Coach",
-      icon: Users,
-      secondaryIcon: Star,
-      description: "Dedicated guidance for your career path.",
-    },
-    {
-      title: "Instant Doubt Solving",
-      icon: MessageSquare,
-      secondaryIcon: Monitor,
-      description: "Get your queries resolved instantly by experts.",
-    },
-    {
-      title: "Alumni Network",
+      title: "Experienced Faculty",
       icon: GraduationCap,
-      secondaryIcon: Users,
-      description: "Connect with a vast network of successful alumni.",
+      description: "Learn from expert mentors with rich industry and academic experience.",
     },
     {
-      title: "Multi-Domain Interviews",
-      icon: Users,
-      secondaryIcon: HelpCircle,
-      description: "Prepare for interviews across various domains.",
+      title: "Industry-Relevant Curriculum",
+      icon: BookOpen,
+      secondaryIcon: Lightbulb,
+      description: "Stay ahead with a curriculum covering programming, databases, networking, cloud, AI, and more.",
     },
     {
-      title: "Profile Building Session",
-      icon: FileText,
-      secondaryIcon: UserCheck,
-      description: "Enhance your professional profile for better opportunities.",
+      title: "Practical Learning",
+      icon: Laptop,
+      secondaryIcon: Code,
+      description: "Gain hands-on exposure through projects, labs, internships, and real-world case studies.",
     },
+    {
+      title: "Industrial Visits",
+      icon: MapPin,
+      description: "Experience corporate culture through IVs, workshops, and guest lectures from experts.",
+    },
+    {
+      title: "Placement Support",
+      icon: Briefcase,
+      secondaryIcon: CheckCircle,
+      description: "Dedicated placement assistance, interview prep, and lifetime career support.",
+    }
   ];
 
   // BCA Degree Program Curriculum Modules
   const curriculumModules = [
     {
-      id: "module-1",
-      title: "Semester 1 - Programming Fundamentals",
+      id: "semester-1",
+      title: "Semester 1 · Programming Foundation",
       category: "#First Year",
-      duration: "6 Months",
+      duration: "First Year",
       topics: [
-        "Introduction to Computers",
-        "Computer Organization & Architecture",
-        "C Programming Language",
-        "Problem Solving Techniques",
-        "Data Structures using C",
+        "Office Automation using PC Packages",
+        "Programming with C and C++",
         "Digital Electronics",
-        "Mathematics-I (Algebra & Calculus)",
-        "Communication Skills",
-        "Environmental Studies"
+        "Communicative English",
+        "Fundamentals of Computer & IT",
+        "PC Packages Lab",
+        "C & C++ Programming Lab",
+        "Workshops on emerging technologies"
       ]
     },
     {
-      id: "module-2",
-      title: "Semester 2 - Database & Web Fundamentals",
+      id: "semester-2",
+      title: "Semester 2 · Data & Network Essentials",
       category: "#First Year",
-      duration: "6 Months",
+      duration: "First Year",
       topics: [
-        "Object-Oriented Programming with C++",
-        "Database Management Systems",
-        "SQL & PL/SQL",
-        "Web Technologies (HTML, CSS, JavaScript)",
-        "Computer Networks Basics",
-        "Mathematics-II (Statistics & Probability)",
-        "Operating Systems Concepts",
-        "Soft Skills Development"
+        "Database Management System",
+        "Data Structures",
+        "Computer Networks",
+        "Environmental Science",
+        "Computer Hardware & Troubleshooting",
+        "DBMS Lab",
+        "Data Structures Lab",
+        "Internship training in a company"
       ]
     },
     {
-      id: "module-3",
-      title: "Semester 3 - Java & Software Engineering",
+      id: "semester-3",
+      title: "Semester 3 · Web & Linux Administration",
       category: "#Second Year",
-      duration: "6 Months",
+      duration: "Second Year",
       topics: [
-        "Java Programming",
-        "Advanced Java (JSP, Servlets)",
-        "Software Engineering Principles",
-        "System Analysis & Design",
-        "Data Structures & Algorithms",
-        "Computer Graphics & Multimedia",
-        "Numerical Methods",
-        "Mini Project Development"
+        "Web Designing (HTML, CSS, JavaScript)",
+        "Operating Systems",
+        "Linux Server Administration",
+        "Multimedia & Animation",
+        "RDBMS using MySQL",
+        "Linux & Shell Programming",
+        "Web Designing Lab",
+        "Linux Server Admin Lab",
+        "Multimedia & Animation Lab",
+        "RDBMS using MySQL Lab"
       ]
     },
     {
-      id: "module-4",
-      title: "Semester 4 - Python & Web Development",
+      id: "semester-4",
+      title: "Semester 4 · Advanced Programming & Cyber",
       category: "#Second Year",
-      duration: "6 Months",
+      duration: "Second Year",
       topics: [
-        "Python Programming",
-        "Web Development with Django/Flask",
-        "Advanced Database Concepts",
-        "Cloud Computing Fundamentals",
-        "Linux Operating System",
-        "Network Security Basics",
-        "Business Communication",
-        "Project Work"
-      ]
-    },
-    {
-      id: "module-5",
-      title: "Semester 5 - Advanced Technologies",
-      category: "#Third Year",
-      duration: "6 Months",
-      topics: [
-        "Mobile Application Development (Android/iOS)",
-        "Machine Learning Basics",
-        "Artificial Intelligence Fundamentals",
-        "Data Analytics & Visualization",
-        "Advanced Web Technologies (React/Angular)",
-        "Software Testing & QA",
+        "Programming with Java",
+        "Software Engineering",
+        "Windows Server Administration",
         "Cyber Security",
-        "Elective Specialization"
+        "E-Commerce & E-Governance",
+        "Programming with Python",
+        "Java Lab",
+        "Windows Server Lab",
+        "Cyber Security Lab",
+        "E-Commerce & E-Governance Lab",
+        "Coding bootcamp with prizes"
       ]
     },
     {
-      id: "module-6",
-      title: "Semester 6 - Industry Internship & Project",
+      id: "semester-5",
+      title: "Semester 5 · Full Stack & Emerging Tech",
       category: "#Third Year",
-      duration: "6 Months",
+      duration: "Third Year",
       topics: [
-        "Major Project Development",
-        "Industry Internship (3-6 months)",
-        "DevOps & CI/CD Basics",
-        "Blockchain Technology Overview",
-        "IoT (Internet of Things) Introduction",
-        "Cloud Platforms (AWS/Azure/GCP)",
-        "Interview Preparation",
-        "Resume Building",
-        "Aptitude & Technical Tests",
-        "Mock Interviews",
-        "Placement Training",
-        "Professional Ethics"
+        "DOT NET Programming (VB .NET & ASP .NET)",
+        "Web Development with PHP",
+        "Mathematics",
+        "Management Theory & Practice",
+        "Mobile Application Development",
+        "Sound Editing with Audacity",
+        "DOT NET Lab",
+        "PHP Lab",
+        "Mobile App Development Lab",
+        "Industry rejuvenation tour"
+      ]
+    },
+    {
+      id: "semester-6",
+      title: "Semester 6 · Career Launch & Project",
+      category: "#Third Year",
+      duration: "Third Year",
+      topics: [
+        "Cloud Computing",
+        "Computerised Accounting with Tally",
+        "Social Media Marketing",
+        "VBA Programming",
+        "Cloud Computing Lab",
+        "Tally Lab",
+        "Social Media Marketing Lab",
+        "Project Work & Specialised workshops"
       ]
     }
   ];
 
   const careerOpportunities = [
     "Software Developer",
-    "Web Developer",
-    "Full Stack Developer",
-    "System Analyst",
+    "Systems Analyst",
     "Database Administrator",
+    "Web & UI Developer",
     "IT Consultant",
-    "Software Engineer",
-    "Application Developer"
+    "Cloud & DevOps Associate",
+    "Cyber Security Analyst",
+    "Mobile App Developer"
   ];
 
   return (
     <DarkModeProvider>
       <SEO 
-        title="BCA - Bachelor of Computer Applications Degree Program"
-        description="Pursue BCA degree with QUASTECH. UGC recognized 3-year program covering programming, web development, database management, software engineering with 100% placement assistance."
-        keywords="BCA course, Bachelor of Computer Applications, BCA degree, computer applications course, BCA program, UGC recognized BCA, BCA with placement"
+        title="Quastech BCA Program - Bachelor of Computer Applications"
+        description="Centre of Excellence @ Quastech. 3-year BCA program with cutting-edge curriculum, experienced faculty, hands-on learning, internships, industry connections, personalised support, and placement assurance."
+        keywords="Quastech BCA, Bachelor of Computer Applications, BCA program, BCA with placement, industry relevant BCA, BCA practical learning"
         canonical="/bca"
         ogImage="/images/bca/bca-degree.png"
         category="Degree Courses"
       />
       <CourseStructuredData 
-        name="Bachelor of Computer Applications (BCA)"
-        description="UGC recognized 3-year BCA degree program with comprehensive training in computer applications, programming, web development, and software engineering with placement support."
+        name="Quastech BCA Program"
+        description="3-year BCA program blending academics with hands-on projects, internships, industry visits, and placement support to build future-ready IT professionals."
         url="https://quastech.co.in/bca"
         duration="P3Y"
         courseMode="blended"
@@ -338,7 +322,7 @@ const BCA = () => {
                   <ChevronRight className="w-4 h-4" />
                   <span>Degree Courses</span>
                   <ChevronRight className="w-4 h-4" />
-                  <span className="text-white font-semibold">BCA - Bachelor of Computer Applications</span>
+                  <span className="text-white gweithio font-semibold">Quastech BCA Program</span>
                 </motion.div>
 
                 {/* Course Title */}
@@ -348,7 +332,7 @@ const BCA = () => {
                   transition={{ delay: 0.2 }}
                   className="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-2"
                 >
-                  Bachelor of Computer Applications (BCA)
+                  Quastech BCA Program
                 </motion.h1>
 
                 {/* Course Description */}
@@ -358,7 +342,7 @@ const BCA = () => {
                   transition={{ delay: 0.3 }}
                   className="text-base md:text-lg text-white/90 max-w-2xl mb-5"
                 >
-                  UGC recognized 3-year degree program in Computer Applications. Master programming, web development, database management, and software engineering with comprehensive training and placement support.
+                  Centre of Excellence @ Quastech. Pursue a Bachelor of Computer Applications degree that fuses academics with hands-on training, internships, industry visits, and lifelong placement support.
                 </motion.p>
 
                 {/* Ratings Section */}
@@ -552,20 +536,40 @@ const BCA = () => {
             >
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">
-                  Course Overview
+                  Why Quastech BCA?
                 </span>
               </h2>
-              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-                Our Software Testing Training program is designed to provide you with comprehensive knowledge and hands-on experience in all aspects of software testing.
-              </p>
+              <div className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto space-y-4 leading-relaxed text-left md:text-center">
+                <p>
+                  Centre of Excellence @ Quastech. Embark on a journey of academic excellence and technological prowess with our Bachelor of Computer Applications program designed to create future-ready IT professionals.
+                </p>
+                <p>
+                  <strong>Cutting-edge Curriculum:</strong> Master programming languages, database management, software engineering, web development, and more, ensuring a well-rounded computer science education.
+                </p>
+                <p>
+                  <strong>Experienced Faculty:</strong> Learn from mentors who are experts in their respective fields, offering valuable insights, guidance, and mentorship.
+                </p>
+                <p>
+                  <strong>Hands-on Learning:</strong> Dive into projects, internships, and practical sessions that allow you to apply theoretical concepts to real-world scenarios.
+                </p>
+                <p>
+                  <strong>Industry Connections:</strong> Benefit from partnerships that enable guest lectures, workshops, and industry-relevant assignments.
+                </p>
+                <p>
+                  <strong>Personalised Support:</strong> Receive academic and career support tailored to your goals.
+                </p>
+                <p>
+                  <strong>Career Opportunities:</strong> Explore roles in software development, systems analysis, database administration, IT consulting, and more with strong growth prospects.
+                </p>
+              </div>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { icon: Target, title: "Manual Testing", desc: "Learn fundamental testing concepts" },
-                { icon: Code, title: "Automation Testing", desc: "Master Selenium and other tools" },
-                { icon: TrendingUp, title: "Performance Testing", desc: "Optimize application performance" },
-                { icon: Star, title: "Industry Best Practices", desc: "Follow industry standards" }
+                { icon: GraduationCap, title: "Experienced Faculty", desc: "Learn from mentors with rich academic and corporate expertise." },
+                { icon: BookOpen, title: "Industry-Relevant Curriculum", desc: "Stay future-ready with programming, networking, cloud, AI, and more." },
+                { icon: Laptop, title: "Practical Learning", desc: "Apply concepts through projects, labs, internships, and live case studies." },
+                { icon: Briefcase, title: "Placement & IV", desc: "Industrial visits, grooming sessions, and dedicated placement support." }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -596,7 +600,7 @@ const BCA = () => {
             >
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">
-                  BCA Degree Program Curriculum
+                  BCA Program Curriculum
                 </span>
               </h2>
             </motion.div>
@@ -609,9 +613,9 @@ const BCA = () => {
                 transition={{ duration: 0.6 }}
                 className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 rounded-2xl p-8 text-white h-fit sticky top-24 shadow-xl"
               >
-                  <h3 className="text-xl md:text-2xl font-bold mb-4">Industry Oriented Curriculum</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-4">Industry Integrated Journey</h3>
                 <p className="text-white/90 mb-8 leading-relaxed text-sm">
-                  Explore each topic in-depth through interactive sessions, real-world use cases, and tool-based learning. You'll not only understand the theory but also build practical skills that matter in actual roles.
+                  Each semester blends classroom learning with labs, internships, industrial visits, workshops, and projects so you graduate with both academic knowledge and practical expertise.
                 </p>
 
                 {/* Stats Cards */}
@@ -622,8 +626,8 @@ const BCA = () => {
                         <Database className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">30+</div>
-                        <div className="text-sm text-gray-600 font-medium">Case Studies & Projects</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">25+</div>
+                        <div className="text-sm text-gray-600 font-medium">Projects, Labs & Workshops</div>
                       </div>
                     </div>
                   </div>
@@ -633,8 +637,8 @@ const BCA = () => {
                         <Wrench className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent">10+</div>
-                        <div className="text-sm text-gray-600 font-medium">Languages & Tools</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent">12+</div>
+                        <div className="text-sm text-gray-600 font-medium">Programming Tools & Platforms</div>
                       </div>
                     </div>
                   </div>
@@ -644,8 +648,8 @@ const BCA = () => {
                         <Calendar className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">280+</div>
-                        <div className="text-sm text-gray-600 font-medium">Live Sessions Hours</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">100%</div>
+                        <div className="text-sm text-gray-600 font-medium">Placement Assistance</div>
                       </div>
                     </div>
                   </div>
@@ -738,11 +742,11 @@ const BCA = () => {
             >
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">
-                  Key Highlights in BCA Degree Program
+                  Benefits of Quastech BCA
                 </span>
               </h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto font-medium">
-                Every Feature Empowers The Career You've Always Wanted
+                Experience the advantages that make our BCA journey future-ready and industry-aligned
               </p>
             </motion.div>
 
@@ -786,11 +790,11 @@ const BCA = () => {
             >
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">
-                  Tools & Technologies You'll Master in BCA Program
+                  Technologies & Tools You'll Master
                 </span>
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Master industry-standard tools and technologies used by top companies worldwide
+                Build expertise across programming languages, databases, cloud platforms, cyber security stacks, analytics tools, and automation frameworks
               </p>
             </motion.div>
 
@@ -815,20 +819,20 @@ const BCA = () => {
                 }}
                 style={{ width: "max-content" }}
               >
-                {/* Software Testing Tools */}
+                {/* BCA Program Tools */}
                 {[
-                  { name: "Selenium", logo: "/coursesicons/html.jpg", color: "from-green-500 to-green-600" },
+                  { name: "C/C++", logo: "/coursesicons/html.jpg", color: "from-blue-500 to-blue-600" },
                   { name: "Java", logo: "/coursesicons/python.jpg", color: "from-orange-500 to-orange-600" },
-                  { name: "SQL", logo: "/coursesicons/mysql.jpg", color: "from-blue-500 to-blue-600" },
-                  { name: "JUnit", logo: "/coursesicons/bootstrap.jpg", color: "from-purple-500 to-purple-600" },
-                  { name: "TestNG", logo: "/coursesicons/css.jpg", color: "from-indigo-500 to-indigo-600" },
-                  { name: "Maven", logo: "/coursesicons/django.jpg", color: "from-yellow-500 to-orange-500" },
-                  { name: "Jenkins", logo: "/coursesicons/jquery.jpg", color: "from-blue-600 to-blue-700" },
-                  { name: "Git", logo: "/coursesicons/html.jpg", color: "from-red-500 to-red-600" },
-                  { name: "Postman", logo: "/coursesicons/python.jpg", color: "from-orange-500 to-orange-600" },
-                  { name: "Bugzilla", logo: "/coursesicons/mysql.jpg", color: "from-red-500 to-pink-600" },
-                  { name: "Jira", logo: "/coursesicons/bootstrap.jpg", color: "from-blue-500 to-blue-600" },
-                  { name: "Docker", logo: "/coursesicons/css.jpg", color: "from-blue-400 to-blue-500" },
+                  { name: "Python", logo: "/coursesicons/django.jpg", color: "from-green-500 to-green-600" },
+                  { name: "MySQL", logo: "/coursesicons/mysql.jpg", color: "from-cyan-500 to-blue-600" },
+                  { name: "Linux", logo: "/coursesicons/css.jpg", color: "from-slate-600 to-slate-800" },
+                  { name: ".NET", logo: "/coursesicons/bootstrap.jpg", color: "from-purple-500 to-purple-600" },
+                  { name: "PHP", logo: "/coursesicons/jquery.jpg", color: "from-pink-500 to-fuchsia-600" },
+                  { name: "Android", logo: "/coursesicons/python.jpg", color: "from-emerald-500 to-emerald-600" },
+                  { name: "Cloud", logo: "/coursesicons/html.jpg", color: "from-sky-500 to-sky-600" },
+                  { name: "Data Sci", logo: "/coursesicons/bootstrap.jpg", color: "from-teal-500 to-teal-600" },
+                  { name: "Cyber", logo: "/coursesicons/css.jpg", color: "from-indigo-500 to-indigo-600" },
+                  { name: "Tally", logo: "/coursesicons/django.jpg", color: "from-orange-400 to-orange-500" },
                 ].map((tool, index) => (
                   <motion.div
                     key={`tool-${index}`}

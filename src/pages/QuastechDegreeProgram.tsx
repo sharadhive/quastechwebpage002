@@ -36,9 +36,9 @@ import {
   CheckCircle,
   ClipboardList,
   Trophy,
-  PresentationChartLine,
+  BarChart3,
   FolderOpen,
-  Certificate,
+  Medal,
   ArrowUp,
   UserCircle,
   BadgeCheck,
@@ -121,50 +121,47 @@ const QuastechDegreeProgram = () => {
 
   const courseHighlights = [
     {
-      title: "Pan India Placements",
-      icon: MapPin,
-      description: "Access to placement opportunities across India.",
-    },
-    {
-      title: "80% Practical Training",
-      icon: Laptop,
-      secondaryIcon: Lightbulb,
-      description: "Hands-on experience with real-world projects.",
-    },
-    {
-      title: "2 Global Certifications",
+      title: "Dual Degree Advantage",
       icon: Award,
-      description: "Earn industry-recognized global certifications.",
+      secondaryIcon: Medal,
+      description: "Graduate with a Mumbai University degree plus Quastech's industry certification.",
     },
     {
-      title: "Personalised Career Coach",
-      icon: Users,
-      secondaryIcon: Star,
-      description: "Dedicated guidance for your career path.",
+      title: "Quastech Degree Certification",
+      icon: BadgeCheck,
+      description: "Earn a specialised credential that highlights your practical expertise.",
     },
     {
-      title: "Instant Doubt Solving",
-      icon: MessageSquare,
-      secondaryIcon: Monitor,
-      description: "Get your queries resolved instantly by experts.",
+      title: "3 Years Industrial Immersion",
+      icon: Briefcase,
+      description: "Gain continuous exposure to real projects, internships, and innovation labs.",
     },
     {
-      title: "Alumni Network",
+      title: "Guaranteed Placement Support",
+      icon: MapPin,
+      secondaryIcon: CheckCircle,
+      description: "Dedicated placement team, mock interviews, and corporate tie-ups.",
+    },
+    {
+      title: "Lifetime Career Assistance",
       icon: GraduationCap,
       secondaryIcon: Users,
-      description: "Connect with a vast network of successful alumni.",
+      description: "Access lifelong job support, profile upgrades, and alumni mentorship.",
     },
     {
-      title: "Multi-Domain Interviews",
-      icon: Users,
-      secondaryIcon: HelpCircle,
-      description: "Prepare for interviews across various domains.",
+      title: "Industrial Visits & Bootcamps",
+      icon: BarChart3,
+      description: "Experience live corporate environments, workshops, and coding bootcamps.",
     },
     {
-      title: "Profile Building Session",
-      icon: FileText,
-      secondaryIcon: UserCheck,
-      description: "Enhance your professional profile for better opportunities.",
+      title: "Corporate-Ready Skills",
+      icon: TrendingUp,
+      description: "Build a multidisciplinary skillset aligned with high-paying IT roles.",
+    },
+    {
+      title: "Work-Life Experiences",
+      icon: Rocket,
+      description: "Rejuvenating tours, innovation challenges, and rewards for top performers.",
     },
   ];
 
@@ -172,161 +169,122 @@ const QuastechDegreeProgram = () => {
   const curriculumModules = [
     {
       id: "module-1",
-      title: "SQL",
-      category: "#Database",
-      duration: "2 Weeks",
+      title: "Semester 1 · Diploma in Software Engineering",
+      category: "#Foundation",
+      duration: "Year 1",
       topics: [
-        "Introduction to SQL",
-        "What is Data and Database?",
-        "Types of Database DBMS - Database Management System",
-        "RDBMS - Relational Database Management System",
-        "Operators",
-        "Statements",
-        "DDL",
-        "DML",
-        "TCL",
-        "DQL",
-        "Aggregate Function",
-        "Count(), Sum(), Min(), Max(), Avg()",
-        "Clauses",
-        "Subquery",
-        "Joins"
+        "Computer Networks & Security",
+        "Software Engineering Fundamentals",
+        "Linux & Windows System Programming",
+        "System Programming Concepts",
+        "C Programming Essentials",
+        "HTML & CSS",
+        "Python Basics",
+        "Soft Skills Development",
+        "Workshops & seminars on emerging technologies"
       ]
     },
     {
       id: "module-2",
-      title: "Basic Java",
-      category: "#Programming",
-      duration: "3 Weeks",
+      title: "Semester 2 · Advanced Programming & Cloud",
+      category: "#Foundation",
+      duration: "Year 1",
       topics: [
-        "Introduction of Java",
-        "Features of Java",
-        "JDK - Java Development Kit",
-        "Variables",
-        "Operators",
-        "Conditional Statement",
-        "String and String Method",
-        "Array",
-        "For Each Loop"
+        "Advanced C/C++ Programming",
+        "Database Systems with SQL",
+        "Java Fundamentals",
+        "Cloud Computing Concepts",
+        "Cloud Architecture & APIs",
+        "Networking Essentials",
+        "Industry Internship Training Program"
       ]
     },
     {
       id: "module-3",
-      title: "Manual Testing",
-      category: "#Testing",
-      duration: "4 Weeks",
+      title: "Semester 3 · Advanced Software Engineering",
+      category: "#Advanced",
+      duration: "Year 2",
       topics: [
-        "Introduction to Software Testing",
-        "SDLC Models - Software Development Life Cycle",
-        "Configuration Management",
-        "Quality Assurance (QA) & Quality Control (QC)",
-        "Verification and Validation (V & V- Model)",
-        "Software Test Life Cycle (STLC)",
-        "Test Methods, Levels and Types",
-        "Requirements Analysis",
-        "Use Cases",
-        "Test Design Techniques",
-        "Defect Management",
-        "Agile Testing",
-        "Manual and Automation Testing"
+        "Advanced Python Programming",
+        "Advanced Java",
+        "R Programming",
+        "MySQL for Developers",
+        "Tkinter Desktop Applications",
+        "Django Framework",
+        "Descriptive Statistics",
+        "Hands-on industry projects & innovation labs"
       ]
     },
     {
       id: "module-4",
-      title: "ISTQB",
-      category: "#Certification",
-      duration: "2 Weeks",
+      title: "Semester 4 · Specialisation Tracks",
+      category: "#Advanced",
+      duration: "Year 2",
       topics: [
-        "Fundamentals Of Testing",
-        "Testing Throughout The Software Development Lifecycle",
-        "Static Testing",
-        "Test Techniques",
-        "Test Management",
-        "Tool Support For Testing"
+        "Embedded C with Computer Networks",
+        ".NET Technologies",
+        "Cyber Security Practices",
+        "Cyber Forensics",
+        "Introduction to Query Languages",
+        "CSS & Visual Tools",
+        "Corporate coding bootcamp with prizes"
       ]
     },
     {
       id: "module-5",
-      title: "Testing Tools",
-      category: "#Tools",
-      duration: "2 Weeks",
+      title: "Semester 5 · Data Science & Full Stack",
+      category: "#Specialisation",
+      duration: "Year 3",
       topics: [
-        "JIRA",
-        "JMETER"
+        "Data Science with R",
+        "Data Science with Python",
+        "Machine Learning",
+        "Software Testing",
+        "Web Designing",
+        "Full Stack Development (Java & Python)",
+        "Rejuvenating industry tour & experiential learning"
       ]
     },
     {
       id: "module-6",
-      title: "Selenium Java",
-      category: "#Automation",
-      duration: "3 Weeks",
+      title: "Semester 6 · Career Launch",
+      category: "#Career",
+      duration: "Year 3",
       topics: [
-        "Class and Object",
-        "Inheritance",
-        "Polymorphism",
-        "Constructor",
-        "Encapsulation",
-        "Abstraction",
-        "Exception Handling"
-      ]
-    },
-    {
-      id: "module-7",
-      title: "Selenium",
-      category: "#Automation",
-      duration: "5 Weeks",
-      topics: [
-        "Introduction to Selenium Automation",
-        "Introduction & Installation of Selenium IDE",
-        "What is Selenium",
-        "Component of Selenium",
-        "Locators using WebDrivers",
-        "Handling Pop Up Messages",
-        "Selenium Webdrivers waits",
-        "Checkboxes, Radio Button, Drop down list",
-        "Action Classes",
-        "POM (Page Object Model)",
-        "POI (Poor Objection Implementation) fetch the data",
-    "Database Testing",
-        "Types of Frameworks",
-        "TestNG Introduction & Need",
-        "Advantages over Junit",
-        "Understanding usage of annotations",
-        "Running a test in TestNG",
-        "Assertions/reporting errors",
-        "Creating Data Driven & Keyword Driven Framework",
-        "Creating Hybrid Framework",
-        "Testing on Web Application using Selenium",
-        "MAVEN (Maven Project)",
-        "JENKINS (Jenkins Project)"
+        "Industrial visits & corporate exposure",
+        "Interview preparation & business communication",
+        "Full-time internship",
+        "100% placement assistance",
+        "HR masterclasses & resume workshops",
+        "Expert seminars from industry specialists"
       ]
     }
   ];
 
   const careerOpportunities = [
-    "Software Developer",
+    "Software Engineer",
     "Full Stack Developer",
-    "Mobile App Developer",
-    "Data Scientist",
-    "Cloud Engineer",
-    "DevOps Engineer",
-    "IT Project Manager",
-    "System Architect"
+    "Data Scientist / Analyst",
+    "Cybersecurity Specialist",
+    "Cloud & DevOps Engineer",
+    "RPA / Automation Engineer",
+    "UI/UX & Web Designer",
+    "IT Project Manager"
   ];
 
   return (
     <DarkModeProvider>
       <SEO 
-        title="Quastech Degree Program - IT Degree with Placement"
-        description="Industry-focused IT degree program with comprehensive training in programming, web development, data science, and software engineering. Get UGC recognized degree with 100% placement assistance."
-        keywords="IT degree program, computer science degree, software engineering degree, IT education, degree with placement, recognized IT degree, Quastech degree"
+        title="Quastech Degree Program+ - Dual Degree with IT Specialisations"
+        description="Pursue Mumbai University academics and Quastech specialisations together. Earn dual certifications, 3 years of industrial knowledge, internships, and 100% placement support."
+        keywords="Quastech Degree Program, dual degree IT, BSc IT specialisation, industry integrated degree, quastech degree program plus, IT degree with placement"
         canonical="/quastech-degree-program"
         ogImage="/images/degree/quastech-degree.png"
         category="Degree Courses"
       />
       <CourseStructuredData 
-        name="Quastech Degree Program"
-        description="Industry-focused IT degree program with practical training in programming, web development, data science, and placement support. UGC recognized degree."
+        name="Quastech Degree Program+"
+        description="Dual degree program combining Mumbai University academics with Quastech specialisations in software engineering, data science, cyber security, and full stack development with internships and placement support."
         url="https://quastech.co.in/quastech-degree-program"
         duration="P3Y"
         courseMode="blended"
@@ -368,7 +326,7 @@ const QuastechDegreeProgram = () => {
                   <ChevronRight className="w-4 h-4" />
                   <span>Degree Courses</span>
                   <ChevronRight className="w-4 h-4" />
-                  <span className="text-white font-semibold">Quastech Degree Program</span>
+                  <span className="text-white font-semibold">Quastech Degree Program+</span>
                 </motion.div>
 
                 {/* Course Title */}
@@ -378,7 +336,7 @@ const QuastechDegreeProgram = () => {
                   transition={{ delay: 0.2 }}
                   className="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-2"
                 >
-                  Quastech Degree Program
+                  Quastech Degree Program+
                 </motion.h1>
 
                 {/* Course Description */}
@@ -388,7 +346,7 @@ const QuastechDegreeProgram = () => {
                   transition={{ delay: 0.3 }}
                   className="text-base md:text-lg text-white/90 max-w-2xl mb-5"
                 >
-                  Industry-focused 3-year degree program combining IT skills with practical training. Master programming, web development, data science, cloud computing with 100% placement assistance and UGC recognition.
+                  Study Mumbai University academics and Quastech specialisations together. Graduate with dual certifications, three years of industry immersion, and lifelong career support that gives you a competitive edge in IT.
                 </motion.p>
 
                 {/* Ratings Section */}
@@ -578,24 +536,32 @@ const QuastechDegreeProgram = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">
                   Course Overview
                 </span>
               </h2>
-              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-                Our Software Testing Training program is designed to provide you with comprehensive knowledge and hands-on experience in all aspects of software testing.
-              </p>
+              <div className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto space-y-4 leading-relaxed text-left md:text-center">
+                <p>
+                  Quastech Degree Program+ is a Centre of Excellence initiative that lets you pursue your Mumbai University academics and Quastech specialisation simultaneously. The dual-learning path builds a multidisciplinary foundation so you graduate with a university degree, an industry-recognised certification, and a portfolio of projects that recruiters trust.
+                </p>
+                <p>
+                  Across six semesters you’ll master programming, software engineering, cyber security, data science, full stack development, and corporate readiness. Each academic year blends classroom subjects with live industry projects, workshops, internships, industrial visits, coding bootcamps, and rejuvenating tours to keep you inspired.
+                </p>
+                <p>
+                  By the time you complete the program, you’ll carry two professional qualifications, three years of industrial knowledge, and lifelong placement support—giving you a head start and a competitive edge in the IT job market.
+                </p>
+              </div>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { icon: Target, title: "Manual Testing", desc: "Learn fundamental testing concepts" },
-                { icon: Code, title: "Automation Testing", desc: "Master Selenium and other tools" },
-                { icon: TrendingUp, title: "Performance Testing", desc: "Optimize application performance" },
-                { icon: Star, title: "Industry Best Practices", desc: "Follow industry standards" }
+                { icon: CheckCircle2, title: "Dual Certification", desc: "Graduate with a Mumbai University degree and Quastech specialisation together." },
+                { icon: BookOpen, title: "Multidisciplinary Learning", desc: "Cover software engineering, data science, cyber security, cloud, and full stack." },
+                { icon: Briefcase, title: "3-Year Industry Exposure", desc: "Internships, industrial visits, innovation labs, and corporate bootcamps every semester." },
+                { icon: Star, title: "Placement & Lifelong Support", desc: "Structured placement training, resume labs, and lifetime career assistance." }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -639,9 +605,9 @@ const QuastechDegreeProgram = () => {
                 transition={{ duration: 0.6 }}
                 className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 rounded-2xl p-8 text-white h-fit sticky top-24 shadow-xl"
               >
-                  <h3 className="text-xl md:text-2xl font-bold mb-4">Industry Oriented Curriculum</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-4">Industry Integrated Journey</h3>
                 <p className="text-white/90 mb-8 leading-relaxed text-sm">
-                  Explore each topic in-depth through interactive sessions, real-world use cases, and tool-based learning. You'll not only understand the theory but also build practical skills that matter in actual roles.
+                  Each semester blends university academics with Quastech specialisations, internships, projects, industrial visits, and corporate bootcamps—ensuring you develop a well-rounded, job-ready profile.
                 </p>
 
                 {/* Stats Cards */}
@@ -649,33 +615,33 @@ const QuastechDegreeProgram = () => {
                   <div className="bg-white rounded-xl p-4 shadow-lg">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                        <Database className="w-6 h-6 text-white" />
+                        <Award className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">30+</div>
-                        <div className="text-sm text-gray-600 font-medium">Case Studies & Projects</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">2</div>
+                        <div className="text-sm text-gray-600 font-medium">Professional Certifications</div>
                       </div>
                     </div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-lg">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
-                        <Wrench className="w-6 h-6 text-white" />
+                        <Briefcase className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent">10+</div>
-                        <div className="text-sm text-gray-600 font-medium">Languages & Tools</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent">3 Years</div>
+                        <div className="text-sm text-gray-600 font-medium">Industrial Knowledge</div>
                       </div>
                     </div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-lg">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-                        <Calendar className="w-6 h-6 text-white" />
+                        <MapPin className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">280+</div>
-                        <div className="text-sm text-gray-600 font-medium">Live Sessions Hours</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">100%</div>
+                        <div className="text-sm text-gray-600 font-medium">Placement Support</div>
                       </div>
                     </div>
                   </div>
@@ -768,11 +734,11 @@ const QuastechDegreeProgram = () => {
             >
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">
-                  Key Highlights in Quastech Degree Program
+                  Benefits of Quastech Degree Program+
                 </span>
               </h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto font-medium">
-                Every Feature Empowers The Career You've Always Wanted
+                Everything you need to graduate with confidence, credentials, and corporate readiness.
               </p>
             </motion.div>
 
@@ -820,7 +786,7 @@ const QuastechDegreeProgram = () => {
                 </span>
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Master industry-standard tools and technologies used by top companies worldwide
+                Master programming languages, data platforms, cloud technologies, cyber security stacks, automation frameworks, and full stack toolchains used by leading IT companies.
               </p>
             </motion.div>
 
@@ -845,20 +811,20 @@ const QuastechDegreeProgram = () => {
                 }}
                 style={{ width: "max-content" }}
               >
-                {/* Software Testing Tools */}
+                {/* Degree Program Tools */}
                 {[
-                  { name: "Selenium", logo: "/coursesicons/html.jpg", color: "from-green-500 to-green-600" },
+                  { name: "C", logo: "/coursesicons/html.jpg", color: "from-blue-500 to-blue-600" },
+                  { name: "C++", logo: "/coursesicons/bootstrap.jpg", color: "from-purple-500 to-purple-600" },
                   { name: "Java", logo: "/coursesicons/python.jpg", color: "from-orange-500 to-orange-600" },
+                  { name: "Python", logo: "/coursesicons/django.jpg", color: "from-green-500 to-green-600" },
+                  { name: "Django", logo: "/coursesicons/jquery.jpg", color: "from-cyan-500 to-blue-600" },
+                  { name: ".NET", logo: "/coursesicons/css.jpg", color: "from-indigo-500 to-indigo-600" },
                   { name: "SQL", logo: "/coursesicons/mysql.jpg", color: "from-blue-500 to-blue-600" },
-                  { name: "JUnit", logo: "/coursesicons/bootstrap.jpg", color: "from-purple-500 to-purple-600" },
-                  { name: "TestNG", logo: "/coursesicons/css.jpg", color: "from-indigo-500 to-indigo-600" },
-                  { name: "Maven", logo: "/coursesicons/django.jpg", color: "from-yellow-500 to-orange-500" },
-                  { name: "Jenkins", logo: "/coursesicons/jquery.jpg", color: "from-blue-600 to-blue-700" },
-                  { name: "Git", logo: "/coursesicons/html.jpg", color: "from-red-500 to-red-600" },
-                  { name: "Postman", logo: "/coursesicons/python.jpg", color: "from-orange-500 to-orange-600" },
-                  { name: "Bugzilla", logo: "/coursesicons/mysql.jpg", color: "from-red-500 to-pink-600" },
-                  { name: "Jira", logo: "/coursesicons/bootstrap.jpg", color: "from-blue-500 to-blue-600" },
-                  { name: "Docker", logo: "/coursesicons/css.jpg", color: "from-blue-400 to-blue-500" },
+                  { name: "Cloud", logo: "/coursesicons/html.jpg", color: "from-sky-500 to-sky-600" },
+                  { name: "Cyber", logo: "/coursesicons/python.jpg", color: "from-slate-600 to-slate-800" },
+                  { name: "ML", logo: "/coursesicons/bootstrap.jpg", color: "from-emerald-500 to-emerald-600" },
+                  { name: "Data", logo: "/coursesicons/css.jpg", color: "from-fuchsia-500 to-fuchsia-600" },
+                  { name: "FullStack", logo: "/coursesicons/django.jpg", color: "from-teal-500 to-teal-600" },
                 ].map((tool, index) => (
                   <motion.div
                     key={`tool-${index}`}
@@ -1963,7 +1929,7 @@ const QuastechDegreeProgram = () => {
                 </span>
               </h2>
               <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-                Clear, concise answers about our Software Testing Training—curriculum, format, placement, and more.
+                Clear, concise answers about our Quastech Degree Program+ — curriculum, format, placements, and more.
               </p>
             </motion.div>
 
@@ -1978,10 +1944,10 @@ const QuastechDegreeProgram = () => {
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="faq-1" className="group bg-white border border-blue-100 rounded-2xl mb-4 shadow-sm hover:shadow-lg transition-shadow">
                     <AccordionTrigger className="px-6 py-5 text-left font-semibold hover:no-underline">
-                      <span className="text-gray-900">What is included in the Software Testing Training Program?</span>
+                      <span className="text-gray-900">What is included in the Quastech Degree Program+?</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 text-gray-700 leading-relaxed">
-                      The program covers Manual Testing, Automation with Selenium Java, SQL fundamentals, tools like JIRA & JMeter, ISTQB concepts, profile building, and interview preparation with case-study projects.
+                      You pursue your Mumbai University curriculum while mastering Quastech specialisations across programming, software engineering, cloud, cyber security, data science, full stack, soft skills, industrial projects, internships, industrial visits, coding bootcamps, and corporate readiness workshops.
                     </AccordionContent>
                   </AccordionItem>
 
@@ -1990,7 +1956,7 @@ const QuastechDegreeProgram = () => {
                       <span className="text-gray-900">Do you provide placement assistance?</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 text-gray-700 leading-relaxed">
-                      Yes. You get resume polishing, mock interviews, HR preparation, and interview opportunities through our hiring partners. Many learners secure offers within weeks of completion.
+                      Yes. We provide dedicated placement mentoring, resume and portfolio building, mock interviews, aptitude prep, HR guidance, and direct interview drives with our partner companies. Alumni also receive lifetime job support.
                     </AccordionContent>
                   </AccordionItem>
 
@@ -1999,25 +1965,25 @@ const QuastechDegreeProgram = () => {
                       <span className="text-gray-900">Is the training available online and offline? Do I get LMS access?</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 text-gray-700 leading-relaxed">
-                      The course is offered in both formats. You also receive lifetime LMS access to recordings, notes, code repositories, and assignments.
+                      The degree program is delivered in classroom and hybrid formats. You receive lifetime LMS access with lecture recordings, study material, code repositories, assessments, and doubt-solving support.
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="faq-4" className="group bg-white border border-blue-100 rounded-2xl mb-4 shadow-sm hover:shadow-lg transition-shadow">
                     <AccordionTrigger className="px-6 py-5 text-left font-semibold hover:no-underline">
-                      <span className="text-gray-900">What is the course duration and weekly schedule?</span>
+                      <span className="text-gray-900">What is the program duration and weekly schedule?</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 text-gray-700 leading-relaxed">
-                      Typical duration is 10–14 weeks depending on the track. Sessions are planned on weekdays/weekends with additional practice and doubt-clearing support.
+                      The program spans six semesters (three academic years). Sessions run alongside university lectures with weekday/weekend batches, workshops, projects, internships, industrial visits, and mentor interactions scheduled throughout.
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="faq-5" className="group bg-white border border-blue-100 rounded-2xl mb-1 shadow-sm hover:shadow-lg transition-shadow">
                     <AccordionTrigger className="px-6 py-5 text-left font-semibold hover:no-underline">
-                      <span className="text-gray-900">Who can join—do I need coding experience?</span>
+                      <span className="text-gray-900">Who can join—do I need prior coding experience?</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 text-gray-700 leading-relaxed">
-                      No prior coding is required for the Manual Testing track. Basic programming is introduced gradually for the Automation track with simple, guided practice.
+                      The program is designed for students pursuing BSc IT, BSc CS, BCA or equivalent. Coding concepts start from fundamentals and gradually progress, so beginners can learn comfortably while advanced learners explore specialisations.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -2052,10 +2018,10 @@ const QuastechDegreeProgram = () => {
               className="text-white"
             >
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
-                Ready to Start Your Testing Journey?
+                Ready to Elevate Your Degree Journey?
               </h2>
               <p className="text-base md:text-lg mb-8 max-w-2xl mx-auto">
-                Join thousands of successful students who have transformed their careers with our Software Testing Training.
+                Join thousands of successful students who have transformed their careers with our Quastech Degree Program+.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.a

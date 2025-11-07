@@ -180,148 +180,117 @@ I'm interested in the React JS Development course. Please provide more details.`
     },
   ];
 
-  // Software Testing Curriculum Modules
+  // React JS Development Curriculum Modules - 20 weeks (5 Months)
   const curriculumModules = [
     {
       id: "module-1",
-      title: "SQL",
-      category: "#Database",
+      title: "HTML5",
+      category: "#Frontend",
       duration: "2 Weeks",
       topics: [
-        "Introduction to SQL",
-        "What is Data and Database?",
-        "Types of Database DBMS - Database Management System",
-        "RDBMS - Relational Database Management System",
-        "Operators",
-        "Statements",
-        "DDL",
-        "DML",
-        "TCL",
-        "DQL",
-        "Aggregate Function",
-        "Count(), Sum(), Min(), Max(), Avg()",
-        "Clauses",
-        "Subquery",
-        "Joins"
+        "Semantic markup",
+        "Forms & validation",
+        "Accessibility best practices"
       ]
     },
     {
       id: "module-2",
-      title: "Basic Java",
-      category: "#Programming",
+      title: "CSS3",
+      category: "#Styling",
       duration: "3 Weeks",
       topics: [
-        "Introduction of Java",
-        "Features of Java",
-        "JDK - Java Development Kit",
-        "Variables",
-        "Operators",
-        "Conditional Statement",
-        "String and String Method",
-        "Array",
-        "For Each Loop"
+        "Flexbox & Grid",
+        "Animations",
+        "Responsive layouts"
       ]
     },
     {
       id: "module-3",
-      title: "Manual Testing",
-      category: "#Testing",
-      duration: "4 Weeks",
+      title: "Bootstrap",
+      category: "#Framework",
+      duration: "2 Weeks",
       topics: [
-        "Introduction to Software Testing",
-        "SDLC Models - Software Development Life Cycle",
-        "Configuration Management",
-        "Quality Assurance (QA) & Quality Control (QC)",
-        "Verification and Validation (V & V- Model)",
-        "Software Test Life Cycle (STLC)",
-        "Test Methods, Levels and Types",
-        "Requirements Analysis",
-        "Use Cases",
-        "Test Design Techniques",
-        "Defect Management",
-        "Agile Testing",
-        "Manual and Automation Testing"
+        "Bootstrap grid system",
+        "Utility classes",
+        "Component customization"
       ]
     },
     {
       id: "module-4",
-      title: "ISTQB",
-      category: "#Certification",
-      duration: "2 Weeks",
+      title: "JavaScript Essentials",
+      category: "#Programming",
+      duration: "5 Weeks",
       topics: [
-        "Fundamentals Of Testing",
-        "Testing Throughout The Software Development Lifecycle",
-        "Static Testing",
-        "Test Techniques",
-        "Test Management",
-        "Tool Support For Testing"
+        "ES6+ features",
+        "DOM manipulation",
+        "Fetch & Async programming",
+        "Modular JavaScript"
       ]
     },
     {
       id: "module-5",
-      title: "Testing Tools",
-      category: "#Tools",
-      duration: "2 Weeks",
+      title: "jQuery",
+      category: "#Frontend",
+      duration: "1 Week",
       topics: [
-        "JIRA",
-        "JMETER"
+        "jQuery selectors",
+        "DOM utilities",
+        "AJAX helpers"
       ]
     },
     {
       id: "module-6",
-      title: "Selenium Java",
-      category: "#Automation",
-      duration: "3 Weeks",
+      title: "UI Project Sprint",
+      category: "#Project",
+      duration: "1 Week",
       topics: [
-        "Class and Object",
-        "Inheritance",
-        "Polymorphism",
-        "Constructor",
-        "Encapsulation",
-        "Abstraction",
-        "Exception Handling"
+        "Design implementation",
+        "Responsive best practices",
+        "Cross-browser testing"
       ]
     },
     {
       id: "module-7",
-      title: "Selenium",
-      category: "#Automation",
-      duration: "5 Weeks",
+      title: "React Fundamentals",
+      category: "#Framework",
+      duration: "3 Weeks",
       topics: [
-        "Introduction to Selenium Automation",
-        "Introduction & Installation of Selenium IDE",
-        "What is Selenium",
-        "Component of Selenium",
-        "Locators using WebDrivers",
-        "Handling Pop Up Messages",
-        "Selenium Webdrivers waits",
-        "Checkboxes, Radio Button, Drop down list",
-        "Action Classes",
-        "POM (Page Object Model)",
-        "POI (Poor Objection Implementation) fetch the data",
-    "Database Testing",
-        "Types of Frameworks",
-        "TestNG Introduction & Need",
-        "Advantages over Junit",
-        "Understanding usage of annotations",
-        "Running a test in TestNG",
-        "Assertions/reporting errors",
-        "Creating Data Driven & Keyword Driven Framework",
-        "Creating Hybrid Framework",
-        "Testing on Web Application using Selenium",
-        "MAVEN (Maven Project)",
-        "JENKINS (Jenkins Project)"
+        "Component architecture",
+        "State & props",
+        "Hooks & Context API"
+      ]
+    },
+    {
+      id: "module-8",
+      title: "Advanced React",
+      category: "#Framework",
+      duration: "2 Weeks",
+      topics: [
+        "Routing & navigation",
+        "Performance optimization",
+        "Testing React apps"
+      ]
+    },
+    {
+      id: "module-9",
+      title: "React Project",
+      category: "#Project",
+      duration: "1 Week",
+      topics: [
+        "End-to-end SPA development",
+        "API integration",
+        "Deployment"
       ]
     }
   ];
 
   const careerOpportunities = [
-    "Software Test Engineer",
-    "QA Analyst",
-    "Test Automation Engineer",
-    "Performance Test Engineer",
-    "Mobile App Tester",
-    "API Test Engineer"
+    "React JS Developer",
+    "Frontend Engineer",
+    "UI Developer",
+    "JavaScript Developer",
+    "React Native Developer",
+    "SPA Developer"
   ];
 
   return (

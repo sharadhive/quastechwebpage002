@@ -187,120 +187,146 @@ I'm interested in the Full Stack Java Development course. Please provide more de
     },
   ];
 
-  // Full Stack Java Development Curriculum Modules
+  // Full Stack Java Development Curriculum Modules - 39 weeks (9 Months)
   const curriculumModules = [
     {
       id: "module-1",
-      title: "Core Java Programming",
-      category: "#Programming",
-      duration: "4 Weeks",
+      title: "MySQL Database",
+      category: "#Database",
+      duration: "2 Weeks",
       topics: [
-        "Java Fundamentals",
-        "Object-Oriented Programming (OOP)",
-        "Classes and Objects",
-        "Inheritance and Polymorphism",
-        "Abstraction and Encapsulation",
-        "Exception Handling",
-        "Collections Framework",
-        "Multithreading",
-        "File I/O Operations",
-        "Lambda Expressions",
-        "Streams API",
-        "Generics"
+        "Database Fundamentals",
+        "SQL Queries & Operations",
+        "Table Design & Relationships",
+        "Joins, Subqueries & Indexes",
+        "Stored Procedures & Triggers",
+        "Database Optimization"
       ]
     },
     {
       id: "module-2",
-      title: "Advanced Java",
-      category: "#Programming",
-      duration: "3 Weeks",
+      title: "HTML & CSS Basics",
+      category: "#Frontend Basics",
+      duration: "2 Weeks",
       topics: [
-        "JDBC and Database Connectivity",
-        "Servlets and JSP",
-        "Java Networking",
-        "Reflection API",
-        "Annotations",
-        "Design Patterns",
-        "Memory Management",
-        "Performance Optimization"
+        "HTML: Structure, Tags, Forms - 1 Week",
+        "CSS: Styling, Layouts, Flexbox - 1 Week"
       ]
     },
     {
       id: "module-3",
-      title: "Spring Framework",
-      category: "#Framework",
-      duration: "4 Weeks",
+      title: "Core Java",
+      category: "#Programming",
+      duration: "9 Weeks",
       topics: [
-        "Spring Core",
-        "Dependency Injection",
-        "Spring Boot",
-        "Spring MVC",
-        "Spring Data JPA",
-        "Spring Security",
-        "RESTful Web Services",
-        "Spring AOP",
-        "Spring Testing"
+        "Java Fundamentals & Syntax",
+        "Object-Oriented Programming (OOP)",
+        "Classes, Objects & Methods",
+        "Inheritance & Polymorphism",
+        "Abstraction & Encapsulation",
+        "Exception Handling",
+        "Collections Framework",
+        "Multithreading & Concurrency",
+        "File I/O & Streams API",
+        "Lambda Expressions & Generics"
       ]
     },
     {
       id: "module-4",
-      title: "Hibernate & JPA",
-      category: "#ORM",
-      duration: "3 Weeks",
+      title: "Advanced Java",
+      category: "#Programming",
+      duration: "4 Weeks",
       topics: [
-        "Hibernate Fundamentals",
-        "JPA Annotations",
-        "Entity Relationships",
-        "HQL and Criteria API",
-        "Caching Strategies",
-        "Transaction Management",
-        "Performance Tuning"
+        "JDBC & Database Connectivity",
+        "Servlets & JSP",
+        "Java Networking",
+        "Annotations & Reflection API",
+        "Design Patterns",
+        "Memory Management"
       ]
     },
     {
       id: "module-5",
-      title: "Frontend Technologies",
-      category: "#Frontend",
-      duration: "4 Weeks",
+      title: "SpringBoot Framework",
+      category: "#Framework",
+      duration: "5 Weeks",
       topics: [
-        "HTML5 and CSS3",
-        "JavaScript ES6+",
-        "React.js Fundamentals",
-        "React Hooks",
-        "State Management",
-        "Routing",
-        "API Integration",
-        "Build Tools (Webpack, Babel)"
+        "Spring Core & Dependency Injection",
+        "Spring Boot Fundamentals",
+        "Spring MVC Architecture",
+        "Spring Data JPA",
+        "RESTful Web Services",
+        "Spring Security",
+        "Microservices with Spring"
       ]
     },
     {
       id: "module-6",
-      title: "Microservices & Cloud",
-      category: "#Architecture",
-      duration: "3 Weeks",
+      title: "SpringBoot Project",
+      category: "#Project",
+      duration: "1 Week",
       topics: [
-        "Microservices Architecture",
-        "Spring Cloud",
-        "Docker Containerization",
-        "Kubernetes Basics",
-        "API Gateway",
-        "Service Discovery",
-        "Distributed Tracing",
-        "Cloud Deployment (AWS/Azure)"
+        "Real-world Application Development",
+        "Backend API Implementation",
+        "Database Integration",
+        "Best Practices & Deployment"
       ]
     },
     {
       id: "module-7",
-      title: "DevOps & Tools",
-      category: "#DevOps",
+      title: "Advanced Frontend - HTML5 & CSS3",
+      category: "#Frontend",
+      duration: "5 Weeks",
+      topics: [
+        "HTML5: Semantic Tags, APIs - 2 Weeks",
+        "CSS3: Advanced Styling, Grid, Animations - 3 Weeks"
+      ]
+    },
+    {
+      id: "module-8",
+      title: "Bootstrap Framework",
+      category: "#Frontend",
       duration: "2 Weeks",
       topics: [
-        "Maven Build Tool",
-        "Git Version Control",
-        "Jenkins CI/CD",
-        "SonarQube Code Quality",
-        "Logging and Monitoring",
-        "Unit Testing (JUnit, Mockito)"
+        "Bootstrap Grid System",
+        "Components & Utilities",
+        "Responsive Design Patterns"
+      ]
+    },
+    {
+      id: "module-9",
+      title: "JavaScript",
+      category: "#Frontend",
+      duration: "5 Weeks",
+      topics: [
+        "JavaScript Fundamentals",
+        "ES6+ Features",
+        "DOM Manipulation",
+        "Event Handling",
+        "AJAX & Fetch API",
+        "Async/Await & Promises"
+      ]
+    },
+    {
+      id: "module-10",
+      title: "jQuery",
+      category: "#Frontend",
+      duration: "1 Week",
+      topics: [
+        "jQuery Selectors & Traversal",
+        "DOM Manipulation with jQuery",
+        "AJAX with jQuery"
+      ]
+    },
+    {
+      id: "module-11",
+      title: "Frontend Project",
+      category: "#Project",
+      duration: "1 Week",
+      topics: [
+        "Complete Web Application",
+        "UI/UX Implementation",
+        "Frontend-Backend Integration"
       ]
     }
   ];

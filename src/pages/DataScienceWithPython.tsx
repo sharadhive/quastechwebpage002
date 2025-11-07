@@ -166,133 +166,92 @@ const DataScienceWithPython = () => {
   const curriculumModules = [
     {
       id: "module-1",
-      title: "SQL",
+      title: "MySQL Database",
       category: "#Database",
-      duration: "2 Weeks",
+      duration: "5 Weeks",
       topics: [
-        "Introduction to SQL",
-        "What is Data and Database?",
-        "Types of Database DBMS - Database Management System",
-        "RDBMS - Relational Database Management System",
-        "Operators",
-        "Statements",
-        "DDL",
-        "DML",
-        "TCL",
-        "DQL",
-        "Aggregate Function",
-        "Count(), Sum(), Min(), Max(), Avg()",
-        "Clauses",
-        "Subquery",
-        "Joins"
+        "Database Fundamentals",
+        "SQL Queries & Operations",
+        "Table Design & Relationships",
+        "Joins & Subqueries",
+        "Data Manipulation for Analytics"
       ]
     },
     {
       id: "module-2",
-      title: "Basic Java",
+      title: "Python Programming",
       category: "#Programming",
-      duration: "3 Weeks",
+      duration: "5 Weeks",
       topics: [
-        "Introduction of Java",
-        "Features of Java",
-        "JDK - Java Development Kit",
-        "Variables",
-        "Operators",
-        "Conditional Statement",
-        "String and String Method",
-        "Array",
-        "For Each Loop"
+        "Python Basics & Syntax",
+        "Data Types & Variables",
+        "Control Flow & Loops",
+        "Functions & Modules",
+        "OOP in Python",
+        "NumPy & Pandas"
       ]
     },
     {
       id: "module-3",
-      title: "Manual Testing",
-      category: "#Testing",
-      duration: "4 Weeks",
+      title: "Data Science + Machine Learning",
+      category: "#Data Science",
+      duration: "5 Weeks",
       topics: [
-        "Introduction to Software Testing",
-        "SDLC Models - Software Development Life Cycle",
-        "Configuration Management",
-        "Quality Assurance (QA) & Quality Control (QC)",
-        "Verification and Validation (V & V- Model)",
-        "Software Test Life Cycle (STLC)",
-        "Test Methods, Levels and Types",
-        "Requirements Analysis",
-        "Use Cases",
-        "Test Design Techniques",
-        "Defect Management",
-        "Agile Testing",
-        "Manual and Automation Testing"
+        "Statistics & Probability",
+        "Data Preprocessing",
+        "Exploratory Data Analysis",
+        "Supervised Learning (Regression, Classification)",
+        "Unsupervised Learning (Clustering)",
+        "Model Evaluation & Optimization",
+        "Scikit-learn Library"
       ]
     },
     {
       id: "module-4",
-      title: "ISTQB",
-      category: "#Certification",
-      duration: "2 Weeks",
+      title: "Data Science Project",
+      category: "#Project",
+      duration: "1 Week",
       topics: [
-        "Fundamentals Of Testing",
-        "Testing Throughout The Software Development Lifecycle",
-        "Static Testing",
-        "Test Techniques",
-        "Test Management",
-        "Tool Support For Testing"
+        "End-to-End ML Project",
+        "Data Collection & Cleaning",
+        "Model Building & Deployment"
       ]
     },
     {
       id: "module-5",
-      title: "Testing Tools",
-      category: "#Tools",
-      duration: "2 Weeks",
+      title: "Deep Learning",
+      category: "#AI & ML",
+      duration: "3 Weeks",
       topics: [
-        "JIRA",
-        "JMETER"
+        "Neural Networks Fundamentals",
+        "TensorFlow & Keras",
+        "CNN (Convolutional Neural Networks)",
+        "RNN (Recurrent Neural Networks)",
+        "Model Training & Tuning"
       ]
     },
     {
       id: "module-6",
-      title: "Selenium Java",
-      category: "#Automation",
+      title: "AI + NLP",
+      category: "#AI & ML",
       duration: "3 Weeks",
       topics: [
-        "Class and Object",
-        "Inheritance",
-        "Polymorphism",
-        "Constructor",
-        "Encapsulation",
-        "Abstraction",
-        "Exception Handling"
+        "Artificial Intelligence Basics",
+        "Natural Language Processing",
+        "Text Processing & Tokenization",
+        "Sentiment Analysis",
+        "Language Models"
       ]
     },
     {
       id: "module-7",
-      title: "Selenium",
-      category: "#Automation",
-      duration: "5 Weeks",
+      title: "Advanced AI Project",
+      category: "#Project",
+      duration: "1 Week",
       topics: [
-        "Introduction to Selenium Automation",
-        "Introduction & Installation of Selenium IDE",
-        "What is Selenium",
-        "Component of Selenium",
-        "Locators using WebDrivers",
-        "Handling Pop Up Messages",
-        "Selenium Webdrivers waits",
-        "Checkboxes, Radio Button, Drop down list",
-        "Action Classes",
-        "POM (Page Object Model)",
-        "POI (Poor Objection Implementation) fetch the data",
-    "Database Testing",
-        "Types of Frameworks",
-        "TestNG Introduction & Need",
-        "Advantages over Junit",
-        "Understanding usage of annotations",
-        "Running a test in TestNG",
-        "Assertions/reporting errors",
-        "Creating Data Driven & Keyword Driven Framework",
-        "Creating Hybrid Framework",
-        "Testing on Web Application using Selenium",
-        "MAVEN (Maven Project)",
-        "JENKINS (Jenkins Project)"
+        "AI/NLP Application Development",
+        "Model Deployment",
+        "Real-world Implementation"
       ]
     }
   ];

@@ -192,133 +192,84 @@ I am interested in booking a free counselling session. Please contact me at your
   const curriculumModules = [
     {
       id: "module-1",
-      title: "SQL",
+      title: "MySQL Database",
       category: "#Database",
-      duration: "2 Weeks",
+      duration: "5-6 Weeks",
       topics: [
-        "Introduction to SQL",
-        "What is Data and Database?",
-        "Types of Database DBMS - Database Management System",
-        "RDBMS - Relational Database Management System",
-        "Operators",
-        "Statements",
-        "DDL",
-        "DML",
-        "TCL",
-        "DQL",
-        "Aggregate Function",
-        "Count(), Sum(), Min(), Max(), Avg()",
-        "Clauses",
-        "Subquery",
-        "Joins"
+        "Database Fundamentals",
+        "SQL Queries & Operations",
+        "Table Design & Relationships",
+        "Joins, Subqueries & Indexes",
+        "Data Manipulation & Analysis",
+        "Database Optimization"
       ]
     },
     {
       id: "module-2",
-      title: "Basic Java",
+      title: "Python Programming",
       category: "#Programming",
-      duration: "3 Weeks",
+      duration: "5 Weeks",
       topics: [
-        "Introduction of Java",
-        "Features of Java",
-        "JDK - Java Development Kit",
-        "Variables",
-        "Operators",
-        "Conditional Statement",
-        "String and String Method",
-        "Array",
-        "For Each Loop"
+        "Python Basics & Syntax",
+        "Data Types & Variables",
+        "Control Flow & Loops",
+        "Functions & Modules",
+        "File Handling",
+        "Libraries for Data Analysis (NumPy, Pandas)"
       ]
     },
     {
       id: "module-3",
-      title: "Manual Testing",
-      category: "#Testing",
-      duration: "4 Weeks",
+      title: "Microsoft Excel",
+      category: "#Tools",
+      duration: "3 Weeks",
       topics: [
-        "Introduction to Software Testing",
-        "SDLC Models - Software Development Life Cycle",
-        "Configuration Management",
-        "Quality Assurance (QA) & Quality Control (QC)",
-        "Verification and Validation (V & V- Model)",
-        "Software Test Life Cycle (STLC)",
-        "Test Methods, Levels and Types",
-        "Requirements Analysis",
-        "Use Cases",
-        "Test Design Techniques",
-        "Defect Management",
-        "Agile Testing",
-        "Manual and Automation Testing"
+        "Excel Basics & Formulas",
+        "Data Formatting & Validation",
+        "Pivot Tables & Charts",
+        "VLOOKUP & HLOOKUP",
+        "Conditional Formatting",
+        "Data Analysis Tools"
       ]
     },
     {
       id: "module-4",
-      title: "ISTQB",
-      category: "#Certification",
-      duration: "2 Weeks",
+      title: "Power BI",
+      category: "#Visualization",
+      duration: "3 Weeks",
       topics: [
-        "Fundamentals Of Testing",
-        "Testing Throughout The Software Development Lifecycle",
-        "Static Testing",
-        "Test Techniques",
-        "Test Management",
-        "Tool Support For Testing"
+        "Power BI Introduction",
+        "Data Import & Transformation",
+        "DAX Functions",
+        "Creating Dashboards",
+        "Reports & Visualizations",
+        "Publishing & Sharing"
       ]
     },
     {
       id: "module-5",
-      title: "Testing Tools",
-      category: "#Tools",
-      duration: "2 Weeks",
+      title: "Tableau",
+      category: "#Visualization",
+      duration: "3 Weeks",
       topics: [
-        "JIRA",
-        "JMETER"
+        "Tableau Fundamentals",
+        "Data Connections",
+        "Creating Charts & Graphs",
+        "Dashboards & Stories",
+        "Calculated Fields",
+        "Advanced Visualizations"
       ]
     },
     {
       id: "module-6",
-      title: "Selenium Java",
-      category: "#Automation",
-      duration: "3 Weeks",
+      title: "Data Analytics Project",
+      category: "#Project",
+      duration: "1 Week",
       topics: [
-        "Class and Object",
-        "Inheritance",
-        "Polymorphism",
-        "Constructor",
-        "Encapsulation",
-        "Abstraction",
-        "Exception Handling"
-      ]
-    },
-    {
-      id: "module-7",
-      title: "Selenium",
-      category: "#Automation",
-      duration: "5 Weeks",
-      topics: [
-        "Introduction to Selenium Automation",
-        "Introduction & Installation of Selenium IDE",
-        "What is Selenium",
-        "Component of Selenium",
-        "Locators using WebDrivers",
-        "Handling Pop Up Messages",
-        "Selenium Webdrivers waits",
-        "Checkboxes, Radio Button, Drop down list",
-        "Action Classes",
-        "POM (Page Object Model)",
-        "POI (Poor Objection Implementation) fetch the data",
-    "Database Testing",
-        "Types of Frameworks",
-        "TestNG Introduction & Need",
-        "Advantages over Junit",
-        "Understanding usage of annotations",
-        "Running a test in TestNG",
-        "Assertions/reporting errors",
-        "Creating Data Driven & Keyword Driven Framework",
-        "Creating Hybrid Framework",
-        "Testing on Web Application using Selenium",
-        "MAVEN (Maven Project)",
-        "JENKINS (Jenkins Project)"
+        "Real-world Data Analysis",
+        "Dashboard Creation",
+        "Business Intelligence Reporting",
+        "Data-driven Decision Making"
       ]
     }
   ];

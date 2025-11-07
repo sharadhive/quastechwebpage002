@@ -168,137 +168,146 @@ const MERNStackDevelopment = () => {
     },
   ];
 
-  // Software Testing Curriculum Modules
+  // MERN Stack Curriculum Modules - 30 weeks (7.5 Months)
   const curriculumModules = [
     {
       id: "module-1",
-      title: "SQL",
+      title: "MongoDB Database",
       category: "#Database",
       duration: "2 Weeks",
       topics: [
-        "Introduction to SQL",
-        "What is Data and Database?",
-        "Types of Database DBMS - Database Management System",
-        "RDBMS - Relational Database Management System",
-        "Operators",
-        "Statements",
-        "DDL",
-        "DML",
-        "TCL",
-        "DQL",
-        "Aggregate Function",
-        "Count(), Sum(), Min(), Max(), Avg()",
-        "Clauses",
-        "Subquery",
-        "Joins"
+        "MongoDB Fundamentals",
+        "NoSQL Concepts",
+        "CRUD Operations",
+        "Aggregation Framework",
+        "Indexing & Performance",
+        "Data Modeling"
       ]
     },
     {
       id: "module-2",
-      title: "Basic Java",
-      category: "#Programming",
-      duration: "3 Weeks",
+      title: "HTML5",
+      category: "#Frontend",
+      duration: "2 Weeks",
       topics: [
-        "Introduction of Java",
-        "Features of Java",
-        "JDK - Java Development Kit",
-        "Variables",
-        "Operators",
-        "Conditional Statement",
-        "String and String Method",
-        "Array",
-        "For Each Loop"
+        "HTML5 Semantic Tags",
+        "Forms & Validation",
+        "Multimedia Elements",
+        "Canvas & SVG",
+        "Local Storage"
       ]
     },
     {
       id: "module-3",
-      title: "Manual Testing",
-      category: "#Testing",
-      duration: "4 Weeks",
+      title: "CSS3",
+      category: "#Frontend",
+      duration: "3 Weeks",
       topics: [
-        "Introduction to Software Testing",
-        "SDLC Models - Software Development Life Cycle",
-        "Configuration Management",
-        "Quality Assurance (QA) & Quality Control (QC)",
-        "Verification and Validation (V & V- Model)",
-        "Software Test Life Cycle (STLC)",
-        "Test Methods, Levels and Types",
-        "Requirements Analysis",
-        "Use Cases",
-        "Test Design Techniques",
-        "Defect Management",
-        "Agile Testing",
-        "Manual and Automation Testing"
+        "CSS3 Styling & Selectors",
+        "Flexbox & Grid Layout",
+        "Animations & Transitions",
+        "Responsive Design",
+        "CSS Preprocessors"
       ]
     },
     {
       id: "module-4",
-      title: "ISTQB",
-      category: "#Certification",
+      title: "Bootstrap",
+      category: "#Frontend",
       duration: "2 Weeks",
       topics: [
-        "Fundamentals Of Testing",
-        "Testing Throughout The Software Development Lifecycle",
-        "Static Testing",
-        "Test Techniques",
-        "Test Management",
-        "Tool Support For Testing"
+        "Bootstrap Grid System",
+        "Components & Utilities",
+        "Responsive Design Patterns",
+        "Customization"
       ]
     },
     {
       id: "module-5",
-      title: "Testing Tools",
-      category: "#Tools",
-      duration: "2 Weeks",
+      title: "JavaScript",
+      category: "#Frontend",
+      duration: "5 Weeks",
       topics: [
-        "JIRA",
-        "JMETER"
+        "JavaScript Fundamentals",
+        "ES6+ Features",
+        "DOM Manipulation",
+        "Event Handling",
+        "Async/Await & Promises",
+        "AJAX & Fetch API"
       ]
     },
     {
       id: "module-6",
-      title: "Selenium Java",
-      category: "#Automation",
-      duration: "3 Weeks",
+      title: "jQuery",
+      category: "#Frontend",
+      duration: "1 Week",
       topics: [
-        "Class and Object",
-        "Inheritance",
-        "Polymorphism",
-        "Constructor",
-        "Encapsulation",
-        "Abstraction",
-        "Exception Handling"
+        "jQuery Selectors",
+        "DOM Manipulation",
+        "Event Handling",
+        "AJAX with jQuery"
       ]
     },
     {
       id: "module-7",
-      title: "Selenium",
-      category: "#Automation",
+      title: "Frontend Project",
+      category: "#Project",
+      duration: "1 Week",
+      topics: [
+        "Complete Web Application",
+        "Responsive UI Implementation",
+        "Best Practices"
+      ]
+    },
+    {
+      id: "module-8",
+      title: "React.js",
+      category: "#Frontend Framework",
       duration: "5 Weeks",
       topics: [
-        "Introduction to Selenium Automation",
-        "Introduction & Installation of Selenium IDE",
-        "What is Selenium",
-        "Component of Selenium",
-        "Locators using WebDrivers",
-        "Handling Pop Up Messages",
-        "Selenium Webdrivers waits",
-        "Checkboxes, Radio Button, Drop down list",
-        "Action Classes",
-        "POM (Page Object Model)",
-        "POI (Poor Objection Implementation) fetch the data",
-    "Database Testing",
-        "Types of Frameworks",
-        "TestNG Introduction & Need",
-        "Advantages over Junit",
-        "Understanding usage of annotations",
-        "Running a test in TestNG",
-        "Assertions/reporting errors",
-        "Creating Data Driven & Keyword Driven Framework",
-        "Creating Hybrid Framework",
-        "Testing on Web Application using Selenium",
-        "MAVEN (Maven Project)",
-        "JENKINS (Jenkins Project)"
+        "React Fundamentals",
+        "Components & Props",
+        "State & Lifecycle",
+        "Hooks (useState, useEffect)",
+        "React Router",
+        "API Integration"
+      ]
+    },
+    {
+      id: "module-9",
+      title: "Node.js",
+      category: "#Backend",
+      duration: "1 Week",
+      topics: [
+        "Node.js Fundamentals",
+        "npm & Modules",
+        "Async Programming"
+      ]
+    },
+    {
+      id: "module-10",
+      title: "Express.js",
+      category: "#Backend",
+      duration: "7 Weeks",
+      topics: [
+        "Express.js Framework",
+        "Routing & Middleware",
+        "RESTful APIs",
+        "Authentication & Authorization",
+        "MongoDB Integration",
+        "Error Handling",
+        "Security Best Practices"
+      ]
+    },
+    {
+      id: "module-11",
+      title: "Full Stack Project",
+      category: "#Project",
+      duration: "1 Week",
+      topics: [
+        "Complete MERN Application",
+        "Frontend-Backend Integration",
+        "Deployment & Hosting"
       ]
     }
   ];

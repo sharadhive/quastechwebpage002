@@ -168,11 +168,11 @@ const FullStackDotNetDevelopment = () => {
     },
   ];
 
-  // Software Testing Curriculum Modules
+  // Full Stack .NET Development Curriculum Modules - 35 weeks (9 Months)
   const curriculumModules = [
     {
       id: "module-1",
-      title: "SQL",
+      title: "MySQL Database",
       category: "#Database",
       duration: "2 Weeks",
       topics: [

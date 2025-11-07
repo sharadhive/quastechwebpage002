@@ -202,96 +202,106 @@ I am interested in booking a free counselling session. Please contact me at your
   const curriculumModules = [
     {
       id: "module-1",
-      title: "SQL",
+      title: "MySQL Database",
       category: "#Database",
       duration: "2 Weeks",
       topics: [
         "Introduction to SQL",
-        "What is Data and Database?",
-        "Types of Database DBMS - Database Management System",
-        "RDBMS - Relational Database Management System",
-        "Operators",
-        "Statements",
-        "DDL",
-        "DML",
-        "TCL",
-        "DQL",
-        "Aggregate Function",
-        "Count(), Sum(), Min(), Max(), Avg()",
-        "Clauses",
-        "Subquery",
-        "Joins"
+        "Data & Database Fundamentals",
+        "DBMS & RDBMS Concepts",
+        "SQL Operations & Statements",
+        "DDL, DML, TCL, DQL",
+        "Aggregate Functions",
+        "Joins & Subqueries"
       ]
     },
     {
       id: "module-2",
       title: "Basic Java",
       category: "#Programming",
-      duration: "3 Weeks",
+      duration: "1 Week",
       topics: [
-        "Introduction of Java",
-        "Features of Java",
-        "JDK - Java Development Kit",
-        "Variables",
-        "Operators",
-        "Conditional Statement",
-        "String and String Method",
-        "Array",
-        "For Each Loop"
+        "Introduction to Java",
+        "Java Features & JDK",
+        "Variables & Operators",
+        "Conditional Statements",
+        "Strings & Arrays",
+        "Loops & Control Flow"
       ]
     },
     {
       id: "module-3",
       title: "Manual Testing",
       category: "#Testing",
-      duration: "4 Weeks",
+      duration: "5 Weeks",
       topics: [
         "Introduction to Software Testing",
-        "SDLC Models - Software Development Life Cycle",
-        "Configuration Management",
-        "Quality Assurance (QA) & Quality Control (QC)",
-        "Verification and Validation (V & V- Model)",
+        "SDLC Models",
+        "Quality Assurance & Quality Control",
+        "Verification & Validation",
         "Software Test Life Cycle (STLC)",
-        "Test Methods, Levels and Types",
+        "Test Methods, Levels & Types",
         "Requirements Analysis",
-        "Use Cases",
         "Test Design Techniques",
         "Defect Management",
-        "Agile Testing",
-        "Manual and Automation Testing"
+        "Agile Testing"
       ]
     },
     {
       id: "module-4",
-      title: "ISTQB",
-      category: "#Certification",
-      duration: "2 Weeks",
+      title: "Manual Testing Project",
+      category: "#Project",
+      duration: "3 Weeks",
       topics: [
-        "Fundamentals Of Testing",
-        "Testing Throughout The Software Development Lifecycle",
-        "Static Testing",
-        "Test Techniques",
-        "Test Management",
-        "Tool Support For Testing"
+        "Real Application Testing",
+        "Test Case Documentation",
+        "Bug Reporting",
+        "Test Execution & Reporting"
       ]
     },
     {
       id: "module-5",
-      title: "Testing Tools",
+      title: "JIRA",
       category: "#Tools",
-      duration: "2 Weeks",
+      duration: "1 Week",
       topics: [
-        "JIRA",
-        "JMETER"
+        "JIRA Tool Overview",
+        "Project Management",
+        "Issue Tracking",
+        "Sprint Planning"
       ]
     },
     {
       id: "module-6",
-      title: "Selenium Java",
-      category: "#Automation",
-      duration: "3 Weeks",
+      title: "API Testing",
+      category: "#Tools",
+      duration: "1 Week",
       topics: [
-        "Class and Object",
+        "API Testing Fundamentals",
+        "REST API Concepts",
+        "Postman Tool",
+        "API Test Cases"
+      ]
+    },
+    {
+      id: "module-7",
+      title: "JMeter",
+      category: "#Tools",
+      duration: "1 Week",
+      topics: [
+        "Performance Testing Basics",
+        "JMeter Tool Overview",
+        "Load & Stress Testing",
+        "Test Reporting"
+      ]
+    },
+    {
+      id: "module-8",
+      title: "Selenium Java (OOP Concepts)",
+      category: "#Automation",
+      duration: "2 Weeks",
+      topics: [
+        "Class & Object",
         "Inheritance",
         "Polymorphism",
         "Constructor",
@@ -301,34 +311,44 @@ I am interested in booking a free counselling session. Please contact me at your
       ]
     },
     {
-      id: "module-7",
-      title: "Selenium",
+      id: "module-9",
+      title: "Selenium WebDriver",
       category: "#Automation",
       duration: "5 Weeks",
       topics: [
-        "Introduction to Selenium Automation",
-        "Introduction & Installation of Selenium IDE",
-        "What is Selenium",
-        "Component of Selenium",
-        "Locators using WebDrivers",
-        "Handling Pop Up Messages",
-        "Selenium Webdrivers waits",
-        "Checkboxes, Radio Button, Drop down list",
+        "Introduction to Selenium",
+        "Selenium Components",
+        "Locators & WebDrivers",
+        "Handling Pop-ups & Alerts",
+        "WebDriver Waits",
+        "Checkboxes, Radio Buttons, Dropdowns",
         "Action Classes",
-        "POM (Page Object Model)",
-        "POI (Poor Objection Implementation) fetch the data",
-    "Database Testing",
-        "Types of Frameworks",
-        "TestNG Introduction & Need",
-        "Advantages over Junit",
-        "Understanding usage of annotations",
-        "Running a test in TestNG",
-        "Assertions/reporting errors",
-        "Creating Data Driven & Keyword Driven Framework",
-        "Creating Hybrid Framework",
-        "Testing on Web Application using Selenium",
-        "MAVEN (Maven Project)",
-        "JENKINS (Jenkins Project)"
+        "Page Object Model (POM)",
+        "Data Driven Framework",
+        "TestNG Framework",
+        "Maven Integration"
+      ]
+    },
+    {
+      id: "module-10",
+      title: "Automation Project",
+      category: "#Project",
+      duration: "1 Week",
+      topics: [
+        "Complete Automation Framework",
+        "Test Execution",
+        "Reporting & Analysis"
+      ]
+    },
+    {
+      id: "module-11",
+      title: "Jenkins CI/CD",
+      category: "#DevOps",
+      duration: "4 Hours (Sundays Only)",
+      topics: [
+        "Jenkins Overview",
+        "CI/CD Pipeline Setup",
+        "Automated Test Execution"
       ]
     }
   ];

@@ -26,14 +26,14 @@ const EnquiryForm = () => {
     e.preventDefault();
     
     // Show success message
-    toast({
+      toast({
       title: "✅ Enquiry Submitted!",
       description: "Thank you for your interest. We'll contact you shortly.",
-    });
-    
+      });
+      
     // Reset form
-    setTimeout(() => {
-      setFormData({ name: "", email: "", phone: "", course: "", message: "" });
+      setTimeout(() => {
+        setFormData({ name: "", email: "", phone: "", course: "", message: "" });
     }, 1500);
   };
 
@@ -45,10 +45,10 @@ const EnquiryForm = () => {
   const handleQuickAction = (actionType: string) => {
     switch(actionType) {
       case "Live Chat":
-        toast({
+          toast({
           title: "Live Chat",
           description: "Chat feature coming soon!",
-        });
+          });
         break;
       case "Book Demo":
         setShowBookDemoForm(true);

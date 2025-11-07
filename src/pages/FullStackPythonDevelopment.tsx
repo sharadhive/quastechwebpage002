@@ -166,107 +166,138 @@ const FullStackPythonDevelopment = () => {
   const curriculumModules = [
     {
       id: "module-1",
-      title: "Python Fundamentals",
-      category: "#Programming",
-      duration: "4 Weeks",
+      title: "MySQL Database",
+      category: "#Database",
+      duration: "2 Weeks",
       topics: [
-        "Python Basics & Syntax",
-        "Data Types and Variables",
-        "Control Flow (if/else, loops)",
-        "Functions and Modules",
-        "Object-Oriented Programming",
-        "Exception Handling",
-        "File I/O Operations",
-        "List Comprehensions",
-        "Generators and Iterators",
-        "Decorators"
+        "Database Fundamentals",
+        "SQL Queries & Operations",
+        "Table Design & Relationships",
+        "Joins & Subqueries",
+        "Stored Procedures"
       ]
     },
     {
       id: "module-2",
-      title: "Advanced Python",
-      category: "#Programming",
-      duration: "3 Weeks",
+      title: "HTML & CSS Basics",
+      category: "#Frontend Basics",
+      duration: "2 Weeks",
       topics: [
-        "Advanced Data Structures",
-        "Regular Expressions",
-        "Working with APIs",
-        "Multithreading and Multiprocessing",
-        "Database Connectivity (SQLite, MySQL)",
-        "Python Packages and Virtual Environments"
+        "HTML: Structure, Tags, Forms - 1 Week",
+        "CSS: Styling, Layouts, Flexbox - 1 Week"
       ]
     },
     {
       id: "module-3",
+      title: "Core Python",
+      category: "#Programming",
+      duration: "6 Weeks",
+      topics: [
+        "Python Basics & Syntax",
+        "Data Types & Variables",
+        "Control Flow & Loops",
+        "Functions & Modules",
+        "Object-Oriented Programming",
+        "Exception Handling",
+        "File I/O Operations"
+      ]
+    },
+    {
+      id: "module-4",
+      title: "Advanced Python",
+      category: "#Programming",
+      duration: "4 Weeks",
+      topics: [
+        "Advanced Data Structures",
+        "Regular Expressions",
+        "Working with APIs",
+        "Multithreading",
+        "Database Connectivity",
+        "Decorators & Generators"
+      ]
+    },
+    {
+      id: "module-5",
       title: "Django Framework",
       category: "#Framework",
       duration: "5 Weeks",
       topics: [
         "Django Fundamentals",
-        "Models and ORM",
-        "Views and Templates",
-        "Forms and Admin Panel",
+        "Models & ORM",
+        "Views & Templates",
+        "Forms & Admin Panel",
         "Django REST Framework",
-        "Authentication & Authorization",
-        "Deployment",
-        "Testing with Django"
-      ]
-    },
-    {
-      id: "module-4",
-      title: "Flask Framework",
-      category: "#Framework",
-      duration: "3 Weeks",
-      topics: [
-        "Flask Basics",
-        "Routing and Views",
-        "Jinja2 Templates",
-        "Flask-SQLAlchemy",
-        "RESTful APIs with Flask",
-        "Flask Security",
+        "Authentication",
         "Deployment"
       ]
     },
     {
-      id: "module-5",
-      title: "Frontend Integration",
-      category: "#Frontend",
-      duration: "4 Weeks",
-      topics: [
-        "HTML5 and CSS3",
-        "JavaScript ES6+",
-        "React.js Fundamentals",
-        "React Hooks and State Management",
-        "API Integration",
-        "Build Tools (Webpack, Babel)"
-      ]
-    },
-    {
       id: "module-6",
-      title: "Database & Cloud",
-      category: "#Database",
-      duration: "3 Weeks",
+      title: "Django Project",
+      category: "#Project",
+      duration: "1 Week",
       topics: [
-        "PostgreSQL and MySQL",
-        "MongoDB (NoSQL)",
-        "Database Design",
-        "AWS Deployment",
-        "Docker Containerization",
-        "CI/CD Pipeline"
+        "Real-world Application Development",
+        "Backend API Implementation",
+        "Database Integration",
+        "Best Practices"
       ]
     },
     {
       id: "module-7",
-      title: "FastAPI & DevOps",
-      category: "#DevOps",
+      title: "Advanced Frontend - HTML5 & CSS3",
+      category: "#Frontend",
+      duration: "5 Weeks",
+      topics: [
+        "HTML5: Semantic Tags, APIs - 2 Weeks",
+        "CSS3: Advanced Styling, Grid, Animations - 3 Weeks"
+      ]
+    },
+    {
+      id: "module-8",
+      title: "Bootstrap Framework",
+      category: "#Frontend",
       duration: "2 Weeks",
       topics: [
-        "FastAPI Framework",
-        "Async Programming",
-        "Git Version Control",
-        "Docker and Kubernetes",
-        "Testing (pytest)",
-        "Logging and Monitoring"
+        "Bootstrap Grid System",
+        "Components & Utilities",
+        "Responsive Design"
+      ]
+    },
+    {
+      id: "module-9",
+      title: "JavaScript",
+      category: "#Frontend",
+      duration: "5 Weeks",
+      topics: [
+        "JavaScript Fundamentals",
+        "ES6+ Features",
+        "DOM Manipulation",
+        "Event Handling",
+        "AJAX & Fetch API",
+        "Async/Await"
+      ]
+    },
+    {
+      id: "module-10",
+      title: "jQuery",
+      category: "#Frontend",
+      duration: "1 Week",
+      topics: [
+        "jQuery Selectors",
+        "DOM Manipulation",
+        "AJAX with jQuery"
+      ]
+    },
+    {
+      id: "module-11",
+      title: "Frontend Project",
+      category: "#Project",
+      duration: "1 Week",
+      topics: [
+        "Complete Web Application",
+        "UI/UX Implementation",
+        "Frontend-Backend Integration"
       ]
     }
   ];

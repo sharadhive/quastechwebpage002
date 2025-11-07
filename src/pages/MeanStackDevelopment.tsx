@@ -168,137 +168,122 @@ const MeanStackDevelopment = () => {
     },
   ];
 
-  // Software Testing Curriculum Modules
+  // MEAN Stack Curriculum Modules - 30 weeks (7.5 Months)
   const curriculumModules = [
     {
       id: "module-1",
-      title: "SQL",
+      title: "MongoDB Database",
       category: "#Database",
       duration: "2 Weeks",
       topics: [
-        "Introduction to SQL",
-        "What is Data and Database?",
-        "Types of Database DBMS - Database Management System",
-        "RDBMS - Relational Database Management System",
-        "Operators",
-        "Statements",
-        "DDL",
-        "DML",
-        "TCL",
-        "DQL",
-        "Aggregate Function",
-        "Count(), Sum(), Min(), Max(), Avg()",
-        "Clauses",
-        "Subquery",
-        "Joins"
+        "MongoDB Fundamentals",
+        "NoSQL Database Concepts",
+        "CRUD Operations",
+        "Aggregation Framework",
+        "Indexing & Performance"
       ]
     },
     {
       id: "module-2",
-      title: "Basic Java",
-      category: "#Programming",
-      duration: "3 Weeks",
+      title: "HTML5",
+      category: "#Frontend",
+      duration: "2 Weeks",
       topics: [
-        "Introduction of Java",
-        "Features of Java",
-        "JDK - Java Development Kit",
-        "Variables",
-        "Operators",
-        "Conditional Statement",
-        "String and String Method",
-        "Array",
-        "For Each Loop"
+        "HTML5 Semantic Tags",
+        "Forms & Validation",
+        "Multimedia Elements"
       ]
     },
     {
       id: "module-3",
-      title: "Manual Testing",
-      category: "#Testing",
-      duration: "4 Weeks",
+      title: "CSS3",
+      category: "#Frontend",
+      duration: "3 Weeks",
       topics: [
-        "Introduction to Software Testing",
-        "SDLC Models - Software Development Life Cycle",
-        "Configuration Management",
-        "Quality Assurance (QA) & Quality Control (QC)",
-        "Verification and Validation (V & V- Model)",
-        "Software Test Life Cycle (STLC)",
-        "Test Methods, Levels and Types",
-        "Requirements Analysis",
-        "Use Cases",
-        "Test Design Techniques",
-        "Defect Management",
-        "Agile Testing",
-        "Manual and Automation Testing"
+        "CSS3 Styling & Selectors",
+        "Flexbox & Grid Layout",
+        "Animations & Responsive Design"
       ]
     },
     {
       id: "module-4",
-      title: "ISTQB",
-      category: "#Certification",
+      title: "Bootstrap",
+      category: "#Frontend",
       duration: "2 Weeks",
       topics: [
-        "Fundamentals Of Testing",
-        "Testing Throughout The Software Development Lifecycle",
-        "Static Testing",
-        "Test Techniques",
-        "Test Management",
-        "Tool Support For Testing"
+        "Bootstrap Grid System",
+        "Components & Utilities",
+        "Responsive Design"
       ]
     },
     {
       id: "module-5",
-      title: "Testing Tools",
-      category: "#Tools",
-      duration: "2 Weeks",
+      title: "jQuery",
+      category: "#Frontend",
+      duration: "1 Week",
       topics: [
-        "JIRA",
-        "JMETER"
+        "jQuery Selectors",
+        "DOM Manipulation",
+        "Event Handling"
       ]
     },
     {
       id: "module-6",
-      title: "Selenium Java",
-      category: "#Automation",
-      duration: "3 Weeks",
+      title: "Frontend Project",
+      category: "#Project",
+      duration: "1 Week",
       topics: [
-        "Class and Object",
-        "Inheritance",
-        "Polymorphism",
-        "Constructor",
-        "Encapsulation",
-        "Abstraction",
-        "Exception Handling"
+        "Web Application Development",
+        "UI Implementation"
       ]
     },
     {
       id: "module-7",
-      title: "Selenium",
-      category: "#Automation",
-      duration: "5 Weeks",
+      title: "Angular Framework",
+      category: "#Frontend Framework",
+      duration: "7 Weeks",
       topics: [
-        "Introduction to Selenium Automation",
-        "Introduction & Installation of Selenium IDE",
-        "What is Selenium",
-        "Component of Selenium",
-        "Locators using WebDrivers",
-        "Handling Pop Up Messages",
-        "Selenium Webdrivers waits",
-        "Checkboxes, Radio Button, Drop down list",
-        "Action Classes",
-        "POM (Page Object Model)",
-        "POI (Poor Objection Implementation) fetch the data",
-    "Database Testing",
-        "Types of Frameworks",
-        "TestNG Introduction & Need",
-        "Advantages over Junit",
-        "Understanding usage of annotations",
-        "Running a test in TestNG",
-        "Assertions/reporting errors",
-        "Creating Data Driven & Keyword Driven Framework",
-        "Creating Hybrid Framework",
-        "Testing on Web Application using Selenium",
-        "MAVEN (Maven Project)",
-        "JENKINS (Jenkins Project)"
+        "Angular Fundamentals",
+        "Components & Services",
+        "Routing & Forms",
+        "HTTP Client & RxJS",
+        "State Management",
+        "Angular CLI"
+      ]
+    },
+    {
+      id: "module-8",
+      title: "Node.js",
+      category: "#Backend",
+      duration: "1 Week",
+      topics: [
+        "Node.js Fundamentals",
+        "npm & Modules"
+      ]
+    },
+    {
+      id: "module-9",
+      title: "Express.js",
+      category: "#Backend",
+      duration: "7 Weeks",
+      topics: [
+        "Express.js Framework",
+        "Routing & Middleware",
+        "RESTful APIs",
+        "Authentication",
+        "MongoDB Integration",
+        "Security & Error Handling"
+      ]
+    },
+    {
+      id: "module-10",
+      title: "Full Stack Project",
+      category: "#Project",
+      duration: "1 Week",
+      topics: [
+        "Complete MEAN Application",
+        "Frontend-Backend Integration",
+        "Deployment"
       ]
     }
   ];

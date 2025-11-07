@@ -16,10 +16,14 @@ const branchesData = [
     email: "info@quastech.in",
     map: "https://www.google.com/search?q=quastech+thane",
     images: [
-      "/images/branches/IMG20240104153417.jpg",
-      "/images/branches/IMG20240104153434.jpg",
-      "/images/branches/IMG20240104153417.jpg",
-      "/images/branches/IMG20240104153417.jpg"
+      "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.15_883f6ac6.jpg",
+      "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.16_8e30c1bd.jpg",
+      "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.16_82cda6dc.jpg",
+      "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.16_c93f5b30.jpg",
+      "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.16_fca9beb3.jpg",
+      "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.17_46f3917f.jpg",
+      "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.17_4e91f2a8.jpg",
+      "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.17_7a38ae88.jpg"
     ]
   },
   {
@@ -31,10 +35,16 @@ const branchesData = [
     email: "info@quastech.in",
     map: "https://www.google.com/search?q=quastech+borivali",
     images: [
-      "/images/branches/IMG20240104153526.jpg",
-      "/images/branches/IMG20240104153417.jpg",
-      "/images/branches/IMG20240104153638.jpg",
-      "/images/branches/IMG20240104153417.jpg"
+      "/images/branches/borivali/WhatsApp Image 2025-11-07 at 14.26.33_aafdd705.jpg",
+      "/images/branches/borivali/WhatsApp Image 2025-11-07 at 14.26.34_4743ad0e.jpg",
+      "/images/branches/borivali/WhatsApp Image 2025-11-07 at 14.26.34_70160b73.jpg",
+      "/images/branches/borivali/WhatsApp Image 2025-11-07 at 14.26.35_3df2090d.jpg",
+      "/images/branches/borivali/WhatsApp Image 2025-11-07 at 14.27.02_25db2b8a.jpg",
+      "/images/branches/borivali/WhatsApp Image 2025-11-07 at 14.27.02_4eadf964.jpg",
+      "/images/branches/borivali/WhatsApp Image 2025-11-07 at 14.27.02_b57cd856.jpg",
+      "/images/branches/borivali/WhatsApp Image 2025-11-07 at 14.27.03_61f66642.jpg",
+      "/images/branches/borivali/WhatsApp Image 2025-11-07 at 14.27.03_82c3527d.jpg",
+      "/images/branches/borivali/WhatsApp Image 2025-11-07 at 14.27.03_b664b22d.jpg"
     ]
   },
   {
@@ -46,10 +56,10 @@ const branchesData = [
     email: "info@quastech.in",
     map: "https://www.google.com/search?q=quastech+vashi",
     images: [
-      "/images/branches/IMG20240104153526.jpg",
-      "/images/branches/IMG20240104153417.jpg",
-      "/images/branches/IMG20240104153638.jpg",
-      "/images/branches/IMG20240104153417.jpg"
+      "/images/branches/Vashi/WhatsApp Image 2025-11-07 at 14.26.30_112c067d.jpg",
+      "/images/branches/Vashi/WhatsApp Image 2025-11-07 at 14.26.32_000f716f.jpg",
+      "/images/branches/Vashi/WhatsApp Image 2025-11-07 at 14.26.32_f0bc8f33.jpg",
+      "/images/branches/Vashi/WhatsApp Image 2025-11-07 at 14.26.33_dc8d2836.jpg"
     ]
   },
   {
@@ -61,10 +71,13 @@ const branchesData = [
     email: "info@quastech.in",
     map: "https://www.google.com/search?q=quastech+mohali",
     images: [
-      "/public/images/branches/mohali/20240104_154224.jpg",
-      "/public/images/branches/mohali/20240104_154237.jpg",
-      "/public/images/branches/mohali/20240104_154314.jpg",
-      "/public/images/branches/mohali/20240104_154424.jpg"
+      "/images/branches/Mohali/WhatsApp Image 2025-11-07 at 14.26.02_47f1da4c.jpg",
+      "/images/branches/Mohali/WhatsApp Image 2025-11-07 at 14.26.02_a440567e.jpg",
+      "/images/branches/Mohali/WhatsApp Image 2025-11-07 at 14.26.03_8d26de21.jpg",
+      "/images/branches/Mohali/WhatsApp Image 2025-11-07 at 14.26.03_9a156689.jpg",
+      "/images/branches/Mohali/WhatsApp Image 2025-11-07 at 14.26.03_e01e412a.jpg",
+      "/images/branches/Mohali/WhatsApp Image 2025-11-07 at 14.26.04_3af71400.jpg",
+      "/images/branches/Mohali/WhatsApp Image 2025-11-07 at 14.26.04_fd416c82.jpg"
     ]
   }
 ];
@@ -210,14 +223,16 @@ const BranchSection = () => {
               autoplay={{ delay: 3500, disableOnInteraction: false }}
               slidesPerView={1}
             >
-              {currentBranch?.images.map((src, idx) => (
+              {currentBranch?.images.map((src, idx) => {
+                const imageSrc = encodeURI(src);
+                return (
                 <SwiperSlide key={idx}>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     className="aspect-[4/3] w-full overflow-hidden relative group"
                   >
                     <img
-                      src={src}
+                      src={imageSrc}
                       alt={`${currentBranch?.name} ${idx + 1}`}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-110"
                       loading="lazy"
@@ -231,7 +246,8 @@ const BranchSection = () => {
                     </div>
                   </motion.div>
                 </SwiperSlide>
-              ))}
+                );
+              })}
             </Swiper>
           </motion.div>
         </div>

@@ -40,6 +40,66 @@ const Reviews = () => {
       hasVideo: true
     },
     {
+      name: "Kanchan Rane",
+      role: "Java Developer",
+      course: "Full Stack Java Development",
+      rating: 5,
+      image: "/images/NewStudentReview/Kanchan Rane - Java Developer.png",
+      review: "From backend fundamentals to modern frameworks, the mentors ensured I built real projects and a strong portfolio. QUASTECH gave me the confidence to face interviews head on.",
+      videoUrl: "https://www.instagram.com/p/DHbHreSN1ki/?hl=en",
+      hasVideo: true
+    },
+    {
+      name: "Mayur Hedau",
+      role: "Java Developer",
+      course: "Full Stack Java Development",
+      rating: 5,
+      image: "/images/NewStudentReview/Mayur Hedau- Java Developer.png",
+      review: "The structured roadmap, mock interviews, and continuous mentor feedback helped me transition into a Java developer role within weeks of completing the course.",
+      videoUrl: "https://www.instagram.com/p/DHTbA9SN_O8/?hl=en",
+      hasVideo: true
+    },
+    {
+      name: "Simran Kadam",
+      role: "Software Testing Engineer",
+      course: "Software Testing",
+      rating: 5,
+      image: "/images/prsn.jpg",
+      review: "Hands-on sessions, detailed doubt solving, and regular assessments at QUASTECH prepared me to deliver quality software in the real world.",
+      videoUrl: "https://www.instagram.com/reel/DLKv121tq_6/?hl=en",
+      hasVideo: true
+    },
+    {
+      name: "Pooja Khapre",
+      role: "Software Testing Engineer",
+      course: "Software Testing",
+      rating: 5,
+      image: "/images/studentreviews01/RewPoojaKhapar.jpg",
+      review: "The blend of manual and automation testing concepts, along with resume and interview preparation, ensured I was job-ready from day one.",
+      videoUrl: "https://www.instagram.com/reel/DKubGEDTBCu/?hl=en",
+      hasVideo: true
+    },
+    {
+      name: "Saurabh Devlekar",
+      role: "Software Testing Engineer",
+      course: "Software Testing",
+      rating: 5,
+      image: "/images/studentreviews01/RewSaurabhDevlekar.jpg",
+      review: "Live scenarios, project assignments, and expert guidance at QUASTECH made complex testing concepts easy to master.",
+      videoUrl: "https://www.instagram.com/reel/DKhjEbATXjN/?hl=en",
+      hasVideo: true
+    },
+    {
+      name: "Pranav",
+      role: "Software Testing Engineer",
+      course: "Software Testing",
+      rating: 5,
+      image: "/images/prsn.jpg",
+      review: "QUASTECH's structured curriculum, supportive mentors, and placement team helped me land my first QA role with confidence.",
+      videoUrl: "https://www.instagram.com/reel/DKhjF0PSnWq/?hl=en",
+      hasVideo: true
+    },
+    {
       name: "Amey Pakhare",
       role: "Software Testing Engineer",
       course: "Software Testing",
@@ -110,32 +170,12 @@ const Reviews = () => {
       hasVideo: false
     },
     {
-      name: "Kanchan Rane",
-      role: "Java Developer",
-      course: "Java Development",
-      rating: 5,
-      image: "/images/NewStudentReview/Kanchan Rane - Java Developer.png",
-      review: "QUASTECH's Java training is exceptional. The hands-on projects and expert mentorship helped me transition into a successful Java developer role. The placement assistance made all the difference!",
-      videoUrl: "#",
-      hasVideo: false
-    },
-    {
       name: "Mahalaxmi Karthesan",
       role: "Software Testing Engineer",
       course: "Software Testing",
       rating: 5,
       image: "/images/NewStudentReview/Mahalaxmi Karthesan -Software Testing.png",
       review: "The comprehensive Software Testing program at QUASTECH equipped me with all necessary skills. From manual to automation testing, the training was top-notch. Successfully placed with great package!",
-      videoUrl: "#",
-      hasVideo: false
-    },
-    {
-      name: "Mayur Hedau",
-      role: "Java Developer",
-      course: "Java Development",
-      rating: 5,
-      image: "/images/NewStudentReview/Mayur Hedau- Java Developer.png",
-      review: "QUASTECH's Java course is well-structured and practical. The trainers provided excellent guidance throughout. The real-world projects helped me build a strong portfolio. Highly recommend!",
       videoUrl: "#",
       hasVideo: false
     },
@@ -200,8 +240,10 @@ const Reviews = () => {
       return;
     }
 
-    const match = videoUrl.match(/\/p\/([^/?]+)/);
-    const embedUrl = match ? `https://www.instagram.com/p/${match[1]}/embed` : videoUrl;
+    const match = videoUrl.match(/\/(?:p|reel)\/([^/?]+)/);
+    const embedUrl = match
+      ? `https://www.instagram.com/${videoUrl.includes("/reel/") ? "reel" : "p"}/${match[1]}/embed`
+      : videoUrl;
 
     setCurrentVideoUrl(embedUrl);
     setShowVideoModal(true);

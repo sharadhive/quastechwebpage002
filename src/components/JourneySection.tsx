@@ -40,7 +40,7 @@ const JourneySection = () => {
           className="w-full"
         >
           <img 
-            src="/images/carrierpath.png" 
+            src="/uploads\aaaa.jpg"
             alt="Career Path Journey" 
             className="w-full h-auto object-cover"
           />

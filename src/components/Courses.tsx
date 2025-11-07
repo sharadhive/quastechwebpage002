@@ -203,8 +203,8 @@ const Courses = () => {
   };
 
   return (
-    <section id="courses" className="section-spacing-compact bg-gradient-mesh overflow-x-hidden relative z-10 max-w-full pt-6 md:pt-8">
-      <div className="container mx-auto container-padding overflow-x-hidden px-4 sm:px-6 md:px-8 max-w-full">
+    <section id="courses" className="section-spacing-compact bg-gradient-mesh relative z-10 max-w-full pt-6 md:pt-8">
+      <div className="container mx-auto container-padding px-4 sm:px-6 md:px-8 max-w-full">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -223,7 +223,7 @@ const Courses = () => {
         </motion.div>
 
         {/* Courses Slider with Professional Cards */}
-        <div className="relative overflow-x-hidden py-4 md:py-6 max-w-full">
+        <div className="relative py-4 md:py-6 max-w-full overflow-visible">
           {/* Mobile: Single Card with Navigation */}
           <div className="block md:hidden relative py-2 max-w-full">
             {/* Navigation Arrows for Mobile */}
@@ -419,9 +419,9 @@ const Courses = () => {
           </div>
 
           {/* Desktop: Manual Navigation with Arrows */}
-          <div className="hidden md:block relative py-4 max-w-full">
+          <div className="hidden md:block relative py-4 max-w-full overflow-visible">
             {/* Course Cards Display - Show 3 at a time */}
-            <div className="flex gap-4 md:gap-5 lg:gap-6 justify-center px-8 md:px-12 lg:px-16 max-w-full overflow-x-hidden relative">
+            <div className="flex gap-4 md:gap-5 lg:gap-6 justify-center px-8 md:px-12 lg:px-16 max-w-full relative">
               {/* Navigation Arrows - Closer to Cards */}
               <motion.button
                 onClick={handleCoursePrevious}

@@ -182,11 +182,7 @@ const companyList = [
 
 // Placement roles by category
 const placementCategories = [
-  { key: 'all', label: 'All Placements' },
-  { key: 'software-testing', label: 'Software Testing' },
-  { key: 'java-development', label: 'Java Development' },
-  { key: 'fullstack-development', label: 'Full Stack Development' },
-  { key: 'data-analytics-science', label: 'Data Analytics / Data Science' }
+  { key: 'all', label: 'All Placements' }
 ];
 
 const getPlacements = (category) => {
@@ -745,11 +741,15 @@ const PlacementPage = () => {
                   }}
                 >
                   {[
+                    { label: "PLACEMENT DRIVE", title: "Saleman Digital Automation Pvt. Ltd. – Recruitment Day", image: "/images/placementdrive/saleman digial automation Pvt\u00A0ltd.jpg", type: "image" },
                     { label: "PLACEMENTS", title: "Helping Learners Achieve Their Dream IT Jobs!", image: branchImages[1], type: "image" },
                     { label: "JOBS", title: "Conducting Megha Placement Drive for Students", video: "/uploads/TV Drive.mp4", type: "video" },
                     { label: "WELCOME", title: "Moment of the Warm Welcome", image: "/uploads/placementdrive01.jpg", type: "image" },
                     { label: "NSDC RECOGNITION", title: "Campus to Corporate Event with National Skill Development Corporation Congratulating Our Students", image: "/uploads/studentcertificate.jpg", type: "image" },
                     { label: "MOCK", title: "Our Learners Appearing for Their Mock Interviews", image: branchImages[0], type: "image" },
+                    { label: "PLACEMENT DRIVE", title: "Cateina Technologies – Campus Hiring Drive", image: "/images/placementdrive/cateina technologies.jpg", type: "image" },
+                    { label: "PLACEMENT DRIVE", title: "Nimap Infotech – Interview Session", image: "/images/placementdrive/Nimap Infotech.jpg", type: "image" },
+                    { label: "PLACEMENT DRIVE", title: "RPJ Associates – Talent Acquisition", image: "/images/placementdrive/rpj associates.jpg", type: "image" },
                   ].map((item, idx) => (
                     <SwiperSlide key={idx} className="!w-full">
                       <motion.div
@@ -791,7 +791,7 @@ const PlacementPage = () => {
                         ) : (
                           <>
                             <img 
-                              src={item.image} 
+                              src={encodeURI(item.image)} 
                               alt={item.title} 
                               className="w-full h-[360px] md:h-[420px] object-cover" 
                               style={{ objectPosition: 'center center' }}
@@ -890,29 +890,21 @@ const PlacementPage = () => {
               <h2 className="heading-institute-lg flex-1 tracking-tight">Recent Placements</h2>
               <span className="ml-3 bg-blue-50 text-blue-700 rounded-full px-4 py-1 text-xs font-bold shadow">2000+</span>
             </div>
-            <div className="flex flex-wrap gap-4 justify-center mb-10">
-              {placementCategories.map(cat => (
-                <motion.button
-                  key={cat.key}
-                  className={`px-6 py-2 text-base rounded-full border font-bold shadow-sm ${selectedCategory === cat.key ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white border-blue-700 shadow-lg' : 'bg-blue-50 text-blue-800 border-blue-100 hover:bg-blue-100 hover:text-blue-700'}`}
-                  style={{minWidth:120, transformStyle: 'preserve-3d'}}
-                  onClick={()=>setSelectedCategory(cat.key)}
-                  whileHover={{
-                    y: -5,
-                    rotateY: 5,
-                    scale: 1.1,
-                    boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
-                    transition: { duration: 0.2 }
-                  }}
-                  whileTap={{ scale: 0.95, rotateY: 0 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: cat.key === 'all' ? 0 : 0.1 }}
-                >
-                  {cat.label}
-                </motion.button>
-              ))}
-            </div>
+        <div className="flex flex-wrap gap-4 justify-center mb-10">
+          <motion.button
+            className="px-6 py-2 text-base rounded-full border font-bold shadow-lg bg-gradient-to-r from-blue-600 to-blue-700 text-white border-blue-700"
+            style={{ minWidth: 140 }}
+            whileHover={{
+              y: -5,
+              scale: 1.08,
+              boxShadow: '0 12px 30px rgba(37,99,235,0.35)',
+              transition: { duration: 0.25 }
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            All Placements
+          </motion.button>
+        </div>
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedCategory}
@@ -1007,83 +999,6 @@ const PlacementPage = () => {
                   <p className="text-gray-700 text-sm leading-relaxed line-clamp-6">{testimonial.review}</p>
                 </motion.div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 7. Profile Building Sessions */}
-        <section className="py-16 bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="heading-institute-lg text-center mb-12">Profile building sessions</h2>
-            <div className="grid md:grid-cols-5 gap-4 mb-8">
-              {profileSessions.map((session) => (
-                <button
-                  key={session.id}
-                  onClick={() => setSelectedSession(session.id)}
-                  className={`px-4 py-3 rounded-xl font-bold text-sm transition-all ${
-                    selectedSession === session.id
-                      ? 'bg-blue-600 text-white shadow-lg'
-                      : 'bg-blue-50 text-blue-700 hover:bg-blue-100'
-                  }`}
-                >
-                  {session.title} {session.id}
-                </button>
-              ))}
-            </div>
-            {currentSession && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg border border-blue-100"
-              >
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${selectedSession === currentSession.id ? 'bg-blue-600' : 'bg-blue-100'}`}>
-                        <currentSession.icon className={`w-6 h-6 ${selectedSession === currentSession.id ? 'text-white' : 'text-blue-600'}`} />
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-800">{currentSession.title}</h3>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">{currentSession.description}</p>
-                  </div>
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img src={currentSession.image} alt={currentSession.title} className="w-full h-64 object-cover" />
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </div>
-        </section>
-
-        {/* 8. Upcoming Placement Drives */}
-        <section className="py-16 bg-gradient-to-br from-blue-50 to-gray-50">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="heading-institute-lg text-center mb-12">Upcoming placement drives</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {upcomingDrives.map((drive, i) => (
-            <motion.div
-                  key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border border-blue-100"
-                >
-                  <div className="flex items-end justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-1">{drive.company}</h3>
-                      <a href={drive.website} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">{drive.website}</a>
-                    </div>
-                  </div>
-                  <div className="mb-4">
-                    <p className="text-gray-700 font-semibold mb-2">Opening For Technology - {drive.position}</p>
-                    <p className="text-sm text-gray-600">No. Of Open Positions: <span className="font-bold text-blue-600">{drive.openings}</span></p>
-                  </div>
-                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                    Request a Date
-                  </button>
-                  </motion.div>
-                ))}
             </div>
           </div>
         </section>

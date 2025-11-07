@@ -80,11 +80,11 @@ const SoftwareTestingTraining = () => {
     // Create WhatsApp message with all form details
     const whatsappMessage = `*New Counselling Session Request*
 
-?? *Name:* ${formData.name}
-?? *Email:* ${formData.email}
-?? *Phone:* ${formData.phone}
-?? *Message:* ${formData.message || 'No additional message'}
-?? *Course Page:* Software Testing Training
+- Name: ${formData.name}
+- Email: ${formData.email}
+- Phone: ${formData.phone}
+- Message: ${formData.message || 'No additional message'}
+- Course Page: Software Testing Training
 
 I am interested in booking a free counselling session. Please contact me at your earliest convenience.`;
 
@@ -92,21 +92,21 @@ I am interested in booking a free counselling session. Please contact me at your
     const whatsappNumber = "918422800381";
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
-    console.log("?? Sending Counselling Request to WhatsApp:", whatsappMessage);
+    console.log("Sending Counselling Request to WhatsApp:", whatsappMessage);
     const whatsappWindow = window.open(whatsappURL, '_blank', 'noopener,noreferrer');
     
     if (whatsappWindow) {
       toast({
-        title: "? WhatsApp Opened!",
-        description: "Your counselling request is ready in WhatsApp. Just click Send!",
+        title: "WhatsApp opened",
+        description: "Your counselling request is ready. Tap Send to share it.",
       });
       setTimeout(() => {
         setFormData({ name: "", email: "", phone: "", message: "" });
       }, 2000);
     } else {
       toast({
-        title: "?? Allow Popups",
-        description: "Please allow popups to send your request via WhatsApp",
+        title: "Allow pop-ups",
+        description: "Please enable pop-ups to send your request through WhatsApp.",
         variant: "destructive"
       });
       window.location.href = whatsappURL;
@@ -586,7 +586,7 @@ I am interested in booking a free counselling session. Please contact me at your
                     <div>
                       <div className="relative">
                         <div className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
-                          <span className="text-lg">????</span>
+                          <Phone className="w-4 h-4 text-blue-600" />
                           <span className="text-gray-600 font-medium text-sm">(+91)</span>
                           <ChevronRight className="w-3 h-3 text-gray-400" />
                         </div>
@@ -1315,7 +1315,7 @@ I am interested in booking a free counselling session. Please contact me at your
                       </label>
                       <div className="flex items-center gap-2">
                         <div className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg bg-gray-50">
-                          <span className="text-sm font-semibold">????</span>
+                          <Phone className="w-4 h-4 text-blue-600" />
                           <span className="text-sm font-semibold">(+91)</span>
                         </div>
                         <Input
@@ -1947,7 +1947,7 @@ I am interested in booking a free counselling session. Please contact me at your
                 </span>
               </h2>
               <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-                Clear, concise answers about our Software Testing Training�curriculum, format, placement, and more.
+                Clear, concise answers about our Software Testing Training curriculum, format, placement, and more.
               </p>
             </motion.div>
 
@@ -1992,13 +1992,13 @@ I am interested in booking a free counselling session. Please contact me at your
                       <span className="text-gray-900">What is the course duration and weekly schedule?</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 text-gray-700 leading-relaxed">
-                      Typical duration is 10�14 weeks depending on the track. Sessions are planned on weekdays/weekends with additional practice and doubt-clearing support.
+                      Typical duration is 10-14 weeks depending on the track. Sessions are planned on weekdays/weekends with additional practice and doubt-clearing support.
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="faq-5" className="group bg-white border border-blue-100 rounded-2xl mb-1 shadow-sm hover:shadow-lg transition-shadow">
                     <AccordionTrigger className="px-6 py-5 text-left font-semibold hover:no-underline">
-                      <span className="text-gray-900">Who can join�do I need coding experience?</span>
+                      <span className="text-gray-900">Who can join — do I need coding experience?</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 text-gray-700 leading-relaxed">
                       No prior coding is required for the Manual Testing track. Basic programming is introduced gradually for the Automation track with simple, guided practice.

@@ -60,6 +60,7 @@ import SEO from "@/components/SEO";
 import { CourseStructuredData, BreadcrumbStructuredData } from "@/components/StructuredData";
 import { useToast } from "@/hooks/use-toast";
 import BranchSection from "@/components/BranchSection";
+import CourseTechnologySection from "@/components/CourseTechnologySection";
 
 const DataScienceWithPython = () => {
   const { toast } = useToast();
@@ -1979,6 +1980,7 @@ const DataScienceWithPython = () => {
           </div>
         </section>
 
+        <CourseTechnologySection courseSlug="python-data-science" />
         <BranchSection />
 
         <Footer />

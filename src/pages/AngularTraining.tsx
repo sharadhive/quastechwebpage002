@@ -60,6 +60,7 @@ import SEO from "@/components/SEO";
 import { CourseStructuredData, BreadcrumbStructuredData } from "@/components/StructuredData";
 import { useToast } from "@/hooks/use-toast";
 import BranchSection from "@/components/BranchSection";
+import CourseTechnologySection from "@/components/CourseTechnologySection";
 
 const AngularTraining = () => {
   const { toast } = useToast();
@@ -757,8 +758,10 @@ const AngularTraining = () => {
           </div>
         </section>
 
-        {/* Tools & Technologies Section */}
-        <section className="py-8 md:py-12 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+        <CourseTechnologySection courseSlug="angular-course" />
+
+        {/* Career Resources Section */}
+        <section className="py-8 md:py-12 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}

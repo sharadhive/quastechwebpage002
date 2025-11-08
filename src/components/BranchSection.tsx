@@ -21,9 +21,9 @@ const branchesData = [
       "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.16_82cda6dc.jpg",
       "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.16_c93f5b30.jpg",
       "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.16_fca9beb3.jpg",
-      "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.17_46f3917f.jpg",
       "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.17_4e91f2a8.jpg",
-      "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.17_7a38ae88.jpg"
+      "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.17_7a38ae88.jpg",
+      "/images/branches/Thane/WhatsApp Image 2025-11-07 at 14.31.17_46f3917f.jpg"
     ]
   },
   {

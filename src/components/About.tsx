@@ -410,7 +410,9 @@ const About = () => {
           >
             <motion.div variants={itemVariants} className="section-header">
               <h2 className="heading-institute-lg">
-                Technologies We Master
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">
+                  Technologies We Master
+                </span>
               </h2>
               <p className="section-subtitle">
                 Our curriculum is built on the most in-demand technologies in the industry.

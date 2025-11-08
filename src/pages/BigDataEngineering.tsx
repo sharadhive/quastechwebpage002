@@ -60,6 +60,7 @@ import SEO from "@/components/SEO";
 import { CourseStructuredData, BreadcrumbStructuredData } from "@/components/StructuredData";
 import { useToast } from "@/hooks/use-toast";
 import BranchSection from "@/components/BranchSection";
+import CourseTechnologySection from "@/components/CourseTechnologySection";
 
 const BigDataEngineering = () => {
   const { toast } = useToast();
@@ -2026,6 +2027,7 @@ const BigDataEngineering = () => {
           </div>
         </section>
 
+        <CourseTechnologySection courseSlug="big-data-engineering" />
         <BranchSection />
 
         <Footer />

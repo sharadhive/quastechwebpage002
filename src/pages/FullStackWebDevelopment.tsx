@@ -60,6 +60,7 @@ import SEO from "@/components/SEO";
 import { CourseStructuredData, BreadcrumbStructuredData } from "@/components/StructuredData";
 import { useToast } from "@/hooks/use-toast";
 import BranchSection from "@/components/BranchSection";
+import CourseTechnologySection from "@/components/CourseTechnologySection";
 
 const FullStackWebDevelopment = () => {
   const { toast } = useToast();
@@ -2017,6 +2018,7 @@ const FullStackWebDevelopment = () => {
           </div>
         </section>
 
+        <CourseTechnologySection courseSlug="web-development-course" />
         <BranchSection />
 
         <Footer />

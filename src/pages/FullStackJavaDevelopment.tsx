@@ -58,6 +58,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import BranchSection from "@/components/BranchSection";
+import CourseTechnologySection from "@/components/CourseTechnologySection";
 import SEO from "@/components/SEO";
 import { CourseStructuredData, BreadcrumbStructuredData } from "@/components/StructuredData";
 
@@ -2057,6 +2058,7 @@ I'm interested in the Full Stack Java Development course. Please provide more de
           </div>
         </section>
 
+        <CourseTechnologySection courseSlug="full-stack-java-development" />
         <BranchSection />
 
         <Footer />

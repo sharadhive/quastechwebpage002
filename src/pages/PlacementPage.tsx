@@ -245,45 +245,6 @@ const branchImages = [
   "/images/branches/IMG20240104153526.jpg",
 ];
 
-// Testimonials data - using named students for better credibility
-const testimonials = [
-  {
-    name: "Omkar Bhagojikarkare",
-    role: "DevOps Engineer",
-    company: "Top IT Company",
-    image: "/images/studentreviews01/RewOmkarBhagojikarkare.jpg",
-    review: "QUASTECH's comprehensive training helped me transition into DevOps. The practical approach and industry-focused curriculum gave me the confidence to excel. The placement support was exceptional!"
-  },
-  {
-    name: "Pooja Khapar",
-    role: "Mobile App Developer",
-    company: "Tech Startup",
-    image: "/images/studentreviews01/RewPoojaKhapar.jpg",
-    review: "From zero coding knowledge to becoming a Mobile App Developer - QUASTECH made it possible. The hands-on projects and expert mentorship prepared me for real-world challenges. Highly recommend!"
-  },
-  {
-    name: "Kanchan Rane",
-    role: "Data Scientist",
-    company: "Analytics Firm",
-    image: "/images/studentreviews01/RewKanchanRane.jpg",
-    review: "The Data Science course at QUASTECH is exceptional. The practical approach and live projects made all the difference. The mentorship and career guidance helped me land my dream job!"
-  },
-  {
-    name: "Sarjerao Sanjay Patil",
-    role: "Software Engineer",
-    company: "Leading IT Company",
-    image: "/images/studentreviews01/RewSarjeraoSanjayPatil.jpg",
-    review: "QUASTECH provided me with the perfect foundation for my tech career. The comprehensive curriculum and practical projects helped me develop strong technical skills. The placement support was outstanding!"
-  },
-  {
-    name: "Student 7",
-    role: "Data Analyst",
-    company: "Top Company",
-    image: "/images/studentreviews01/IMG-20251102-WA0002.jpg",
-    review: "Stuck after graduation with just theory, Quastech turned my career around. With their practical training and expert guidance, I gained the skills and confidence to crack interviews. Now, I'm placed at a top company!"
-  },
-];
-
 // Profile building sessions
 const profileSessions = [
   {
@@ -368,6 +329,14 @@ const PlacementPage = () => {
     image: studentImages[i%studentImages.length]
   }));
 
+  const testimonialsData = placements.slice(0, 6).map((item) => ({
+    name: item.name,
+    role: item.role,
+    company: item.company?.name ?? "Top Company",
+    image: item.image,
+    review: `Recently placed at ${item.company?.name ?? "a leading organization"}. Thrilled to start this new chapter with the skills gained through QUASTECH.`
+  }));
+
   const [selectedSession, setSelectedSession] = useState(1);
   const currentSession = profileSessions.find(s => s.id === selectedSession);
   
@@ -392,20 +361,12 @@ const PlacementPage = () => {
       <div className="min-h-screen bg-gradient-to-br from-background via-muted/30 to-background">
         <Header />
         
-        {/* 1. Hero Banner Section - Same as Hero Component */}
-        <section className="relative px-4 pt-20 md:pt-22 pb-6 md:pb-8 overflow-hidden flex items-center justify-center min-h-[450px] md:min-h-[520px]">
-          {/* Hero Component Background Gradient */}
-          <div className="absolute inset-0 -z-1">
-            {/* Clean Professional Hero Gradient - Same as Hero Component */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800" />
-            
-            {/* Subtle Overlay for Better Text Contrast */}
+        {/* 1. HERO BANNER - RESPONSIVE (desktop side-by-side, mobile stacked) */}
+        <section className="relative px-4 pt-8 pb-16 lg:pb-20 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+          {/* Hero Background Layers - unchanged */}
+          <div className="absolute inset-0 -z-10">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-orange-900/20" />
-            
-            {/* Professional Mesh Overlay */}
             <div className="absolute inset-0 bg-gradient-mesh opacity-10" />
-            
-            {/* Subtle Grid Pattern */}
             <div
               className="absolute inset-0 opacity-5"
               style={{
@@ -415,7 +376,7 @@ const PlacementPage = () => {
               }}
             />
 
-            {/* Animated Floating Elements */}
+            {/* Floating orbs & animated layers (kept as-is) */}
             <motion.div
               initial={{ y: 0, x: 0, rotate: 0 }}
               animate={{ 
@@ -463,180 +424,120 @@ const PlacementPage = () => {
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[450px] md:h-[450px] bg-gradient-to-br from-blue-600/20 to-orange-500/20 rounded-full blur-3xl"
             />
           </div>
-          
-          <div className="relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-6 md:gap-10 items-end md:items-end py-2">
-            {/* Left Side - Text Content */}
-            <div className="flex-1 flex flex-col items-end justify-start -mt-4 md:-mt-6">
+
+          {/* Content wrapper: stacked on mobile, two columns on md+ */}
+            <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            {/* LEFT: Text content (on mobile will be on top) */}
+            <div className="flex flex-col items-center md:items-start text-center md:text-left py-4 md:py-8">
               <motion.span 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-orange-400 font-bold text-lg md:text-xl uppercase tracking-wider mb-5 md:mb-6"
+                className="text-orange-400 font-bold text-lg md:text-xl uppercase tracking-wider mb-4 md:mb-6"
               >
                 STORY OF OUR SUCCESSFUL PLACEMENTS
               </motion.span>
               
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.6 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 md:mb-7"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 md:mb-6"
               >
                 <span className="bg-blue-700 text-white rounded-lg px-4 py-2 inline-block mb-2 text-base md:text-lg">Customer Stories</span>
                 <br />
                 <span className="text-blue-200 font-extrabold">That Inspire You</span>
               </motion.h1>
               
-                  <motion.div
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="space-y-3 text-white/90 font-semibold mb-6 md:mb-7"
+                className="space-y-2 text-white/90 font-semibold mb-4 md:mb-6 max-w-xl"
               >
-                <p className="text-base md:text-lg leading-relaxed">SUCCESS ISN'T JUST ABOUT REACHING THE GOAL.</p>
-                <p className="text-base md:text-lg leading-relaxed">IT'S ABOUT THE JOURNEY, THE LESSONS, AND THE GROWTH.</p>
-                <p className="text-base md:text-lg leading-relaxed font-bold text-white">BE INSPIRED BY THOSE WHO MADE IT HAPPEN!</p>
-                  </motion.div>
-              
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed">SUCCESS ISN'T JUST ABOUT REACHING THE GOAL.</p>
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed">IT'S ABOUT THE JOURNEY, THE LESSONS, AND THE GROWTH.</p>
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-white">BE INSPIRED BY THOSE WHO MADE IT HAPPEN!</p>
+              </motion.div>
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="w-full"
+                className="w-full flex justify-center md:justify-start"
               >
-                <p className="text-white/80 font-semibold text-base md:text-lg mb-4">Quastech Alumni Work At Top Companies</p>
-                <div className="w-full overflow-x-hidden relative flex justify-start">
-                  <div className="w-full pointer-events-none absolute bg-gradient-to-r from-slate-900 to-transparent left-0 top-0 h-full z-10" style={{width:'24px'}}/>
-                  <div className="w-full pointer-events-none absolute bg-gradient-to-l from-slate-900 to-transparent right-0 top-0 h-full z-10" style={{width:'24px'}}/>
-                  <div className="max-w-xl overflow-hidden">
-                    <div className="flex gap-4 md:gap-6" style={{ animation: 'slideX 25s linear infinite' }}>
-                      {companyList.slice(0, 6).map((logo, i) => (
-                        <img 
-                          key={logo.logo + '-' + i} 
-                          src={logo.logo} 
-                          alt={logo.name} 
-                          title={logo.name} 
-                          className="h-12 md:h-16 w-auto rounded-lg bg-white shadow-md border border-white/40 transition-transform hover:scale-110 hover:shadow-xl" 
-                          style={{minWidth:'100px'}} 
-                        />
-                      ))}
-                      {companyList.slice(0, 6).map((logo, i) => (
-                        <img 
-                          key={'dupe-' + logo.logo + '-' + i} 
-                          src={logo.logo} 
-                          alt={logo.name} 
-                          title={logo.name} 
-                          className="h-12 md:h-16 w-auto rounded-lg bg-white shadow-md border border-white/40 transition-transform hover:scale-110 hover:shadow-xl" 
-                          style={{minWidth:'100px'}} 
-                        />
-                      ))}
+                <div className="text-white/80 font-semibold text-sm md:text-lg">
+                  <p className="mb-3">Quastech Alumni Work At Top Companies</p>
+
+                  <div className="w-full overflow-x-hidden relative flex justify-start">
+                    <div className="w-full pointer-events-none absolute bg-gradient-to-r from-slate-900 to-transparent left-0 top-0 h-full z-10" style={{width:'24px'}}/>
+                    <div className="w-full pointer-events-none absolute bg-gradient-to-l from-slate-900 to-transparent right-0 top-0 h-full z-10" style={{width:'24px'}}/>
+                    <div className="max-w-xs md:max-w-xl overflow-hidden">
+                      <div className="flex gap-4 md:gap-6" style={{ animation: 'slideX 25s linear infinite' }}>
+                        {companyList.slice(0, 6).map((logo, i) => (
+                          <img 
+                            key={logo.logo + '-' + i} 
+                            src={logo.logo} 
+                            alt={logo.name} 
+                            title={logo.name} 
+                            className="h-10 md:h-12 lg:h-16 w-auto rounded-lg bg-white shadow-md border border-white/40 transition-transform hover:scale-110 hover:shadow-xl" 
+                            style={{minWidth:'90px'}} 
+                          />
+                        ))}
+                        {companyList.slice(0, 6).map((logo, i) => (
+                          <img 
+                            key={'dupe-' + logo.logo + '-' + i} 
+                            src={logo.logo} 
+                            alt={logo.name} 
+                            title={logo.name} 
+                            className="h-10 md:h-12 lg:h-16 w-auto rounded-lg bg-white shadow-md border border-white/40 transition-transform hover:scale-110 hover:shadow-xl" 
+                            style={{minWidth:'90px'}} 
+                          />
+                        ))}
+                      </div>
                     </div>
+                    <style>{`@keyframes slideX { to { transform: translateX(-50%); } }`}</style>
                   </div>
-                  <style>{`@keyframes slideX { to { transform: translateX(-50%); } }`}</style>
                 </div>
               </motion.div>
             </div>
 
-            {/* Right Side - Circular Profile Images with Floating Animation in Grid Layout */}
-            <div className="flex-1 relative min-h-[400px] md:min-h-[480px] flex items-center justify-center md:justify-end select-none pb-4 -mt-8 md:-mt-10">
-              <div className="w-full max-w-[550px] h-[460px] relative">
-                {/* Grid layout: 4 rows x 4 columns (16 images total) */}
-                {/* Images will repeat if there are less than 16 student images */}
-                {(() => {
-                  const numRows = 4; // 4 rows
-                  const numCols = 4; // 4 columns
-                  const totalImages = numRows * numCols; // 16 images total
-                  
-                  // Calculate positions based on grid
-                  const containerWidth = 550; // Expanded container width
-                  const containerHeight = 460; // Container height - adjusted to prevent cutoff
-                  const imageSize = 90; // Larger image size in pixels
-                  const gap = 30; // Increased gap between images
-                  
-                  // Calculate starting position - shift grid upward (more space at bottom)
-                  const totalWidth = (numCols * imageSize) + ((numCols - 1) * gap);
-                  const totalHeight = (numRows * imageSize) + ((numRows - 1) * gap);
-                  const startLeft = (containerWidth - totalWidth) / 2;
-                  // Position grid higher - shifted more upward to prevent bottom cutoff
-                  const startTop = Math.max(0, (containerHeight - totalHeight) / 22); // Shifted a bit more upward
-                  
-                  // Use first 16 unique students from NewStudentReview - NO DUPLICATES
-                  const studentImagesForGrid = students.slice(0, 16);
-                  
-                  return studentImagesForGrid.map((student, idx) => {
-                    const row = Math.floor(idx / numCols);
-                    const col = idx % numCols;
-                    const top = startTop + (row * (imageSize + gap));
-                    const left = startLeft + (col * (imageSize + gap));
-                    const delay = idx * 0.08;
-                    const floatDelay = idx * 0.15;
-                    
-                    return (
-                      <motion.div
-                        key={`student-grid-${idx}-${student.name}`}
-                        style={{ 
-                          position: 'absolute', 
-                          top: `${top}px`, 
-                          left: `${left}px`, 
-                          width: `${imageSize}px`, 
-                          height: `${imageSize}px`, 
-                          zIndex: idx + 1 
-                        }}
-                        initial={{ opacity: 0, scale: 0.5, y: 50 }}
-                        animate={{ 
-                          opacity: 1, 
-                          scale: 1,
-                        }}
-                        transition={{ 
-                          opacity: { duration: 0.8, delay: 0.5 + delay },
-                          scale: { duration: 0.8, delay: 0.5 + delay, type: 'spring', stiffness: 100 },
-                        }}
-                      >
-                        <motion.img
-                          src={student.image}
-                          alt={student.name}
-                          className="w-full h-full object-cover border-3 border-white shadow-2xl rounded-full cursor-pointer"
-                          style={{ 
-                            transformStyle: 'preserve-3d',
-                            objectPosition: 'center center',
-                            objectFit: 'cover',
-                            backgroundColor: '#3b82f6'
-                          }}
-                          initial={{ y: 0, rotateY: 0 }}
-                          animate={{
-                            y: -10,
-                            rotateY: 10
-                          }}
-                          transition={{
-                            y: {
-                              duration: 2.5 + (idx * 0.12),
-                              repeat: Infinity,
-                              repeatType: 'reverse',
-                              ease: 'easeInOut',
-                              delay: 1.5 + delay + floatDelay
-                            },
-                            rotateY: {
-                              duration: 4 + (idx * 0.2),
-                              repeat: Infinity,
-                              repeatType: 'reverse',
-                              ease: 'easeInOut',
-                              delay: 2 + delay + floatDelay
-                            }
-                          }}
-                          whileHover={{
-                            scale: 1.15,
-                            rotateY: 15,
-                            rotateX: -10,
-                            zIndex: 10,
-                            boxShadow: '0 30px 60px rgba(0,0,0,0.4)',
-                            transition: { duration: 0.3 }
-                          }}
-                          title={student.name}
-                        />
-            </motion.div>
-                    );
-                  });
-                })()}
+            {/* RIGHT: Student circular images grid (on mobile will appear below text) */}
+            <div className="flex justify-center md:justify-end py-6 md:py-8">
+              {/* Responsive grid: 3 cols on small, 4 on md, consistent spacing and sizing */}
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 sm:gap-4 items-center">
+                {students.slice(0, 16).map((student, idx) => (
+                  <motion.div
+                    key={`hero-student-${idx}-${student.name}`}
+                    initial={{ opacity: 0, scale: 0.6, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.08 * idx }}
+                    className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-white shadow-2xl bg-blue-500"
+                  >
+                    <motion.img
+                      src={student.image}
+                      alt={student.name}
+                      className="w-full h-full object-cover"
+                      initial={{ y: 0 }}
+                      animate={{
+                        y: [-6, 6, -6],
+                      }}
+                      transition={{
+                        duration: 3 + (idx * 0.1),
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "easeInOut",
+                        delay: 0.5 + idx * 0.02
+                      }}
+                      whileHover={{
+                        scale: 1.08,
+                        rotateY: 10,
+                        transition: { duration: 0.25 }
+                      }}
+                      title={student.name}
+                    />
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
@@ -742,13 +643,13 @@ const PlacementPage = () => {
                 >
                   {[
                     { label: "PLACEMENT DRIVE", title: "Saleman Digital Automation Pvt. Ltd. – Recruitment Day", image: "/images/placementdrive/saleman digial automation Pvt\u00A0ltd.jpg", type: "image" },
-                    { label: "PLACEMENTS", title: "Helping Learners Achieve Their Dream IT Jobs!", image: branchImages[1], type: "image" },
+                    // { label: "PLACEMENTS", title: "Helping Learners Achieve Their Dream IT Jobs!", image: branchImages[1], type: "image" },
                     { label: "JOBS", title: "Conducting Megha Placement Drive for Students", video: "/uploads/TV Drive.mp4", type: "video" },
                     { label: "WELCOME", title: "Moment of the Warm Welcome", image: "/uploads/placementdrive01.jpg", type: "image" },
                     { label: "NSDC RECOGNITION", title: "Campus to Corporate Event with National Skill Development Corporation Congratulating Our Students", image: "/uploads/studentcertificate.jpg", type: "image" },
-                    { label: "MOCK", title: "Our Learners Appearing for Their Mock Interviews", image: branchImages[0], type: "image" },
-                    { label: "PLACEMENT DRIVE", title: "Cateina Technologies – Campus Hiring Drive", image: "/images/placementdrive/cateina technologies.jpg", type: "image" },
-                    { label: "PLACEMENT DRIVE", title: "Nimap Infotech – Interview Session", image: "/images/placementdrive/Nimap Infotech.jpg", type: "image" },
+                    // { label: "MOCK", title: "Our Learners Appearing for Their Mock Interviews", image: branchImages[0], type: "image" },
+                    { label: "PLACEMENT DRIVE", title: "Cateina Technologies – Campus Hiring Drive", image: "/images/placementdrive/121222.jpg", type: "image" },
+                    { label: "PLACEMENT DRIVE", title: "Nimap Infotech – Interview Session", image: "/images/placementdrive/1212.jpg", type: "image" },
                     { label: "PLACEMENT DRIVE", title: "RPJ Associates – Talent Acquisition", image: "/images/placementdrive/rpj associates.jpg", type: "image" },
                   ].map((item, idx) => (
                     <SwiperSlide key={idx} className="!w-full">
@@ -961,7 +862,7 @@ const PlacementPage = () => {
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="heading-institute-lg text-center mb-12">Placed Learner's Testimonials</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, i) => (
+              {testimonialsData.map((testimonial, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 30, rotateX: -15 }}

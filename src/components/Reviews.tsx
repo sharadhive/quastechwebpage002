@@ -16,7 +16,6 @@ const Reviews = () => {
   const [currentReview, setCurrentReview] = useState(0);
   const [showVideoModal, setShowVideoModal] = useState(false);
   const [currentVideoUrl, setCurrentVideoUrl] = useState("");
-  const [showAllReviews, setShowAllReviews] = useState(false);
 
   const reviews = [
     {
@@ -221,6 +220,14 @@ const Reviews = () => {
     }
   ];
 
+  const sortedReviews = [...reviews].sort(
+    (a, b) => Number(a.hasVideo) - Number(b.hasVideo)
+  );
+
+  const displayedGridReviews = sortedReviews
+    .filter((review) => !review.hasVideo)
+    .slice(0, 8);
+
   const stats = [
     { value: "4.9/5", label: "Average Rating", icon: Star },
     { value: "5000+", label: "Reviews", icon: MessageCircle },
@@ -337,6 +344,7 @@ const Reviews = () => {
                     variant="outline"
                     size="sm"
                     onClick={() => openVideoModal(reviews[currentReview].videoUrl)}
+                    type="button"
                   >
                     <Play className="w-4 h-4 mr-2" />
                     Watch Video
@@ -349,6 +357,7 @@ const Reviews = () => {
                     size="sm"
                     onClick={prevReview}
                     className="w-10 h-10 p-0"
+                    type="button"
                   >
                     <ArrowLeft className="w-4 h-4" />
                   </Button>
@@ -357,6 +366,7 @@ const Reviews = () => {
                     size="sm"
                     onClick={nextReview}
                     className="w-10 h-10 p-0"
+                    type="button"
                   >
                     <ArrowRight className="w-4 h-4" />
                   </Button>
@@ -379,7 +389,7 @@ const Reviews = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 max-w-7xl mx-auto">
-            {(showAllReviews ? reviews : reviews.slice(0, 8)).map((review, index) => (
+            {displayedGridReviews.map((review, index) => (
               <motion.div
                 key={review.name}
                 initial={{ opacity: 0, y: 50 }}
@@ -419,22 +429,14 @@ const Reviews = () => {
                     
                     {/* Buttons */}
                     <div className="flex items-center gap-1.5 mt-auto pt-2 border-t border-gray-100">
-                      {review.hasVideo && (
-                        <Button 
-                          variant="ghost" 
-                          size="sm"
-                          onClick={() => openVideoModal(review.videoUrl)}
-                          className="text-blue-600 hover:text-blue-700 text-xs h-6 px-2 flex-1"
-                        >
-                          <Play className="w-3 h-3 mr-0.5" />
-                          Video
-                        </Button>
-                      )}
-                      <Button 
-                        variant="ghost" 
-                        size="sm" 
+                      <Button
+                        variant="ghost"
+                        size="sm"
                         className="text-xs h-6 px-2 flex-1"
-                        onClick={() => setCurrentReview(reviews.indexOf(review))}
+                        type="button"
+                        onClick={() => {
+                          window.location.href = "/placement";
+                        }}
                       >
                         Read More
                       </Button>
@@ -445,18 +447,6 @@ const Reviews = () => {
             ))}
           </div>
         </motion.div>
-
-        {!showAllReviews && reviews.length > 8 && (
-          <div className="mt-5 md:mt-6 flex justify-center">
-            <Button
-              variant="secondary"
-              className="px-6 md:px-8 py-2 md:py-2.5 text-sm md:text-base font-semibold"
-              onClick={() => setShowAllReviews(true)}
-            >
-              View More Reviews
-            </Button>
-          </div>
-        )}
 
         {/* CTA */}
         <motion.div
@@ -476,10 +466,26 @@ const Reviews = () => {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-2 md:gap-3 justify-center md:justify-end">
-              <Button variant="glass" size="lg" className="text-xs md:text-sm lg:text-base font-semibold h-10 md:h-11 lg:h-12 px-5 md:px-6">
+              <Button
+                variant="glass"
+                size="lg"
+                className="text-xs md:text-sm lg:text-base font-semibold h-10 md:h-11 lg:h-12 px-5 md:px-6"
+                type="button"
+                onClick={() => {
+                  window.location.href = "/contact";
+                }}
+              >
                 Start Your Journey Today
               </Button>
-              <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white hover:text-primary text-xs md:text-sm lg:text-base h-10 md:h-11 lg:h-12 px-5 md:px-6">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-white/30 text-white hover:bg-white hover:text-primary text-xs md:text-sm lg:text-base h-10 md:h-11 lg:h-12 px-5 md:px-6"
+                type="button"
+                onClick={() => {
+                  window.location.href = "/placement";
+                }}
+              >
                 View Placements
               </Button>
             </div>

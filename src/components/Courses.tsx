@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import CounsellorForm from "@/components/CounsellorForm";
 import {
   Code,
   Database,
@@ -37,6 +38,7 @@ const Courses = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [currentCourseIndex, setCurrentCourseIndex] = useState(0);
   const [techAnimationActive, setTechAnimationActive] = useState<{ [key: number]: boolean }>({});
+  const [showCounsellorForm, setShowCounsellorForm] = useState(false);
   const navigate = useNavigate();
 
   // Course page mapping
@@ -629,13 +631,21 @@ const Courses = () => {
               Connect with our industry-expert career counselors for personalized course recommendations tailored to your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="glass" size="lg" className="text-sm md:text-base font-semibold hover:scale-105 transition-transform">
+              <Button 
+                variant="glass" 
+                size="lg" 
+                className="text-sm md:text-base font-semibold hover:scale-105 transition-transform"
+                onClick={() => setShowCounsellorForm(true)}
+              >
                 Get Free Career Counseling →
               </Button>
             </div>
           </div>
         </motion.div>
       </div>
+
+      {/* Counsellor Form Modal */}
+      <CounsellorForm isOpen={showCounsellorForm} onClose={() => setShowCounsellorForm(false)} />
     </section>
   );
 };

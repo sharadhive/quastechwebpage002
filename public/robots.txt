@@ -42,4 +42,4 @@ User-agent: WhatsApp
 Allow: /
 
 # Sitemap location
-Sitemap: https://quastech.co.in/sitemap.xml
+Sitemap: https://https://quastewchwebpage02.netlify.app//sitemap.xml

@@ -198,148 +198,153 @@ I am interested in booking a free counselling session. Please contact me at your
     },
   ];
 
-  // Software Testing Curriculum Modules
+  // Digital Marketing Curriculum Modules (15 weeks, 112 hours)
   const curriculumModules = [
     {
       id: "module-1",
-      title: "SQL",
-      category: "#Database",
-      duration: "2 Weeks",
+      title: "Introduction to Digital Marketing",
+      category: "#Foundation",
+      duration: "1 Week",
       topics: [
-        "Introduction to SQL",
-        "What is Data and Database?",
-        "Types of Database DBMS - Database Management System",
-        "RDBMS - Relational Database Management System",
-        "Operators",
-        "Statements",
-        "DDL",
-        "DML",
-        "TCL",
-        "DQL",
-        "Aggregate Function",
-        "Count(), Sum(), Min(), Max(), Avg()",
-        "Clauses",
-        "Subquery",
-        "Joins"
+        "What is traditional marketing (2 hours)",
+        "What is digital marketing (2 hours)",
+        "Opportunities in digital marketing (2 hours)",
+        "Channels (2 hours)"
       ]
     },
     {
       id: "module-2",
-      title: "Basic Java",
-      category: "#Programming",
-      duration: "3 Weeks",
+      title: "Canva",
+      category: "#Design",
+      duration: "1 Week",
       topics: [
-        "Introduction of Java",
-        "Features of Java",
-        "JDK - Java Development Kit",
-        "Variables",
-        "Operators",
-        "Conditional Statement",
-        "String and String Method",
-        "Array",
-        "For Each Loop"
+        "Introduction to Canva (2 hours)",
+        "Tools (2 hours)",
+        "Design (2 hours)",
+        "Animation (2 hours)"
       ]
     },
     {
       id: "module-3",
-      title: "Manual Testing",
-      category: "#Testing",
-      duration: "4 Weeks",
+      title: "Social Media Optimization & Social Media Marketing",
+      category: "#SocialMedia",
+      duration: "3 Weeks",
       topics: [
-        "Introduction to Software Testing",
-        "SDLC Models - Software Development Life Cycle",
-        "Configuration Management",
-        "Quality Assurance (QA) & Quality Control (QC)",
-        "Verification and Validation (V & V- Model)",
-        "Software Test Life Cycle (STLC)",
-        "Test Methods, Levels and Types",
-        "Requirements Analysis",
-        "Use Cases",
-        "Test Design Techniques",
-        "Defect Management",
-        "Agile Testing",
-        "Manual and Automation Testing"
+        "Introduction to SMO (2 hours)",
+        "Creating Accounts (2 hours)",
+        "Logo Creation (2 hours)",
+        "Post, Reel, Carousel Creation (2 hours)",
+        "Instagram (2 hours)",
+        "Calendar Creation (2 hours)",
+        "Facebook (2 hours)",
+        "Whatsapp (2 hours)",
+        "LinkedIn (2 hours)",
+        "Twitter (2 hours)",
+        "Youtube (2 hours)",
+        "Post Checkings (2 hours)"
       ]
     },
     {
       id: "module-4",
-      title: "ISTQB",
-      category: "#Certification",
-      duration: "2 Weeks",
+      title: "Search Engine Optimization",
+      category: "#SEO",
+      duration: "3 Weeks",
       topics: [
-        "Fundamentals Of Testing",
-        "Testing Throughout The Software Development Lifecycle",
-        "Static Testing",
-        "Test Techniques",
-        "Test Management",
-        "Tool Support For Testing"
+        "Introduction to SEO (2 hours)",
+        "SERP (2 hours)",
+        "Indexing (2 hours)",
+        "Local SEO (2 hours)",
+        "On Page SEO (2 hours)",
+        "Technical SEO (2 hours)",
+        "Off Page SEO (2 hours)",
+        "SEO Audit (2 hours)",
+        "SEO Techniques (2 hours)",
+        "Keyword Research (2 hours)",
+        "Google Algorithm (2 hours)",
+        "Backlinks (2 hours)"
       ]
     },
     {
       id: "module-5",
-      title: "Testing Tools",
-      category: "#Tools",
-      duration: "2 Weeks",
+      title: "Search Engine Marketing",
+      category: "#SEM",
+      duration: "3 Weeks",
       topics: [
-        "JIRA",
-        "JMETER"
+        "Introduction to SEM (2 hours)",
+        "Google Ads (2 hours)",
+        "Paid vs Organic (2 hours)",
+        "Dashboard (2 hours)",
+        "Key Terms (2 hours)",
+        "Click Through Rate (2 hours)",
+        "Bidding Strategies (2 hours)",
+        "Budget (2 hours)",
+        "Audience (2 hours)",
+        "Types of Ads Campaign (2 hours)",
+        "Google Ads Levels (2 hours)",
+        "Quality Score (2 hours)"
       ]
     },
     {
       id: "module-6",
-      title: "Selenium Java",
-      category: "#Automation",
-      duration: "3 Weeks",
+      title: "Google Analytics",
+      category: "#Analytics",
+      duration: "1 Week",
       topics: [
-        "Class and Object",
-        "Inheritance",
-        "Polymorphism",
-        "Constructor",
-        "Encapsulation",
-        "Abstraction",
-        "Exception Handling"
+        "Introduction to Google Analytics (2 hours)",
+        "Demo Account (2 hours)",
+        "Bounce Rate (2 hours)",
+        "Google Search Console (2 hours)"
       ]
     },
     {
       id: "module-7",
-      title: "Selenium",
-      category: "#Automation",
-      duration: "5 Weeks",
+      title: "Landing Page",
+      category: "#WebDesign",
+      duration: "1 Week",
       topics: [
-        "Introduction to Selenium Automation",
-        "Introduction & Installation of Selenium IDE",
-        "What is Selenium",
-        "Component of Selenium",
-        "Locators using WebDrivers",
-        "Handling Pop Up Messages",
-        "Selenium Webdrivers waits",
-        "Checkboxes, Radio Button, Drop down list",
-        "Action Classes",
-        "POM (Page Object Model)",
-        "POI (Poor Objection Implementation) fetch the data",
-    "Database Testing",
-        "Types of Frameworks",
-        "TestNG Introduction & Need",
-        "Advantages over Junit",
-        "Understanding usage of annotations",
-        "Running a test in TestNG",
-        "Assertions/reporting errors",
-        "Creating Data Driven & Keyword Driven Framework",
-        "Creating Hybrid Framework",
-        "Testing on Web Application using Selenium",
-        "MAVEN (Maven Project)",
-        "JENKINS (Jenkins Project)"
+        "Introduction to Landing Page (2 hours)",
+        "Wordpress Account (2 hours)",
+        "Plugins (2 hours)",
+        "How to create (2 hours)"
+      ]
+    },
+    {
+      id: "module-8",
+      title: "Industry Concepts In DM",
+      category: "#Advanced",
+      duration: "1 Week",
+      topics: [
+        "Affiliate Marketing (2 hours)",
+        "Email Marketing (2 hours)",
+        "Influencer Marketing & Social Media Tools (2 hours)",
+        "Freelancing Techniques & Remarketing (2 hours)"
+      ]
+    },
+    {
+      id: "module-9",
+      title: "Project Week",
+      category: "#Project",
+      duration: "1 Week",
+      topics: [
+        "SEO (2 hours)",
+        "Backlinks (2 hours)",
+        "Wordpress (2 hours)",
+        "Post, Carousel, Reel (2 hours)"
       ]
     }
   ];
 
   const careerOpportunities = [
-    "Software Test Engineer",
-    "QA Analyst",
-    "Test Automation Engineer",
-    "Performance Test Engineer",
-    "Mobile App Tester",
-    "API Test Engineer"
+    "Digital Marketing Specialist",
+    "SEO Specialist",
+    "SEM/PPC Specialist",
+    "Social Media Marketing Manager",
+    "Content Marketing Manager",
+    "Email Marketing Specialist",
+    "Google Analytics Specialist",
+    "Digital Marketing Manager",
+    "Marketing Analyst",
+    "Online Marketing Consultant"
   ];
 
   return (
@@ -356,7 +361,7 @@ I am interested in booking a free counselling session. Please contact me at your
         name="Digital Marketing Training Course"
         description="Complete Digital Marketing training covering SEO, SEM, Social Media Marketing, Content Strategy, Email Marketing, Google Analytics with hands-on campaigns and guaranteed placement support."
         url="https://quastech.co.in/digital-marketing"
-        duration="P4M"
+        duration="P15W"
         courseMode="blended"
         image="https://quastech.co.in/images/digital-marketing/digital-marketing.png"
       />
@@ -475,10 +480,10 @@ I am interested in booking a free counselling session. Please contact me at your
                   {/* Course Details Box */}
                   <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 md:p-4 grid grid-cols-3 gap-2 md:gap-3 border border-white/20">
                     <div className="text-center">
-                      <div className="text-base md:text-xl font-bold text-white">60 Hrs.</div><div className="text-white/80 text-[10px] md:text-xs mt-1">Duration</div>
+                      <div className="text-base md:text-xl font-bold text-white">112 Hrs.</div><div className="text-white/80 text-[10px] md:text-xs mt-1">Duration</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xs md:text-xl font-bold text-white leading-tight">Online/Offline</div><div className="text-white/80 text-[10px] md:text-xs mt-1">Format</div>
+                      <div className="text-xs md:text-xl font-bold text-white leading-tight">15 Weeks</div><div className="text-white/80 text-[10px] md:text-xs mt-1">Course Period</div>
                     </div>
                     <div className="text-center">
                       <div className="text-base md:text-xl font-bold text-white">LMS</div><div className="text-white/80 text-[10px] md:text-xs mt-1">Life Time Access</div>
@@ -614,16 +619,16 @@ I am interested in booking a free counselling session. Please contact me at your
                 </span>
               </h2>
               <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-                Our Software Testing Training program is designed to provide you with comprehensive knowledge and hands-on experience in all aspects of software testing.
+                Our Digital Marketing Training program is a comprehensive 15-week course (112 hours) designed to provide you with hands-on experience in SEO, SEM, Social Media Marketing, Google Analytics, and all aspects of digital marketing.
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { icon: Target, title: "Manual Testing", desc: "Learn fundamental testing concepts" },
-                { icon: Code, title: "Automation Testing", desc: "Master Selenium and other tools" },
-                { icon: TrendingUp, title: "Performance Testing", desc: "Optimize application performance" },
-                { icon: Star, title: "Industry Best Practices", desc: "Follow industry standards" }
+                { icon: Target, title: "SEO & SEM", desc: "Master Search Engine Optimization and Marketing" },
+                { icon: TrendingUp, title: "Social Media Marketing", desc: "Learn SMO and SMM strategies" },
+                { icon: Monitor, title: "Google Analytics", desc: "Analyze and optimize marketing performance" },
+                { icon: Star, title: "Industry Best Practices", desc: "Real-world campaigns and projects" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -654,9 +659,12 @@ I am interested in booking a free counselling session. Please contact me at your
             >
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">
-                  Software Testing Training Curriculum
+                  Digital Marketing Training Curriculum
                 </span>
               </h2>
+              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-4">
+                Comprehensive 15-week program covering all aspects of Digital Marketing with hands-on projects and real-world campaigns.
+              </p>
             </motion.div>
 
             <div className="grid lg:grid-cols-[350px_1fr] gap-8 max-w-7xl mx-auto">
@@ -669,7 +677,7 @@ I am interested in booking a free counselling session. Please contact me at your
               >
                   <h3 className="text-xl md:text-2xl font-bold mb-4">Industry Oriented Curriculum</h3>
                 <p className="text-white/90 mb-8 leading-relaxed text-sm">
-                  Explore each topic in-depth through interactive sessions, real-world use cases, and tool-based learning. You'll not only understand the theory but also build practical skills that matter in actual roles.
+                  Explore each topic in-depth through interactive sessions, real-world campaigns, and hands-on projects. You'll not only understand the theory but also build practical skills that matter in actual digital marketing roles.
                 </p>
 
                 {/* Stats Cards */}
@@ -677,33 +685,33 @@ I am interested in booking a free counselling session. Please contact me at your
                   <div className="bg-white rounded-xl p-4 shadow-lg">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                        <Database className="w-6 h-6 text-white" />
+                        <Target className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">30+</div>
-                        <div className="text-sm text-gray-600 font-medium">Case Studies & Projects</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">9</div>
+                        <div className="text-sm text-gray-600 font-medium">Comprehensive Modules</div>
                       </div>
                     </div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-lg">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
-                        <Wrench className="w-6 h-6 text-white" />
+                        <TrendingUp className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent">10+</div>
-                        <div className="text-sm text-gray-600 font-medium">Languages & Tools</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent">15+</div>
+                        <div className="text-sm text-gray-600 font-medium">Tools & Platforms</div>
                       </div>
                     </div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-lg">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-                        <Calendar className="w-6 h-6 text-white" />
+                        <Clock className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">280+</div>
-                        <div className="text-sm text-gray-600 font-medium">Live Sessions Hours</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">112</div>
+                        <div className="text-sm text-gray-600 font-medium">Hours of Training</div>
                       </div>
                     </div>
                   </div>

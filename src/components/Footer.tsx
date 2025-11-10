@@ -234,8 +234,15 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <FooterMainTitle title="Placement Courses with AI" />
-            <ul className="space-y-2 mt-5">
+            <ul className="space-y-2 mt-5 mb-6">
               {placementCoursesWithAI.map((link) => (
+                <FooterLink key={link.name} {...link} />
+              ))}
+            </ul>
+
+            <FooterMainTitle title="Quick Links" />
+            <ul className="space-y-2 mt-5">
+              {quickLinks.map((link) => (
                 <FooterLink key={link.name} {...link} />
               ))}
             </ul>
@@ -301,22 +308,14 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <FooterMainTitle title="Dual Degree" />
-            <ul className="space-y-2 mt-5 mb-6">
+            <ul className="space-y-2 mt-5">
               {dualDegreeLinks.map((link) => (
                 <FooterLink key={link.name} {...link} />
               ))}
             </ul>
 
-            <FooterMainTitle title="Non-IT Training" />
-            <ul className="space-y-2 mt-5 mb-6">
-              {nonItTrainingLinks.map((link) => (
-                <FooterLink key={link.name} {...link} />
-              ))}
-            </ul>
-
-            <FooterMainTitle title="Quick Links" />
             <ul className="space-y-2 mt-5">
-              {quickLinks.map((link) => (
+              {nonItTrainingLinks.map((link) => (
                 <FooterLink key={link.name} {...link} />
               ))}
             </ul>
